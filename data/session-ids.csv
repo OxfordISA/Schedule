@@ -6,7 +6,6 @@ id,session_id,session_name,paper_order
 46,2,Public Policy and ESG,1
 85,2,Public Policy and ESG,2
 172,2,Public Policy and ESG,3
-205,47,Green Innovation and Sustainable Energy Strategies,4
 103,3,Biodiversity and Agricultural Industry,1
 175,3,Biodiversity and Agricultural Industry,2
 192,3,Biodiversity and Agricultural Industry,3
@@ -30,8 +29,8 @@ id,session_id,session_name,paper_order
 39,11,Healthcare Data and Analytics,2
 114,11,Healthcare Data and Analytics,3
 150,11,Healthcare Data and Analytics,4
-124,33,Healthcare and People-Centric Operations,1
 125,12,Healthcare Operations and Capacity,1
+2001,12,Healthcare Operations and Capacity,1
 137,12,Healthcare Operations and Capacity,2
 140,12,Healthcare Operations and Capacity,3
 199,14,AI Adoption and Organizational Performance,1
@@ -47,14 +46,16 @@ id,session_id,session_name,paper_order
 108,17,Entrepreneurship Research and Policy,1
 120,17,Entrepreneurship Research and Policy,2
 208,17,Entrepreneurship Research and Policy,3
+55,17,Entrepreneurship Research and Policy,4
 62,18,Generative AI and the Future of Work,1
 63,18,Generative AI and the Future of Work,2
 138,18,Generative AI and the Future of Work,3
+116,18,Generative AI and the Future of Work,4
 84,19,Industrial Policy and Technology Development,1
 195,19,Industrial Policy and Technology Development,2
 203,19,Industrial Policy and Technology Development,3
+146,19,Industrial Policy and Technology Development,4
 54,20,Innovation Strategy and Resources,1
-55,17,Entrepreneurship Research and Policy,4
 65,20,Innovation Strategy and Resources,2
 179,22,Technology Legitimacy and Emerging Markets,1
 186,22,Technology Legitimacy and Emerging Markets,2
@@ -68,13 +69,13 @@ id,session_id,session_name,paper_order
 126,25,Manufacturing Transformation and Workforce Development,2
 151,25,Manufacturing Transformation and Workforce Development,3
 204,25,Manufacturing Transformation and Workforce Development,4
-27,26,"AI, Robots, and Worker Voice: Emerging Evidence on Labor Market Dynamics",1
-86,26,"AI, Robots, and Worker Voice: Emerging Evidence on Labor Market Dynamics",2
-141,26,"AI, Robots, and Worker Voice: Emerging Evidence on Labor Market Dynamics",3
-144,26,"AI, Robots, and Worker Voice: Emerging Evidence on Labor Market Dynamics",4
+27,26,"Platform Work, Control, and Worker Voice",1
+86,26,"Platform Work, Control, and Worker Voice",2
+141,26,"Platform Work, Control, and Worker Voice",3
+144,26,"Platform Work, Control, and Worker Voice",4
+37,29,Digital Platforms and Last-Mile Delivery,1
 61,29,Digital Platforms and Last-Mile Delivery,2
 2004,29,Digital Platforms and Last-Mile Delivery,3
-37,29,Digital Platforms and Last-Mile Delivery,1
 36,30,Supply Chain Risk and Resilience,1
 156,30,Supply Chain Risk and Resilience,2
 168,30,Supply Chain Risk and Resilience,3
@@ -83,16 +84,17 @@ id,session_id,session_name,paper_order
 135,31,Manufacturing Operations and Digital Technology,2
 183,31,Manufacturing Operations and Digital Technology,3
 193,31,Manufacturing Operations and Digital Technology,4
-83,32,Sustainable and Circular Supply Chains,3
 170,32,Sustainable and Circular Supply Chains,1
 201,32,Sustainable and Circular Supply Chains,2
+83,32,Sustainable and Circular Supply Chains,3
 51,33,Healthcare and People-Centric Operations,1
+124,33,Healthcare and People-Centric Operations,1
 75,33,Healthcare and People-Centric Operations,2
 162,33,Healthcare and People-Centric Operations,3
-2001,12,Healthcare Operations and Capacity,1
 128,35,ESG in Supply Chains,1
 143,35,ESG in Supply Chains,2
 154,35,ESG in Supply Chains,3
+205,35,ESG in Supply Chains,4
 110,36,AI and Data Tools for Manufacturing and Industry Intelligence,1
 113,36,AI and Data Tools for Manufacturing and Industry Intelligence,2
 2003,36,AI and Data Tools for Manufacturing and Industry Intelligence,3
@@ -103,16 +105,18 @@ id,session_id,session_name,paper_order
 171,39,Humanitarian and Development Policy,1
 177,39,Humanitarian and Development Policy,2
 180,39,Humanitarian and Development Policy,3
-116,18,Generative AI and the Future of Work,4
 90,40,Industrial Policy Frameworks,1
 118,40,Industrial Policy Frameworks,2
 176,40,Industrial Policy Frameworks,3
-59,40,Industrial Policy Frameworks,4
+59,40,"Product innovation is a function of the component units of a firm processually aligning to create a novel solution to a firm's goals. Product innovation is thus a representation of a firm's capacities, including the ability to grasp market direction. This means that product innovation is both a process of hypothesis-making about firm capacity to engage a market and a representation of that firm's market perception.
+
+   Understanding product innovation as an emergent representational strategy gives a single formal framework for what is often seen as a function of several parts of an organization collaborating across internal boundaries. The rise of ""product"" roles in this century speaks to the need for a complexity management function within the productive process, just as the decay of traditional middle management speaks to a rationalization of the operating processes of large firms. Viewing novel products as representations of a firm akin to quarterly statements, as readable documentation of the firm's ability to innovate and that firm's beliefs about the nature and direction of the markets they serve adds to the means by which firm capacity can be understood.
+
+   By understanding product innovation as a materially representative hypothesis simultaneously concerning the nature of the firm and its surrounding markets, we can better understand the pragmatic application of innovation to times that may be more uncertain than usual. This paper draws on ethnographic research in nascent innovation ecosystems and present practice in product innovation.",4
 25,41,"Private Capital, Innovation Policy, and Regulatory Strategy",1
 45,41,"Private Capital, Innovation Policy, and Regulatory Strategy",2
 74,41,"Private Capital, Innovation Policy, and Regulatory Strategy",3
 191,41,"Private Capital, Innovation Policy, and Regulatory Strategy",4
-146,19,Industrial Policy and Technology Development,4
 64,43,Industrial Decarbonization Pathways,1
 76,43,Industrial Decarbonization Pathways,2
 142,43,Industrial Decarbonization Pathways,3
@@ -120,13 +124,15 @@ id,session_id,session_name,paper_order
 67,44,EV Transition and Automotive Industry,1
 89,44,EV Transition and Automotive Industry,2
 93,44,EV Transition and Automotive Industry,3
+17,44,EV Transition and Automotive Industry,4
 44,47,Green Innovation and Sustainable Energy Strategies,1
 66,47,Green Innovation and Sustainable Energy Strategies,2
 133,47,Green Innovation and Sustainable Energy Strategies,3
+205,47,Green Innovation and Sustainable Energy Strategies,4
+32,48,Technological Change at Work and Across Industries,1
+32,48,Technological Change at Work and Across Industries,2
+32,48,Technological Change at Work and Across Industries,3
 32,48,Technological Change at Work and Across Industries,4
-32,48,Technological Change at Work and Across Industries,4
-32,48,Technological Change at Work and Across Industries,4
-32,48,Technological Change at Work and Across Industries,4
-131,49,Taking Stock: System Dynamics Modeling in Industry Studies,3
-131,49,Taking Stock: System Dynamics Modeling in Industry Studies,3
+131,49,Taking Stock: System Dynamics Modeling in Industry Studies,1
+131,49,Taking Stock: System Dynamics Modeling in Industry Studies,2
 131,49,Taking Stock: System Dynamics Modeling in Industry Studies,3
