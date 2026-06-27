@@ -1,0 +1,30 @@
+group,sort_order,name,role,affiliation
+board,1,John Gray,President,The Ohio State University
+board,2,Edward Anderson,Vice President/President-elect,University of Texas
+board,3,Tonya Boone,Past President,College of William and Mary
+board,4,John Paul MacDuffie,Chief Fiscal Officer,University of Pennsylvania
+board,5,Jeff Shockley,Treasurer,Virginia Commonwealth University
+board,6,Jeff Furman,Early Career Development Committee,Boston University
+board,7,Raja Roy,Awards,New Jersey Institute of Technology
+board,8,Andrew Reamer,Industrial Policy,George Washington University
+board,10,Benn Lawson,Non-U.S. Strategy and Programming,University of Oxford
+board,11,Darcy K. Fudge Kamal,Membership,California State University
+board,12,Renae Sullivan,Program Manager,Industry Studies Association
+iscc,1,John Paul Helveston,Conference Chair 2026,George Washington University
+iscc,2,Renae Sullivan,Program Manager,Industry Studies Association
+iscc,3,John Gray,ISA President,The Ohio State University
+iscc,4,Edward Anderson,Vice President/President-elect,University of Texas
+iscc,5,David M. Hart,DC ISACC,"Council on Foreign Affairs, George Mason University"
+iscc,6,Andrew Reamer,ISA Industrial Policy,George Washington University
+iscc,7,Benn Lawson,2026 International Conference Chair,University of Oxford
+iscc,8,Allison Forbes,DC ISACC,Center for Regional Economic Competitiveness
+iscc,9,Monica Gorman,ISA Industrial Policy,Crowell Global Advisors
+iscc,10,Jeff Furman,Early Career Development Committee,Boston University
+iscc,11,Zach Wright,Conference Chair 2027,Brigham Young University
+stream_chairs,1,Allison Forbes,Policy,Center for Regional Economic Competitiveness
+stream_chairs,2,Tashlin Lakhani,Labor,Cornell University
+stream_chairs,3,Cameron Miller,Innovation & Entrepreneurship,Syracuse University
+stream_chairs,4,Richard Wang,General,Babson College
+stream_chairs,5,John Paul Helveston,Energy,George Washington University
+stream_chairs,6,Anant Mishra,Operations,"VinUniversity, Hanoi, Vietnam"
+stream_chairs,7,Mariana Socal,Healthcare,Johns Hopkins Bloomberg School of Public Health

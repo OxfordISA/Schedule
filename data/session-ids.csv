@@ -1,0 +1,132 @@
+id,session_id,session_name,paper_order
+56,1,Geographic Location and Transportation Cost,1
+109,1,Geographic Location and Transportation Cost,2
+122,1,Geographic Location and Transportation Cost,3
+178,1,Geographic Location and Transportation Cost,4
+46,2,Public Policy and ESG,1
+85,2,Public Policy and ESG,2
+172,2,Public Policy and ESG,3
+205,47,Green Innovation and Sustainable Energy Strategies,4
+103,3,Biodiversity and Agricultural Industry,1
+175,3,Biodiversity and Agricultural Industry,2
+192,3,Biodiversity and Agricultural Industry,3
+24,6,Industry Classification and Regulatory Policy,1
+73,6,Industry Classification and Regulatory Policy,2
+134,6,Industry Classification and Regulatory Policy,3
+181,6,Industry Classification and Regulatory Policy,4
+30,7,Biomedical Innovation & Organizational Ecosystems,1
+48,7,Biomedical Innovation & Organizational Ecosystems,2
+71,7,Biomedical Innovation & Organizational Ecosystems,3
+169,7,Biomedical Innovation & Organizational Ecosystems,4
+50,9,Drug Quality and Safety,1
+94,9,Drug Quality and Safety,2
+95,9,Drug Quality and Safety,3
+2002,9,Drug Quality and Safety,4
+148,10,Drug Supply Chains and Shortages,1
+184,10,Drug Supply Chains and Shortages,2
+185,10,Drug Supply Chains and Shortages,3
+190,10,Drug Supply Chains and Shortages,4
+21,11,Healthcare Data and Analytics,1
+39,11,Healthcare Data and Analytics,2
+114,11,Healthcare Data and Analytics,3
+150,11,Healthcare Data and Analytics,4
+124,33,Healthcare and People-Centric Operations,1
+125,12,Healthcare Operations and Capacity,1
+137,12,Healthcare Operations and Capacity,2
+140,12,Healthcare Operations and Capacity,3
+199,14,AI Adoption and Organizational Performance,1
+200,14,AI Adoption and Organizational Performance,2
+209,14,AI Adoption and Organizational Performance,3
+33,15,Advanced Technologies and Digital Innovation,1
+92,15,Advanced Technologies and Digital Innovation,2
+52,15,Advanced Technologies and Digital Innovation,3
+194,15,Advanced Technologies and Digital Innovation,4
+77,16,Entrepreneurial Ecosystems and Clusters,1
+123,16,Entrepreneurial Ecosystems and Clusters,2
+132,16,Entrepreneurial Ecosystems and Clusters,3
+108,17,Entrepreneurship Research and Policy,1
+120,17,Entrepreneurship Research and Policy,2
+208,17,Entrepreneurship Research and Policy,3
+62,18,Generative AI and the Future of Work,1
+63,18,Generative AI and the Future of Work,2
+138,18,Generative AI and the Future of Work,3
+84,19,Industrial Policy and Technology Development,1
+195,19,Industrial Policy and Technology Development,2
+203,19,Industrial Policy and Technology Development,3
+54,20,Innovation Strategy and Resources,1
+55,17,Entrepreneurship Research and Policy,4
+65,20,Innovation Strategy and Resources,2
+179,22,Technology Legitimacy and Emerging Markets,1
+186,22,Technology Legitimacy and Emerging Markets,2
+210,22,Technology Legitimacy and Emerging Markets,3
+2000,22,Technology Legitimacy and Emerging Markets,4
+72,23,"Hiring, Skills, and Labor Market Dynamics",1
+100,23,"Hiring, Skills, and Labor Market Dynamics",2
+119,23,"Hiring, Skills, and Labor Market Dynamics",3
+147,23,"Hiring, Skills, and Labor Market Dynamics",4
+96,25,Manufacturing Transformation and Workforce Development,1
+126,25,Manufacturing Transformation and Workforce Development,2
+151,25,Manufacturing Transformation and Workforce Development,3
+204,25,Manufacturing Transformation and Workforce Development,4
+27,26,"AI, Robots, and Worker Voice: Emerging Evidence on Labor Market Dynamics",1
+86,26,"AI, Robots, and Worker Voice: Emerging Evidence on Labor Market Dynamics",2
+141,26,"AI, Robots, and Worker Voice: Emerging Evidence on Labor Market Dynamics",3
+144,26,"AI, Robots, and Worker Voice: Emerging Evidence on Labor Market Dynamics",4
+61,29,Digital Platforms and Last-Mile Delivery,2
+2004,29,Digital Platforms and Last-Mile Delivery,3
+37,29,Digital Platforms and Last-Mile Delivery,1
+36,30,Supply Chain Risk and Resilience,1
+156,30,Supply Chain Risk and Resilience,2
+168,30,Supply Chain Risk and Resilience,3
+206,30,Supply Chain Risk and Resilience,4
+28,31,Manufacturing Operations and Digital Technology,1
+135,31,Manufacturing Operations and Digital Technology,2
+183,31,Manufacturing Operations and Digital Technology,3
+193,31,Manufacturing Operations and Digital Technology,4
+83,32,Sustainable and Circular Supply Chains,3
+170,32,Sustainable and Circular Supply Chains,1
+201,32,Sustainable and Circular Supply Chains,2
+51,33,Healthcare and People-Centric Operations,1
+75,33,Healthcare and People-Centric Operations,2
+162,33,Healthcare and People-Centric Operations,3
+2001,12,Healthcare Operations and Capacity,1
+128,35,ESG in Supply Chains,1
+143,35,ESG in Supply Chains,2
+154,35,ESG in Supply Chains,3
+110,36,AI and Data Tools for Manufacturing and Industry Intelligence,1
+113,36,AI and Data Tools for Manufacturing and Industry Intelligence,2
+2003,36,AI and Data Tools for Manufacturing and Industry Intelligence,3
+157,37,AI and Digital Economy Policy,1
+196,37,AI and Digital Economy Policy,2
+197,37,AI and Digital Economy Policy,3
+211,37,AI and Digital Economy Policy,4
+171,39,Humanitarian and Development Policy,1
+177,39,Humanitarian and Development Policy,2
+180,39,Humanitarian and Development Policy,3
+116,18,Generative AI and the Future of Work,4
+90,40,Industrial Policy Frameworks,1
+118,40,Industrial Policy Frameworks,2
+176,40,Industrial Policy Frameworks,3
+59,40,Industrial Policy Frameworks,4
+25,41,"Private Capital, Innovation Policy, and Regulatory Strategy",1
+45,41,"Private Capital, Innovation Policy, and Regulatory Strategy",2
+74,41,"Private Capital, Innovation Policy, and Regulatory Strategy",3
+191,41,"Private Capital, Innovation Policy, and Regulatory Strategy",4
+146,19,Industrial Policy and Technology Development,4
+64,43,Industrial Decarbonization Pathways,1
+76,43,Industrial Decarbonization Pathways,2
+142,43,Industrial Decarbonization Pathways,3
+163,43,Industrial Decarbonization Pathways,4
+67,44,EV Transition and Automotive Industry,1
+89,44,EV Transition and Automotive Industry,2
+93,44,EV Transition and Automotive Industry,3
+44,47,Green Innovation and Sustainable Energy Strategies,1
+66,47,Green Innovation and Sustainable Energy Strategies,2
+133,47,Green Innovation and Sustainable Energy Strategies,3
+32,48,Technological Change at Work and Across Industries,4
+32,48,Technological Change at Work and Across Industries,4
+32,48,Technological Change at Work and Across Industries,4
+32,48,Technological Change at Work and Across Industries,4
+131,49,Taking Stock: System Dynamics Modeling in Industry Studies,3
+131,49,Taking Stock: System Dynamics Modeling in Industry Studies,3
+131,49,Taking Stock: System Dynamics Modeling in Industry Studies,3

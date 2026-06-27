@@ -1,0 +1,98 @@
+[
+  {
+    "award_order": 1,
+    "award": "Best Paper in Innovation and Entrepreneurship",
+    "description": "This award recognizes outstanding innovation and entrepreneurship research. Papers from any research stream are eligible, including self-nominations. Winning papers must demonstrate significant personal investment in understanding industry-specific markets, firms, and institutions, typically integrating field-based research with appropriate theory and analysis, aligning with the Industry Studies Association's mission. Prizes: $500 (first place), $250 (runner-up).",
+    "rank": "Winner",
+    "paper_title": "Mind the Gap in Drug Development: Understanding the Whitespace Between Clinical Trials",
+    "authors": "Sukhun Kang (UC Santa Barbara); Sandra Barbosu (New York University); Fan Ye (UC Santa Barbara); Sungyong Chang (Cornell University)",
+    "awards_committee": "Cameron D Miller (Chair, Syracuse University), Jino Lu (Washington University in St. Louis), and Abhishek Roy (Temple University)"
+  },
+  {
+    "award_order": 1,
+    "award": "Best Paper in Innovation and Entrepreneurship",
+    "description": "This award recognizes outstanding innovation and entrepreneurship research. Papers from any research stream are eligible, including self-nominations. Winning papers must demonstrate significant personal investment in understanding industry-specific markets, firms, and institutions, typically integrating field-based research with appropriate theory and analysis, aligning with the Industry Studies Association's mission. Prizes: $500 (first place), $250 (runner-up).",
+    "rank": "Runner-up",
+    "paper_title": "Misleading Science Maps: Firms' Strategic Responses to Data Malpractice in Alzheimer's Research",
+    "authors": "Matteo Tranchero (The Wharton School); Christian Fons-Rosen (UC Merced); Lee Fleming (UC Berkeley)",
+    "awards_committee": "Cameron D Miller (Chair, Syracuse University), Jino Lu (Washington University in St. Louis), and Abhishek Roy (Temple University)"
+  },
+  {
+    "award_order": 2,
+    "award": "Babbage Best Paper in Industrial Innovation Policy",
+    "description": "This new award, funded by the Babbage International Policy Forum (UK) under Professor Sir Mike Gregory's leadership, recognizes outstanding contributions to industrial innovation policy research. Winning papers must demonstrate deep engagement with theoretical and practical elements of industrial innovation policy and substantial commitment to understanding policy-industry dynamics. Cross-disciplinary approaches drawing from economics, science and technology, and management are encouraged, particularly those offering practical insights for policymakers and industry leaders. Prizes: $750 (first place), $250 (runner-up).",
+    "rank": "Winner",
+    "paper_title": "Implementing a Comprehensive Intervention to Promote Sustainable Agricultural Practices in India",
+    "authors": "Subhankar Saha (Ahmedabad University, India); Haritha Saranga (Indian Institute of Management Bangalore, India); Sriram Narayanan (Michigan State University); Chandrakant Pradhan (Confederation of Indian Industry, India)",
+    "awards_committee": "David M Hart (Chair, George Mason University and Council on Foreign Affairs), Canberk Ucel (ESSEC), and Hanu Tyagi (University of Illinois Urbana-Champaign)"
+  },
+  {
+    "award_order": 2,
+    "award": "Babbage Best Paper in Industrial Innovation Policy",
+    "description": "This new award, funded by the Babbage International Policy Forum (UK) under Professor Sir Mike Gregory's leadership, recognizes outstanding contributions to industrial innovation policy research. Winning papers must demonstrate deep engagement with theoretical and practical elements of industrial innovation policy and substantial commitment to understanding policy-industry dynamics. Cross-disciplinary approaches drawing from economics, science and technology, and management are encouraged, particularly those offering practical insights for policymakers and industry leaders. Prizes: $750 (first place), $250 (runner-up).",
+    "rank": "Runner-up",
+    "paper_title": "Data Privacy Regulation and Innovation",
+    "authors": "Sukhun Kang (University of California Santa Barbara); Jennifer Kao (University of California Los Angeles)",
+    "awards_committee": "David M Hart (Chair, George Mason University and Council on Foreign Affairs), Canberk Ucel (ESSEC), and Hanu Tyagi (University of Illinois Urbana-Champaign)"
+  },
+  {
+    "award_order": 3,
+    "award": "Giarratani Rising Star Award",
+    "description": "Early career scholars may submit one paper to which they've made a significant contribution. This award recognizes junior scholars conducting industry-based research that demonstrates deep knowledge through significant personal investment in understanding industry markets, firms, and institutions. Prizes: $1,000 (first place), $500 (runner-up).",
+    "rank": "Winner",
+    "paper_title": "Dynamic Competition in Networked Markets: Evidence from US Broadband",
+    "authors": "Jennifer Zou (Harvard University)",
+    "awards_committee": "Christopher Law (Chair, Texas A&M), Matteo Tranchero (Wharton School, University of Pennsylvania), and Sukhun Kang (University of California, Santa Barbara)"
+  },
+  {
+    "award_order": 3,
+    "award": "Giarratani Rising Star Award",
+    "description": "Early career scholars may submit one paper to which they've made a significant contribution. This award recognizes junior scholars conducting industry-based research that demonstrates deep knowledge through significant personal investment in understanding industry markets, firms, and institutions. Prizes: $1,000 (first place), $500 (runner-up).",
+    "rank": "Runner-up",
+    "paper_title": "Offshore Manufacturing of Innovative Drugs: Evidence from U.S. Pharmaceutical Firms",
+    "authors": "Minji Lee (Cornell University)",
+    "awards_committee": "Christopher Law (Chair, Texas A&M), Matteo Tranchero (Wharton School, University of Pennsylvania), and Sukhun Kang (University of California, Santa Barbara)"
+  },
+  {
+    "award_order": 4,
+    "award": "Ralph Gomory Best Industry Studies Paper Award",
+    "description": "Named for Ralph Gomory, former Alfred P. Sloan Foundation President who initiated the Industry Studies Program, this award showcases excellent industry studies research published in the preceding year across eight top academic journals. The Industry Studies Association aims to encourage researchers to submit industry studies work to leading scholarly journals while demonstrating to editors the value of deep industry context exploration. The ISA promotes research that builds practitioner relationships for primary data access, uses field-gathered contextual knowledge to inform research questions and design, and guides data analysis, interpretations, and conclusions. Prizes: $1,000 (first place), $500 (runner-up).",
+    "rank": "Winner",
+    "paper_title": "Contradictory control: How employers' multiple control practices clash and enable workers' acts of resistance",
+    "authors": "Yuequan Guo (WZB Berlin Social Science Center)",
+    "publication": "ILR Review, 78(5), 780–805",
+    "doi": "https://doi.org/10.1177/00197939251357273",
+    "awards_committee": "Ram Ganeshan (Chair, William and Mary), Ariel Avgar (Cornell), Daniel Armanios (Oxford), Rich Metters (Texas A & M)"
+  },
+  {
+    "award_order": 4,
+    "award": "Ralph Gomory Best Industry Studies Paper Award",
+    "description": "Named for Ralph Gomory, former Alfred P. Sloan Foundation President who initiated the Industry Studies Program, this award showcases excellent industry studies research published in the preceding year across eight top academic journals. The Industry Studies Association aims to encourage researchers to submit industry studies work to leading scholarly journals while demonstrating to editors the value of deep industry context exploration. The ISA promotes research that builds practitioner relationships for primary data access, uses field-gathered contextual knowledge to inform research questions and design, and guides data analysis, interpretations, and conclusions. Prizes: $1,000 (first place), $500 (runner-up).",
+    "rank": "Runner-up",
+    "paper_title": "The perils of a soft start: Initial conditions, early strategy selection, and small firm performance",
+    "authors": "F. Christopher Eaglin (Fuqua School of Business, Duke University)",
+    "publication": "Strategic Management Journal, 46(9), 2113–2165",
+    "doi": "https://doi.org/10.1002/smj.3718",
+    "awards_committee": "Ram Ganeshan (Chair, William and Mary), Ariel Avgar (Cornell), Daniel Armanios (Oxford), Rich Metters (Texas A & M)"
+  },
+  {
+    "award_order": 5,
+    "award": "Dissertation Award",
+    "description": "This award recognizes outstanding doctoral research in industry studies. Eligible candidates must have completed a dissertation in economics, management, engineering, political science, sociology, or related/interdisciplinary fields within the previous 18 months. Prizes: $500 (first place), $250 (runner-up).",
+    "rank": "Winner",
+    "paper_title": "Coevolution of Small Business Strategy and Regulation: A Mixed-Methods Study of United States Craft Breweries",
+    "authors": "Eppa Rixey (MIT-Sloan, currently Northeastern University)",
+    "committee": "Susan Silbey (Chair); Ezra Zuckerman Sivan; Stine Grodal; Johan Chu",
+    "awards_committee": "Jeff Furman (Chair, Boston University), Florenta Teodoridis (USC-Marshall), and Arvids Ziedonis (Boston University)"
+  },
+  {
+    "award_order": 5,
+    "award": "Dissertation Award",
+    "description": "This award recognizes outstanding doctoral research in industry studies. Eligible candidates must have completed a dissertation in economics, management, engineering, political science, sociology, or related/interdisciplinary fields within the previous 18 months. Prizes: $500 (first place), $250 (runner-up).",
+    "rank": "Runner-up",
+    "paper_title": "The Role of Data in the Search for Innovation: Essays on Big Data Genomics",
+    "authors": "Matteo Tranchero (UC Berkeley, currently The Wharton School)",
+    "committee": "Abhishek Nagaraj (Co-Chair); Lee Fleming (Co-Chair); Toby Stuart; Carolyn Stein; Enrico Moretti",
+    "awards_committee": "Jeff Furman (Chair, Boston University), Florenta Teodoridis (USC-Marshall), and Arvids Ziedonis (Boston University)"
+  }
+]

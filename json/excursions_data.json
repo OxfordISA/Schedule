@@ -1,0 +1,156 @@
+[
+  {
+    "id": "EX1",
+    "option": 1,
+    "session_name": "Morning Excursion Option 1: Showcase of DC-based Public Policy Think Tanks and Research Centers",
+    "date": "2026-06-03",
+    "day": "Wednesday",
+    "start_time": "8:00 AM",
+    "end_time": "11:50 AM",
+    "meeting_point": "Science & Engineering Hall, B1 1270",
+    "description": {},
+    "timeline": [
+      {
+        "time": "8:00-8:30",
+        "activity": "Coffee"
+      },
+      {
+        "time": "8:30-8:35",
+        "activity": "Welcome and introduction"
+      },
+      {
+        "time": "8:35-9:00",
+        "activity": "CSIS"
+      },
+      {
+        "time": "9:00-9:25",
+        "activity": "SCSP"
+      },
+      {
+        "time": "9:25-9:50",
+        "activity": "McKinsey Global Institute"
+      },
+      {
+        "time": "9:50-10:10",
+        "activity": "Coffee break"
+      },
+      {
+        "time": "10:10-10:35",
+        "activity": "MITRE"
+      },
+      {
+        "time": "10:35-11:00",
+        "activity": "Niskanen Center"
+      },
+      {
+        "time": "11:00-11:25",
+        "activity": "CSPO"
+      },
+      {
+        "time": "11:25-11:30",
+        "activity": "Wrap up"
+      },
+      {
+        "time": "11:30-11:50",
+        "activity": "Coffee and mingle"
+      }
+    ],
+    "organizations": [
+      {
+        "name": "CSIS",
+        "panel_title": {},
+        "speakers": [
+          {
+            "name": "Philip Luck",
+            "role": "Director, Economics Program and Scholl Chair in International Business"
+          }
+        ]
+      },
+      {
+        "name": "SCSP",
+        "panel_title": "SCSP Tech Scorecard: A Framework for Comparative Analysis",
+        "speakers": [
+          {
+            "name": "Nyah Stewart",
+            "role": "Director, Technology Leadership"
+          },
+          {
+            "name": "Caroline Armstrong",
+            "role": "Consultant, Technology Leadership"
+          }
+        ]
+      },
+      {
+        "name": "McKinsey Global Institute",
+        "panel_title": "McKinsey Global Institute: Geoeconomics forces for business leaders",
+        "speakers": [
+          {
+            "name": "Rebecca J. Anderson",
+            "role": "Senior Fellow, McKinsey Global Institute"
+          }
+        ]
+      },
+      {
+        "name": "MITRE",
+        "panel_title": "MITRE's Role in the National R&D Ecosystem: Connections to the Industry Studies Community",
+        "speakers": [
+          {
+            "name": "Roz Engel",
+            "role": "Chief Economist, MITRE Public Sector"
+          },
+          {
+            "name": "Sanith Wijesinghe",
+            "role": "Chief Engineer, MITRE Public Sector"
+          },
+          {
+            "name": "Dan Brown",
+            "role": "Chief Scientist for Economic Analysis"
+          }
+        ]
+      },
+      {
+        "name": "Niskanen Center",
+        "panel_title": {},
+        "speakers": [
+          {
+            "name": "R.J. Lyman",
+            "role": "President, Niskanen"
+          },
+          {
+            "name": "Liza Reed",
+            "role": "Director, Climate & Energy"
+          },
+          {
+            "name": "Alex Mechanick",
+            "role": "Senior Policy Analyst, State Capacity"
+          }
+        ]
+      },
+      {
+        "name": "CSPO",
+        "panel_title": "A Quadruple Helix? Adding Society to the University-Industry-Government Mix",
+        "speakers": [
+          {
+            "name": "Arthur Daemmrich",
+            "role": "Director, ASU Consortium for Science, Policy & Outcomes"
+          },
+          {
+            "name": "Mahmud Farooque",
+            "role": "Associate Director, ASU Consortium for Science, Policy & Outcomes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "EX2",
+    "option": 2,
+    "session_name": "Morning Excursion Option 2: Walking Tour of the DC Mall",
+    "date": "2026-06-03",
+    "day": "Wednesday",
+    "start_time": "9:30 AM",
+    "end_time": "11:30 AM",
+    "meeting_point": "Lockkeeper's House, 17th & Constitution Ave NW",
+    "description": "Join us for a walking tour of the National Mall, visiting many of the major monuments. The tour ends at the Lincoln Memorial. Participants can then walk to the Milken Institute for lunch and registration."
+  }
+]
