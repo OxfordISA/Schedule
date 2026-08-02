@@ -1,0 +1,102 @@
+{
+  "board": [
+    {
+      "name": "John Gray",
+      "role": "President",
+      "affiliation": "The Ohio State University"
+    },
+    {
+      "name": "Edward Anderson",
+      "role": "Vice President/President-elect",
+      "affiliation": "University of Texas"
+    },
+    {
+      "name": "Tonya Boone",
+      "role": "Past President",
+      "affiliation": "College of William and Mary"
+    },
+    {
+      "name": "John Paul MacDuffie",
+      "role": "Chief Fiscal Officer",
+      "affiliation": "University of Pennsylvania"
+    },
+    {
+      "name": "Jeff Shockley",
+      "role": "Treasurer",
+      "affiliation": "Virginia Commonwealth University"
+    },
+    {
+      "name": "Jeff Furman",
+      "role": "Early Career Development Committee",
+      "affiliation": "Boston University"
+    },
+    {
+      "name": "Raja Roy",
+      "role": "Awards",
+      "affiliation": "New Jersey Institute of Technology"
+    },
+    {
+      "name": "Andrew Reamer",
+      "role": "Industrial Policy",
+      "affiliation": "George Washington University"
+    },
+    {
+      "name": "Benn Lawson",
+      "role": "Non-U.S. Strategy and Programming",
+      "affiliation": "University of Oxford"
+    },
+    {
+      "name": "Darcy K. Fudge Kamal",
+      "role": "Membership",
+      "affiliation": "California State University"
+    },
+    {
+      "name": "Renae Sullivan",
+      "role": "Program Manager",
+      "affiliation": "Industry Studies Association"
+    }
+  ],
+  "iscc": [],
+  "stream_chairs": [
+    {
+      "name": "Angela Garcia Calvo",
+      "role": "Public Policy & Global Competitiveness",
+      "affiliation": "University of Reading"
+    },
+    {
+      "name": "Federica De Stefano",
+      "role": "Labor Markets, Organizations, and the Future of Work",
+      "affiliation": "University of Oxford"
+    },
+    {
+      "name": "Laura Dupin",
+      "role": "Innovation, Entrepreneurship, and AI-Driven Transformation",
+      "affiliation": "University of Amsterdam Business School"
+    },
+    {
+      "name": "Guendalina Anzolin",
+      "role": "General Industry Studies",
+      "affiliation": "University of Modena"
+    },
+    {
+      "name": "Keno Haverkamp",
+      "role": "General Industry Studies",
+      "affiliation": "University of Cambridge"
+    },
+    {
+      "name": "David Reiner",
+      "role": "Sustainable Innovation, Energy, and Mobility",
+      "affiliation": "University of Cambridge"
+    },
+    {
+      "name": "Oliver von Dzengelevski",
+      "role": "Operations, Supply Chain, and AI-Enhanced Industry 4.0",
+      "affiliation": "ETH Zurich"
+    },
+    {
+      "name": "Rossella Salandra",
+      "role": "Healthcare Systems, Biotechnology, and Pharmaceuticals",
+      "affiliation": "University of Bath"
+    }
+  ]
+}
