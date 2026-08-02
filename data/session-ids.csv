@@ -1,138 +1,154 @@
 id,session_id,session_name,paper_order
-56,1,Geographic Location and Transportation Cost,1
-109,1,Geographic Location and Transportation Cost,2
-122,1,Geographic Location and Transportation Cost,3
-178,1,Geographic Location and Transportation Cost,4
-46,2,Public Policy and ESG,1
-85,2,Public Policy and ESG,2
-172,2,Public Policy and ESG,3
-103,3,Biodiversity and Agricultural Industry,1
-175,3,Biodiversity and Agricultural Industry,2
-192,3,Biodiversity and Agricultural Industry,3
-24,6,Industry Classification and Regulatory Policy,1
-73,6,Industry Classification and Regulatory Policy,2
-134,6,Industry Classification and Regulatory Policy,3
-181,6,Industry Classification and Regulatory Policy,4
-30,7,Biomedical Innovation & Organizational Ecosystems,1
-48,7,Biomedical Innovation & Organizational Ecosystems,2
-71,7,Biomedical Innovation & Organizational Ecosystems,3
-169,7,Biomedical Innovation & Organizational Ecosystems,4
-50,9,Drug Quality and Safety,1
-94,9,Drug Quality and Safety,2
-95,9,Drug Quality and Safety,3
-2002,9,Drug Quality and Safety,4
-148,10,Drug Supply Chains and Shortages,1
-184,10,Drug Supply Chains and Shortages,2
-185,10,Drug Supply Chains and Shortages,3
-190,10,Drug Supply Chains and Shortages,4
-21,11,Healthcare Data and Analytics,1
-39,11,Healthcare Data and Analytics,2
-114,11,Healthcare Data and Analytics,3
-150,11,Healthcare Data and Analytics,4
-125,12,Healthcare Operations and Capacity,1
-2001,12,Healthcare Operations and Capacity,1
-137,12,Healthcare Operations and Capacity,2
-140,12,Healthcare Operations and Capacity,3
-199,14,AI Adoption and Organizational Performance,1
-200,14,AI Adoption and Organizational Performance,2
-209,14,AI Adoption and Organizational Performance,3
-33,15,Advanced Technologies and Digital Innovation,1
-92,15,Advanced Technologies and Digital Innovation,2
-52,15,Advanced Technologies and Digital Innovation,3
-194,15,Advanced Technologies and Digital Innovation,4
-77,16,Entrepreneurial Ecosystems and Clusters,1
-123,16,Entrepreneurial Ecosystems and Clusters,2
-132,16,Entrepreneurial Ecosystems and Clusters,3
-108,17,Entrepreneurship Research and Policy,1
-120,17,Entrepreneurship Research and Policy,2
-208,17,Entrepreneurship Research and Policy,3
-55,17,Entrepreneurship Research and Policy,4
-62,18,Generative AI and the Future of Work,1
-63,18,Generative AI and the Future of Work,2
-138,18,Generative AI and the Future of Work,3
-116,18,Generative AI and the Future of Work,4
-84,19,Industrial Policy and Technology Development,1
-195,19,Industrial Policy and Technology Development,2
-203,19,Industrial Policy and Technology Development,3
-146,19,Industrial Policy and Technology Development,4
-54,20,Innovation Strategy and Resources,1
-65,20,Innovation Strategy and Resources,2
-179,22,Technology Legitimacy and Emerging Markets,1
-186,22,Technology Legitimacy and Emerging Markets,2
-210,22,Technology Legitimacy and Emerging Markets,3
-2000,22,Technology Legitimacy and Emerging Markets,4
-72,23,"Hiring, Skills, and Labor Market Dynamics",1
-100,23,"Hiring, Skills, and Labor Market Dynamics",2
-119,23,"Hiring, Skills, and Labor Market Dynamics",3
-147,23,"Hiring, Skills, and Labor Market Dynamics",4
-96,25,Manufacturing Transformation and Workforce Development,1
-126,25,Manufacturing Transformation and Workforce Development,2
-151,25,Manufacturing Transformation and Workforce Development,3
-204,25,Manufacturing Transformation and Workforce Development,4
-27,26,"Platform Work, Control, and Worker Voice",1
-86,26,"Platform Work, Control, and Worker Voice",2
-141,26,"Platform Work, Control, and Worker Voice",3
-144,26,"Platform Work, Control, and Worker Voice",4
-37,29,Digital Platforms and Last-Mile Delivery,1
-61,29,Digital Platforms and Last-Mile Delivery,2
-2004,29,Digital Platforms and Last-Mile Delivery,3
-36,30,Supply Chain Risk and Resilience,1
-156,30,Supply Chain Risk and Resilience,2
-168,30,Supply Chain Risk and Resilience,3
-206,30,Supply Chain Risk and Resilience,4
-28,31,Manufacturing Operations and Digital Technology,1
-135,31,Manufacturing Operations and Digital Technology,2
-183,31,Manufacturing Operations and Digital Technology,3
-193,31,Manufacturing Operations and Digital Technology,4
-170,32,Sustainable and Circular Supply Chains,1
-201,32,Sustainable and Circular Supply Chains,2
-83,32,Sustainable and Circular Supply Chains,3
-51,33,Healthcare and People-Centric Operations,1
-124,33,Healthcare and People-Centric Operations,1
-75,33,Healthcare and People-Centric Operations,2
-162,33,Healthcare and People-Centric Operations,3
-128,35,ESG in Supply Chains,1
-143,35,ESG in Supply Chains,2
-154,35,ESG in Supply Chains,3
-205,35,ESG in Supply Chains,4
-110,36,AI and Data Tools for Manufacturing and Industry Intelligence,1
-113,36,AI and Data Tools for Manufacturing and Industry Intelligence,2
-2003,36,AI and Data Tools for Manufacturing and Industry Intelligence,3
-157,37,AI and Digital Economy Policy,1
-196,37,AI and Digital Economy Policy,2
-197,37,AI and Digital Economy Policy,3
-211,37,AI and Digital Economy Policy,4
-171,39,Humanitarian and Development Policy,1
-177,39,Humanitarian and Development Policy,2
-180,39,Humanitarian and Development Policy,3
-90,40,Industrial Policy Frameworks,1
-118,40,Industrial Policy Frameworks,2
-176,40,Industrial Policy Frameworks,3
-59,40,"Product innovation is a function of the component units of a firm processually aligning to create a novel solution to a firm's goals. Product innovation is thus a representation of a firm's capacities, including the ability to grasp market direction. This means that product innovation is both a process of hypothesis-making about firm capacity to engage a market and a representation of that firm's market perception.
-
-   Understanding product innovation as an emergent representational strategy gives a single formal framework for what is often seen as a function of several parts of an organization collaborating across internal boundaries. The rise of ""product"" roles in this century speaks to the need for a complexity management function within the productive process, just as the decay of traditional middle management speaks to a rationalization of the operating processes of large firms. Viewing novel products as representations of a firm akin to quarterly statements, as readable documentation of the firm's ability to innovate and that firm's beliefs about the nature and direction of the markets they serve adds to the means by which firm capacity can be understood.
-
-   By understanding product innovation as a materially representative hypothesis simultaneously concerning the nature of the firm and its surrounding markets, we can better understand the pragmatic application of innovation to times that may be more uncertain than usual. This paper draws on ethnographic research in nascent innovation ecosystems and present practice in product innovation.",4
-25,41,"Private Capital, Innovation Policy, and Regulatory Strategy",1
-45,41,"Private Capital, Innovation Policy, and Regulatory Strategy",2
-74,41,"Private Capital, Innovation Policy, and Regulatory Strategy",3
-191,41,"Private Capital, Innovation Policy, and Regulatory Strategy",4
-64,43,Industrial Decarbonization Pathways,1
-76,43,Industrial Decarbonization Pathways,2
-142,43,Industrial Decarbonization Pathways,3
-163,43,Industrial Decarbonization Pathways,4
-67,44,EV Transition and Automotive Industry,1
-89,44,EV Transition and Automotive Industry,2
-93,44,EV Transition and Automotive Industry,3
-17,44,EV Transition and Automotive Industry,4
-44,47,Green Innovation and Sustainable Energy Strategies,1
-66,47,Green Innovation and Sustainable Energy Strategies,2
-133,47,Green Innovation and Sustainable Energy Strategies,3
-205,47,Green Innovation and Sustainable Energy Strategies,4
-32,48,Technological Change at Work and Across Industries,1
-32,48,Technological Change at Work and Across Industries,2
-32,48,Technological Change at Work and Across Industries,3
-32,48,Technological Change at Work and Across Industries,4
-131,49,Taking Stock: System Dynamics Modeling in Industry Studies,1
-131,49,Taking Stock: System Dynamics Modeling in Industry Studies,2
-131,49,Taking Stock: System Dynamics Modeling in Industry Studies,3
+66,GIS1,"Market Power, Competition, and Social Outcomes",1
+31,GIS1,"Market Power, Competition, and Social Outcomes",2
+97,GIS1,"Market Power, Competition, and Social Outcomes",3
+178,GIS1,"Market Power, Competition, and Social Outcomes",4
+29,I&E1,AI and Entrepreneurial Experimentation,1
+83,I&E1,AI and Entrepreneurial Experimentation,2
+33,I&E1,AI and Entrepreneurial Experimentation,3
+67,I&E1,AI and Entrepreneurial Experimentation,4
+163,LAB1,Labor Markets and Institutional Environments,1
+84,LAB1,Labor Markets and Institutional Environments,2
+109,LAB1,Labor Markets and Institutional Environments,3
+207,LAB1,Labor Markets and Institutional Environments,4
+135,OSCM1,Sourcing and Supply Networks,1
+214,OSCM1,Sourcing and Supply Networks,2
+198,OSCM1,Sourcing and Supply Networks,3
+16,OSCM1,Sourcing and Supply Networks,4
+51,SUS1,Climate Legitimacy and Adaptation,1
+142,SUS1,Climate Legitimacy and Adaptation,2
+187,SUS1,Climate Legitimacy and Adaptation,3
+196,SUS1,Climate Legitimacy and Adaptation,4
+81,PP1,Industrial Upgrading,1
+174,PP1,Industrial Upgrading,2
+215,PP1,Industrial Upgrading,3
+137,GIS2,"Policy, Infrastructure, and Industrial Capability",1
+123,GIS2,"Policy, Infrastructure, and Industrial Capability",2
+203,GIS2,"Policy, Infrastructure, and Industrial Capability",3
+58,GIS2,"Policy, Infrastructure, and Industrial Capability",4
+37,I&E2,AI Risk and Governance,1
+118,I&E2,AI Risk and Governance,2
+53,I&E2,AI Risk and Governance,3
+121,I&E2,AI Risk and Governance,4
+59,LAB2,AI and Professional Work,1
+129,LAB2,AI and Professional Work,2
+165,LAB2,AI and Professional Work,3
+156,LAB2,AI and Professional Work,4
+105,OSCM2,Sustainable Operations,1
+134,OSCM2,Sustainable Operations,2
+145,OSCM2,Sustainable Operations,3
+190,OSCM2,Sustainable Operations,4
+48,SUS2,Low Carbon Mobility,1
+49,SUS2,Low Carbon Mobility,2
+140,SUS2,Low Carbon Mobility,3
+185,SUS2,Low Carbon Mobility,4
+86,HC1,Pharmaceutical Markets and Drug Supply Chains,1
+45,HC1,Pharmaceutical Markets and Drug Supply Chains,2
+96,HC1,Pharmaceutical Markets and Drug Supply Chains,3
+41,HC1,Pharmaceutical Markets and Drug Supply Chains,4
+12,PP2,Industrial Statecraft,1
+5,PP2,Industrial Statecraft,2
+46,PP2,Industrial Statecraft,3
+180,XTrack1,Semiconductor Sovereignty and Supply Chain Resilience,1
+205,XTrack1,Semiconductor Sovereignty and Supply Chain Resilience,2
+79,XTrack1,Semiconductor Sovereignty and Supply Chain Resilience,3
+110,XTrack1,Semiconductor Sovereignty and Supply Chain Resilience,4
+57,I&E3,Digital Platforms and Institutional Change,1
+132,I&E3,Digital Platforms and Institutional Change,2
+143,I&E3,Digital Platforms and Institutional Change,3
+192,I&E3,Digital Platforms and Institutional Change,4
+114,LAB3,"The Past, Present, and Future of HRM Research: Theoretical and Methodological Developments",1
+92,OSCM3,AI in Operations,1
+101,OSCM3,AI in Operations,2
+201,OSCM3,AI in Operations,3
+150,OSCM3,AI in Operations,4
+91,SUS3,Assessing Green Industrial Policy Design and Outcomes,1
+91,SUS3,Assessing Green Industrial Policy Design and Outcomes,2
+91,SUS3,Assessing Green Industrial Policy Design and Outcomes,3
+91,SUS3,Assessing Green Industrial Policy Design and Outcomes,4
+26,PP3,Trade and Geopolitical Risk,1
+70,PP3,Trade and Geopolitical Risk,2
+176,PP3,Trade and Geopolitical Risk,3
+153,GIS3,Industry Adaptation and Persistence,1
+88,GIS3,Industry Adaptation and Persistence,2
+162,GIS3,Industry Adaptation and Persistence,3
+11,I&E4,Founders and Entrepreneurial Identity,1
+36,I&E4,Founders and Entrepreneurial Identity,2
+164,I&E4,Founders and Entrepreneurial Identity,3
+115,XTrack2,"Conducting Field Research with Organizations: Opportunities, Challenges, and Best Practices",1
+219,OSCM4,Supply Network Visibility,1
+213,OSCM4,Supply Network Visibility,2
+166,OSCM4,Supply Network Visibility,3
+7,SUS4,Circular Economy and Firm Strategy,1
+158,SUS4,Circular Economy and Firm Strategy,2
+160,SUS4,Circular Economy and Firm Strategy,3
+19,HC2,Healthcare Operations,1
+93,HC2,Healthcare Operations,2
+157,HC2,Healthcare Operations,3
+102,PP4,Competition in Strategic Industries,1
+100,PP4,Competition in Strategic Industries,2
+193,PP4,Competition in Strategic Industries,3
+99,GIS4,Rules and Governance in Digital Markets,1
+189,GIS4,Rules and Governance in Digital Markets,2
+179,GIS4,Rules and Governance in Digital Markets,3
+151,I&E5,Innovation Search and Diffusion,1
+171,I&E5,Innovation Search and Diffusion,2
+211,I&E5,Innovation Search and Diffusion,3
+152,I&E5,Innovation Search and Diffusion,4
+61,LAB4,"Uneven Ground: How Context Shapes Who Builds, Who Stays, and Who Thrives",1
+61,LAB4,"Uneven Ground: How Context Shapes Who Builds, Who Stays, and Who Thrives",2
+61,LAB4,"Uneven Ground: How Context Shapes Who Builds, Who Stays, and Who Thrives",3
+61,LAB4,"Uneven Ground: How Context Shapes Who Builds, Who Stays, and Who Thrives",4
+209,SUS5,Sustainable Innovation and Digital Transformations,1
+30,SUS5,Sustainable Innovation and Digital Transformations,2
+217,SUS5,Sustainable Innovation and Digital Transformations,3
+34,SUS5,Sustainable Innovation and Digital Transformations,4
+212,OSCM5,"Supply Chain Discovery - Emergence, Evolution and Growth",1
+10,PP5,Industrial Transformation and Green Transition,1
+133,PP5,Industrial Transformation and Green Transition,2
+175,PP5,Industrial Transformation and Green Transition,3
+216,PP5,Industrial Transformation and Green Transition,4
+24,XTrack3,Commercial Space and Market Formation,1
+107,XTrack3,Commercial Space and Market Formation,2
+146,XTrack3,Commercial Space and Market Formation,3
+117,XTrack3,Commercial Space and Market Formation,4
+75,GIS5,Firm Capabilities and Strategic Renewal,1
+182,GIS5,Firm Capabilities and Strategic Renewal,2
+177,GIS5,Firm Capabilities and Strategic Renewal,3
+112,GIS5,Firm Capabilities and Strategic Renewal,4
+62,I&E6,"Navigating Uncertainty: IP, Commercialization, and AI-Driven Changes in Biotech",1
+62,I&E6,"Navigating Uncertainty: IP, Commercialization, and AI-Driven Changes in Biotech",2
+62,I&E6,"Navigating Uncertainty: IP, Commercialization, and AI-Driven Changes in Biotech",3
+71,LAB5,Careers and Employee Mobility,1
+149,LAB5,Careers and Employee Mobility,2
+78,LAB5,Careers and Employee Mobility,3
+65,LAB5,Careers and Employee Mobility,4
+202,XTrack4,"Autonomy Without Abdication: Ethics, Control, and Responsibility in Agentic AI",1
+169,SUS6,Sustainable Resources and Investment,1
+64,SUS6,Sustainable Resources and Investment,2
+139,SUS6,Sustainable Resources and Investment,3
+206,HC3,"Politics, Institutions, and Strategy in Health Markets",1
+44,HC3,"Politics, Institutions, and Strategy in Health Markets",2
+220,HC3,"Politics, Institutions, and Strategy in Health Markets",3
+54,GIS6,"Digital Transformation, Data Governance and Policy",1
+111,GIS6,"Digital Transformation, Data Governance and Policy",2
+72,GIS6,"Digital Transformation, Data Governance and Policy",3
+173,GIS6,"Digital Transformation, Data Governance and Policy",4
+94,I&E7,Industry Change and Strategic Adaptation,1
+200,I&E7,Industry Change and Strategic Adaptation,2
+38,I&E7,Industry Change and Strategic Adaptation,3
+195,I&E7,Industry Change and Strategic Adaptation,4
+87,OSCM6,Food and Resource Supply Chains,1
+218,OSCM6,Food and Resource Supply Chains,2
+136,OSCM6,Food and Resource Supply Chains,3
+127,OSCM6,Food and Resource Supply Chains,4
+9,LAB6,Human Capital and Workplace Performance,1
+14,LAB6,Human Capital and Workplace Performance,2
+161,LAB6,Human Capital and Workplace Performance,3
+63,LAB6,Human Capital and Workplace Performance,4
+125,SUS7,Industrial Decarbonisation,1
+147,SUS7,Industrial Decarbonisation,2
+194,SUS7,Industrial Decarbonisation,3
+27,XTrack5,Alternative Proteins and Category Emergence,1
+52,XTrack5,Alternative Proteins and Category Emergence,2
+47,XTrack5,Alternative Proteins and Category Emergence,3

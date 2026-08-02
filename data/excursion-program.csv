@@ -1,18 +1,5 @@
+excursion-program_Oxford
 excursion_id,time_range,activity,org_panel_title,speaker_name,speaker_role
-EX1,8:00-8:30,Coffee,,,
-EX1,8:30-8:35,Welcome and introduction,,,
-EX1,8:35-9:00,CSIS,,Philip Luck,"Director, Economics Program and Scholl Chair in International Business"
-EX1,9:00-9:25,SCSP,SCSP Tech Scorecard: A Framework for Comparative Analysis,Nyah Stewart,"Director, Technology Leadership"
-EX1,9:00-9:25,SCSP,SCSP Tech Scorecard: A Framework for Comparative Analysis,Caroline Armstrong,"Consultant, Technology Leadership"
-EX1,9:25-9:50,McKinsey Global Institute,McKinsey Global Institute: Geoeconomics forces for business leaders,Rebecca J. Anderson,"Senior Fellow, McKinsey Global Institute"
-EX1,9:50-10:10,Coffee break,,,
-EX1,10:10-10:35,MITRE,MITRE's Role in the National R&D Ecosystem: Connections to the Industry Studies Community,Roz Engel,"Chief Economist, MITRE Public Sector"
-EX1,10:10-10:35,MITRE,MITRE's Role in the National R&D Ecosystem: Connections to the Industry Studies Community,Sanith Wijesinghe,"Chief Engineer, MITRE Public Sector"
-EX1,10:10-10:35,MITRE,MITRE's Role in the National R&D Ecosystem: Connections to the Industry Studies Community,Dan Brown,Chief Scientist for Economic Analysis
-EX1,10:35-11:00,Niskanen Center,,R.J. Lyman,"President, Niskanen"
-EX1,10:35-11:00,Niskanen Center,,Liza Reed,"Director, Climate & Energy"
-EX1,10:35-11:00,Niskanen Center,,Alex Mechanick,"Senior Policy Analyst, State Capacity"
-EX1,11:00-11:25,CSPO,A Quadruple Helix? Adding Society to the University-Industry-Government Mix,Arthur Daemmrich,"Director, ASU Consortium for Science, Policy & Outcomes"
-EX1,11:00-11:25,CSPO,A Quadruple Helix? Adding Society to the University-Industry-Government Mix,Mahmud Farooque,"Associate Director, ASU Consortium for Science, Policy & Outcomes"
-EX1,11:25-11:30,Wrap up,,,
-EX1,11:30-11:50,Coffee and mingle,,,
+EX1,7:45am-12:00pm,Aston Martin Aramco F1 Technology Campus,"Silverstone, Towcester. An exclusive behind-the-scenes visit to Aston Martin Aramco F1 Team’s state-of-the-art Technology Campus at Silverstone. The facility brings together design, engineering, manufacturing, aerodynamics, race support and commercial operations within one of the most advanced environments in world motorsport. Participants will gain a rare insight into how a Formula One car is conceived, designed, tested, manufactured, and continuously improved.",,
+EX2,8:00am-12:00pm,HR Wallingford,"Wallingford, Oxford. A behind-the-scenes visit to one of the world’s leading centres for water, environmental, and climate resilience research. Participants will tour HR Wallingford’s unique research facilities, which combine large-scale physical modelling with advanced digital simulation to tackle complex challenges in flood risk, coastal protection, offshore energy and critical infrastructure.",,
+EX3,10:00am-12:00pm,"Walking Tour of Oxford: University, City, and Place","Depart Radcliffe Camera, 10:00am. Drop off at Saïd Business School, 12:00pm. A guided walking tour through Oxford’s historic city centre, introducing participants to the colleges, libraries, streets, and civic spaces that have shaped the University and city. The tour connects Oxford’s academic traditions with wider themes of knowledge, institutions, science, and place.",,
