@@ -76,9 +76,9 @@ panels_raw <- read_csv(
   mutate(
     date_parsed = lubridate::mdy(date),
     day_name = case_when(
-      date_parsed == as.Date("2026-06-03") ~ "Wednesday",
-      date_parsed == as.Date("2026-06-04") ~ "Thursday",
-      date_parsed == as.Date("2026-06-05") ~ "Friday",
+      date_parsed == as.Date("2026-09-03") ~ "Thursday",
+      date_parsed == as.Date("2026-09-04") ~ "Friday",
+      date_parsed == as.Date("2026-09-05") ~ "Saturday",
       TRUE ~ format(date_parsed, "%A")
     ),
     start_dt = as.POSIXct(
