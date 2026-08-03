@@ -1,191 +1,102 @@
-[
-  {
-    "group": "board",
-    "sort_order": 1,
-    "name": "John Gray",
-    "role": "President",
-    "affiliation": "The Ohio State University"
-  },
-  {
-    "group": "board",
-    "sort_order": 2,
-    "name": "Edward Anderson",
-    "role": "Vice President/President-elect",
-    "affiliation": "University of Texas"
-  },
-  {
-    "group": "board",
-    "sort_order": 3,
-    "name": "Tonya Boone",
-    "role": "Past President",
-    "affiliation": "College of William and Mary"
-  },
-  {
-    "group": "board",
-    "sort_order": 4,
-    "name": "John Paul MacDuffie",
-    "role": "Chief Fiscal Officer",
-    "affiliation": "University of Pennsylvania"
-  },
-  {
-    "group": "board",
-    "sort_order": 5,
-    "name": "Jeff Shockley",
-    "role": "Treasurer",
-    "affiliation": "Virginia Commonwealth University"
-  },
-  {
-    "group": "board",
-    "sort_order": 6,
-    "name": "Jeff Furman",
-    "role": "Early Career Development Committee",
-    "affiliation": "Boston University"
-  },
-  {
-    "group": "board",
-    "sort_order": 7,
-    "name": "Raja Roy",
-    "role": "Awards",
-    "affiliation": "New Jersey Institute of Technology"
-  },
-  {
-    "group": "board",
-    "sort_order": 8,
-    "name": "Andrew Reamer",
-    "role": "Industrial Policy",
-    "affiliation": "George Washington University"
-  },
-  {
-    "group": "board",
-    "sort_order": 9,
-    "name": "Benn Lawson",
-    "role": "Non-U.S. Strategy and Programming",
-    "affiliation": "University of Oxford"
-  },
-  {
-    "group": "board",
-    "sort_order": 10,
-    "name": "Darcy K. Fudge Kamal",
-    "role": "Membership",
-    "affiliation": "California State University"
-  },
-  {
-    "group": "board",
-    "sort_order": 11,
-    "name": "Renae Sullivan",
-    "role": "Program Manager",
-    "affiliation": "Industry Studies Association"
-  },
-  {
-    "group": "iscc",
-    "sort_order": 1,
-    "name": "Benn Lawson",
-    "role": "2026 International Conference Chair",
-    "affiliation": "University of Oxford"
-  },
-  {
-    "group": "iscc",
-    "sort_order": 2,
-    "name": "Daniel Armanios",
-    "role": "Local Organising Committee member",
-    "affiliation": "University of Oxford"
-  },
-  {
-    "group": "iscc",
-    "sort_order": 3,
-    "name": "Federica De Stefano",
-    "role": "Local Organising Committee member",
-    "affiliation": "University of Oxford"
-  },
-  {
-    "group": "iscc",
-    "sort_order": 4,
-    "name": "Matthew Amengual",
-    "role": "Local Organising Committee member",
-    "affiliation": "University of Oxford"
-  },
-  {
-    "group": "iscc",
-    "sort_order": 5,
-    "name": "Renae Sullivan",
-    "role": "Program Manager",
-    "affiliation": "Industry Studies Association"
-  },
-  {
-    "group": "iscc",
-    "sort_order": 6,
-    "name": "Edward Anderson",
-    "role": "President",
-    "affiliation": "University of Texas at Austin"
-  },
-  {
-    "group": "iscc",
-    "sort_order": 7,
-    "name": "John Gray",
-    "role": "Past President",
-    "affiliation": "The Ohio State University"
-  },
-  {
-    "group": "iscc",
-    "sort_order": 8,
-    "name": "John Paul Helveston",
-    "role": "Conference Chair 2026",
-    "affiliation": "George Washington University"
-  },
-  {
-    "group": "stream_chairs",
-    "sort_order": 1,
-    "name": "Angela Garcia Calvo",
-    "role": "Public Policy & Global Competitiveness",
-    "affiliation": "University of Reading"
-  },
-  {
-    "group": "stream_chairs",
-    "sort_order": 2,
-    "name": "Federica De Stefano",
-    "role": "Labor Markets, Organizations, and the Future of Work",
-    "affiliation": "University of Oxford"
-  },
-  {
-    "group": "stream_chairs",
-    "sort_order": 3,
-    "name": "Laura Dupin",
-    "role": "Innovation, Entrepreneurship, and AI-Driven Transformation",
-    "affiliation": "University of Amsterdam Business School"
-  },
-  {
-    "group": "stream_chairs",
-    "sort_order": 4,
-    "name": "Guendalina Anzolin",
-    "role": "General Industry Studies",
-    "affiliation": "University of Modena"
-  },
-  {
-    "group": "stream_chairs",
-    "sort_order": 5,
-    "name": "Keno Haverkamp",
-    "role": "General Industry Studies",
-    "affiliation": "University of Cambridge"
-  },
-  {
-    "group": "stream_chairs",
-    "sort_order": 6,
-    "name": "David Reiner",
-    "role": "Sustainable Innovation, Energy, and Mobility",
-    "affiliation": "University of Cambridge"
-  },
-  {
-    "group": "stream_chairs",
-    "sort_order": 7,
-    "name": "Oliver von Dzengelevski",
-    "role": "Operations, Supply Chain, and AI-Enhanced Industry 4.0",
-    "affiliation": "ETH Zurich"
-  },
-  {
-    "group": "stream_chairs",
-    "sort_order": 8,
-    "name": "Rossella Salandra",
-    "role": "Healthcare Systems, Biotechnology, and Pharmaceuticals",
-    "affiliation": "University of Bath"
-  }
-]
+{
+  "board": [
+    {
+      "name": "John Gray",
+      "role": "President",
+      "affiliation": "The Ohio State University"
+    },
+    {
+      "name": "Edward Anderson",
+      "role": "Vice President/President-elect",
+      "affiliation": "University of Texas"
+    },
+    {
+      "name": "Tonya Boone",
+      "role": "Past President",
+      "affiliation": "College of William and Mary"
+    },
+    {
+      "name": "John Paul MacDuffie",
+      "role": "Chief Fiscal Officer",
+      "affiliation": "University of Pennsylvania"
+    },
+    {
+      "name": "Jeff Shockley",
+      "role": "Treasurer",
+      "affiliation": "Virginia Commonwealth University"
+    },
+    {
+      "name": "Jeff Furman",
+      "role": "Early Career Development Committee",
+      "affiliation": "Boston University"
+    },
+    {
+      "name": "Raja Roy",
+      "role": "Awards",
+      "affiliation": "New Jersey Institute of Technology"
+    },
+    {
+      "name": "Andrew Reamer",
+      "role": "Industrial Policy",
+      "affiliation": "George Washington University"
+    },
+    {
+      "name": "Benn Lawson",
+      "role": "Non-U.S. Strategy and Programming",
+      "affiliation": "University of Oxford"
+    },
+    {
+      "name": "Darcy K. Fudge Kamal",
+      "role": "Membership",
+      "affiliation": "California State University"
+    },
+    {
+      "name": "Renae Sullivan",
+      "role": "Program Manager",
+      "affiliation": "Industry Studies Association"
+    }
+  ],
+  "iscc": [],
+  "stream_chairs": [
+    {
+      "name": "Angela Garcia Calvo",
+      "role": "Public Policy & Global Competitiveness",
+      "affiliation": "University of Reading"
+    },
+    {
+      "name": "Federica De Stefano",
+      "role": "Labor Markets, Organizations, and the Future of Work",
+      "affiliation": "University of Oxford"
+    },
+    {
+      "name": "Laura Dupin",
+      "role": "Innovation, Entrepreneurship, and AI-Driven Transformation",
+      "affiliation": "University of Amsterdam Business School"
+    },
+    {
+      "name": "Guendalina Anzolin",
+      "role": "General Industry Studies",
+      "affiliation": "University of Modena"
+    },
+    {
+      "name": "Keno Haverkamp",
+      "role": "General Industry Studies",
+      "affiliation": "University of Cambridge"
+    },
+    {
+      "name": "David Reiner",
+      "role": "Sustainable Innovation, Energy, and Mobility",
+      "affiliation": "University of Cambridge"
+    },
+    {
+      "name": "Oliver von Dzengelevski",
+      "role": "Operations, Supply Chain, and AI-Enhanced Industry 4.0",
+      "affiliation": "ETH Zurich"
+    },
+    {
+      "name": "Rossella Salandra",
+      "role": "Healthcare Systems, Biotechnology, and Pharmaceuticals",
+      "affiliation": "University of Bath"
+    }
+  ]
+}
