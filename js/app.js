@@ -526,8 +526,13 @@ function renderPaper(paper) {
 function renderPanelContent(panel) {
     if (!panel) return '';
 
+    // Only plenaries and special sessions link speaker names to biography cards.
+    // Concurrent discussion panels use the same layout, with plain text names.
+    const allowSpeakerLinks = panel.type === 'plenary' || panel.type === 'special_session';
+    const renderPerson = value => allowSpeakerLinks ? renderPanelistLine(value) : escapeHtml(value);
+
     const mod = panel.moderator && panel.moderator.trim() && panel.moderator.trim() !== 'TBD'
-        ? `<div class="panel-moderator"><strong>Moderator:</strong> ${renderPanelistLine(panel.moderator.trim())}</div>`
+        ? `<div class="panel-moderator"><strong>Moderator:</strong> ${renderPerson(panel.moderator.trim())}</div>`
         : '';
 
     let panelists = '';
@@ -535,7 +540,7 @@ function renderPanelContent(panel) {
         const items = panel.authors.split(/[;\n]+/).map(p => p.trim()).filter(p => p.length > 0);
         const label = panel.type === 'plenary' ? 'Speakers' : panel.type === 'panel' ? 'Panelists' : 'Special Session Speakers';
         panelists = `<div class="panel-panelists"><strong>${label}:</strong><ul>
-            ${items.map(p => `<li>${renderPanelistLine(p)}</li>`).join('')}
+            ${items.map(p => `<li>${renderPerson(p)}</li>`).join('')}
         </ul></div>`;
     }
 
@@ -870,7 +875,7 @@ const lightboxImg     = document.getElementById('lightbox-img');
 
 // Calendar helpers
 const CONFERENCE_TIME_ZONE = 'Europe/London';
-const CONFERENCE_LOCATION = 'University of Oxford, Oxford, UK';
+const CONFERENCE_LOCATION = 'Saïd Business School, Oxford University, UK';
 
 function toggleCalMenu(btn, key) {
     const menu = btn.nextElementSibling;
@@ -950,11 +955,27 @@ function buildCalDescription(s) {
     const lines = [];
     if (s.session_chair) lines.push('Session Chair: ' + s.session_chair);
     if (s.papers && s.papers.length > 0 && s.type !== 'event') {
-        const paperList = s.papers
-            .filter(p => p.title)
-            .map(p => '- ' + p.title + (p.authors ? ' (' + p.authors.replace(/\*/g, '') + ')' : ''))
-            .join('\n');
-        if (paperList) lines.push('\nPapers:\n' + paperList);
+        const first = s.papers[0];
+        const panelFormat = ['panel', 'special_session', 'plenary'].includes(s.type);
+        if (panelFormat) {
+            if (first.moderator) lines.push('Moderator: ' + first.moderator);
+            if (first.authors) {
+                const label = s.type === 'plenary' ? 'Speakers' : 'Panelists';
+                const people = first.authors
+                    .split(/[;\n]+/)
+                    .map(value => value.trim())
+                    .filter(Boolean)
+                    .map(value => '- ' + value)
+                    .join('\n');
+                if (people) lines.push('\n' + label + ':\n' + people);
+            }
+        } else {
+            const paperList = s.papers
+                .filter(p => p.title)
+                .map(p => '- ' + p.title + (p.authors ? ' (' + p.authors.replace(/\*/g, '') + ')' : ''))
+                .join('\n');
+            if (paperList) lines.push('\nPapers:\n' + paperList);
+        }
     }
     return lines.join('\n');
 }
