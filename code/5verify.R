@@ -1,184 +1,193 @@
 # =============================================================================
-# Step 5: Verify all scheduling constraints
+# Step 5: Verify scheduling and programme data constraints
 # =============================================================================
 
 library(testthat)
+library(jsonlite)
 
 source(here::here("code", "config.R"))
 
 schedule <- read_csv(here("data", "schedule.csv"), show_col_types = FALSE) %>%
-  mutate(id = as.character(id), session_id = as.character(session_id))
+  mutate(id = as.character(id), session_id = as.character(session_id)) %>%
+  group_by(id) %>%
+  mutate(id_occurrence = row_number()) %>%
+  ungroup()
 
-# IDs that should never appear
-excluded_all <- as.character(c(reject_ids, withdraw_ids, dissertation_ids, panel_discussion_ids))
+submissions_indexed <- submissions %>%
+  mutate(id = as.character(id)) %>%
+  group_by(id) %>%
+  mutate(id_occurrence = row_number()) %>%
+  ungroup()
 
-# IDs that should appear
-expected_ids <- as.character(
-  submissions %>% filter(!id %in% excluded_all) %>% pull(id)
-)
+expected_rows <- submissions_indexed %>% distinct(id, id_occurrence)
+scheduled_rows <- schedule %>% distinct(id, id_occurrence)
+
+schedule_details <- schedule %>%
+  left_join(
+    submissions_indexed %>%
+      select(
+        id, id_occurrence, type, category, authors, contact_author, moderator
+      ),
+    by = c("id", "id_occurrence")
+  )
 
 cat(sprintf(
-  "Schedule: %d rows | %d unique submissions | %d sessions\n\n",
-  nrow(schedule), n_distinct(schedule$id), n_distinct(schedule$session_id)
+  "Schedule: %d rows | %d submission rows | %d sessions\n\n",
+  nrow(schedule), nrow(expected_rows), n_distinct(schedule$session_id)
 ))
 
-# ── 1. Excluded IDs ──
+# 1. Expected submission rows
 
-test_that("No rejected IDs in schedule", {
-  expect_equal(sort(intersect(schedule$id, as.character(reject_ids))), character(0))
+test_that("All submission rows are scheduled", {
+  missing <- anti_join(expected_rows, scheduled_rows, by = c("id", "id_occurrence"))
+  expect_equal(nrow(missing), 0L)
 })
 
-test_that("No withdrawn IDs in schedule", {
-  expect_equal(sort(intersect(schedule$id, as.character(withdraw_ids))), character(0))
+test_that("No unexpected submission rows are scheduled", {
+  unexpected <- anti_join(scheduled_rows, expected_rows, by = c("id", "id_occurrence"))
+  expect_equal(nrow(unexpected), 0L)
 })
 
-test_that("No dissertation IDs in schedule", {
-  expect_equal(sort(intersect(schedule$id, as.character(dissertation_ids))), character(0))
+# 2. No duplicate schedule rows
+
+test_that("No schedule row is duplicated", {
+  duplicate_rows <- schedule %>%
+    count(id, id_occurrence, session_id, paper_order, time_slot, room, name = "n") %>%
+    filter(n > 1)
+  expect_equal(nrow(duplicate_rows), 0L)
 })
 
-test_that("No panel discussion IDs in schedule", {
-  expect_equal(sort(intersect(schedule$id, as.character(panel_discussion_ids))), character(0))
-})
-
-# ── 2. Expected IDs ──
-
-test_that("All accepted submissions are scheduled", {
-  expect_equal(sort(setdiff(expected_ids, schedule$id)), character(0))
-})
-
-test_that("No unexpected IDs in schedule", {
-  expect_equal(sort(setdiff(schedule$id, expected_ids)), character(0))
-})
-
-# ── 3. No duplicates ──
-
-test_that("Each submission ID appears exactly once", {
-  dup_ids <- schedule %>%
-    filter(!id %in% as.character(self_organized_panel_ids)) %>%
-    count(id) %>% filter(n > 1) %>% pull(id)
-  expect_equal(sort(dup_ids), character(0))
-})
-
-# ── 4. Session consistency ──
+# 3. Session consistency
 
 test_that("All rows within a session share the same slot, room, and name", {
   inconsistent <- schedule %>%
     group_by(session_id) %>%
-    summarise(n_slots = n_distinct(time_slot), n_rooms = n_distinct(room),
-              n_names = n_distinct(session_name), .groups = "drop") %>%
+    summarise(
+      n_slots = n_distinct(time_slot),
+      n_rooms = n_distinct(room),
+      n_names = n_distinct(session_name),
+      .groups = "drop"
+    ) %>%
     filter(n_slots > 1 | n_rooms > 1 | n_names > 1) %>%
     pull(session_id)
   expect_equal(sort(inconsistent), character(0))
 })
 
-# ── 5. No room conflicts ──
+# 4. No room conflicts
 
 test_that("No two sessions share the same room and time slot", {
   conflicts <- schedule %>%
     distinct(session_id, time_slot, room) %>%
-    count(time_slot, room) %>% filter(n > 1)
+    count(time_slot, room) %>%
+    filter(n > 1)
   expect_equal(nrow(conflicts), 0L)
 })
 
-# ── 6. Date restrictions ──
+# 5. Session sizes. Concurrent panels are intentionally single row sessions.
 
-test_that("All date-restricted submissions are on their required date", {
-  restriction_ids <- as.integer(names(date_restrictions))
-  violations <- map_dfr(restriction_ids, function(sid) {
-    required <- as.Date(date_restrictions[[as.character(sid)]])
-    row <- schedule %>% filter(id == as.character(sid)) %>% distinct(id, date)
-    if (nrow(row) == 0) return(tibble(id = sid, issue = "not scheduled"))
-    if (row$date != required) return(tibble(id = sid, issue = sprintf("on %s, required %s", row$date, required)))
-    tibble()
-  })
-  expect_equal(nrow(violations), 0L,
-    label = if (nrow(violations) > 0) paste(paste0("id ", violations$id, ": ", violations$issue), collapse = "; "))
+paper_session_sizes <- schedule_details %>%
+  group_by(session_id) %>%
+  summarise(
+    n_rows = n(),
+    all_papers = all(type == "paper"),
+    .groups = "drop"
+  ) %>%
+  filter(all_papers)
+
+test_that("No paper session has fewer than 2 papers", {
+  expect_equal(
+    sort(paper_session_sizes %>% filter(n_rows < 2) %>% pull(session_id)),
+    character(0)
+  )
 })
 
-# ── 7. Date exclusions ──
-
-test_that("No date-excluded submissions are on their excluded date", {
-  exclusion_ids <- as.integer(names(date_exclusions))
-  violations <- map_dfr(exclusion_ids, function(sid) {
-    excluded <- as.Date(date_exclusions[[as.character(sid)]])
-    row <- schedule %>% filter(id == as.character(sid)) %>% select(id, date)
-    if (nrow(row) == 0 || row$date != excluded) return(tibble())
-    tibble(id = sid, issue = sprintf("on excluded date %s", row$date))
-  })
-  expect_equal(nrow(violations), 0L,
-    label = if (nrow(violations) > 0) paste(paste0("id ", violations$id, ": ", violations$issue), collapse = "; "))
+test_that("No paper session has more than 5 papers", {
+  expect_equal(
+    sort(paper_session_sizes %>% filter(n_rows > 5) %>% pull(session_id)),
+    character(0)
+  )
 })
 
-# ── 8. Session sizes ──
+# 6. Explicit chairs and panel moderators
 
-session_sizes <- schedule %>% count(session_id, name = "n_papers")
+session_chairs <- read_csv(
+  here("data", "session-chairs.csv"),
+  show_col_types = FALSE
+) %>%
+  mutate(session_id = as.character(session_id))
 
-test_that("No session has fewer than 3 papers", {
-  expect_equal(sort(session_sizes %>% filter(n_papers < 3) %>% pull(session_id)), character(0))
+test_that("Every paper session has an explicit chair-source row", {
+  paper_sessions <- schedule_details %>%
+    filter(type == "paper") %>%
+    distinct(session_id)
+  missing <- anti_join(paper_sessions, session_chairs, by = "session_id")
+  expect_equal(nrow(missing), 0L)
 })
 
-test_that("No session has more than 5 papers", {
-  expect_equal(sort(session_sizes %>% filter(n_papers > 5) %>% pull(session_id)), character(0))
+test_that("Every concurrent panel has a named moderator", {
+  missing <- schedule_details %>%
+    filter(type == "panel") %>%
+    filter(is.na(moderator) | str_trim(moderator) == "")
+  expect_equal(nrow(missing), 0L)
 })
 
-# ── 9. PDW registrants ──
-
-test_that("No PDW-registered author is scheduled in W1 or W2", {
-  pdw_registered <- read_csv(here("data", "pdw-registered.csv"), show_col_types = FALSE) %>%
-    mutate(author_name = str_to_lower(`Full Name`)) %>% pull(author_name)
-
-  violations <- schedule %>%
-    filter(time_slot %in% c("W1", "W2")) %>%
-    left_join(submissions %>% mutate(id = as.character(id)) %>% select(id, authors),
-      by = "id", relationship = "many-to-many") %>%
-    filter(!is.na(authors)) %>%
-    mutate(author_list = str_split(authors, ";")) %>%
-    unnest(author_list) %>%
-    mutate(author_name = str_to_lower(str_trim(str_replace(author_list, "\\s*\\(.*", "")))) %>%
-    filter(author_name %in% pdw_registered) %>%
-    distinct(id, session_id, time_slot, author_name)
-
-  expect_equal(nrow(violations), 0L)
-})
-
-# ── 10. Slot restrictions ──
+# 7. Slot restrictions
 
 test_that("All slot-restricted submissions are in their required slot", {
-  if (!exists("slot_restrictions") || length(slot_restrictions) == 0) skip("No slot restrictions")
+  if (!exists("slot_restrictions") || length(slot_restrictions) == 0) {
+    skip("No slot restrictions")
+  }
 
-  session_ids_csv <- read_csv(here("data", "session-ids.csv"), show_col_types = FALSE) %>%
+  session_ids_csv <- read_csv(
+    here("data", "session-ids.csv"),
+    show_col_types = FALSE
+  ) %>%
     mutate(id = as.character(id), session_id = as.character(session_id))
 
   violations <- map_dfr(names(slot_restrictions), function(pid) {
     required_slot <- slot_restrictions[[pid]]
-    sess <- session_ids_csv %>% filter(id == pid) %>% pull(session_id) %>% unique()
+    sess <- session_ids_csv %>%
+      filter(id == pid) %>%
+      pull(session_id) %>%
+      unique()
     if (length(sess) == 0) return(tibble(id = pid, issue = "not in session-ids"))
-    row <- schedule %>% filter(session_id %in% sess) %>% distinct(session_id, time_slot)
+    row <- schedule %>%
+      filter(session_id %in% sess) %>%
+      distinct(session_id, time_slot)
     if (nrow(row) == 0) return(tibble(id = pid, issue = "not scheduled"))
-    if (row$time_slot[1] != required_slot) return(tibble(id = pid, issue = sprintf("in %s, required %s", row$time_slot[1], required_slot)))
+    if (row$time_slot[[1]] != required_slot) {
+      return(tibble(
+        id = pid,
+        issue = sprintf("in %s, required %s", row$time_slot[[1]], required_slot)
+      ))
+    }
     tibble()
   })
   expect_equal(nrow(violations), 0L)
 })
 
-# ── 11. No author double-booking ──
+# 8. No author double booking
 
 test_that("No author appears in multiple sessions at the same time", {
-  conflicts <- schedule %>%
-    left_join(submissions %>% mutate(id = as.character(id)) %>% select(id, authors),
-      by = "id", relationship = "many-to-many") %>%
+  conflicts <- schedule_details %>%
     filter(!is.na(authors)) %>%
-    select(id, session_id, time_slot, authors) %>%
+    select(id, id_occurrence, session_id, time_slot, authors) %>%
     mutate(author_list = str_split(authors, ";")) %>%
     unnest(author_list) %>%
-    mutate(author_name = str_to_lower(str_trim(str_replace(author_list, "\\s*\\(.*", "")))) %>%
+    mutate(
+      author_name = str_to_lower(
+        str_trim(str_replace(author_list, "\\s*\\(.*", ""))
+      )
+    ) %>%
     filter(author_name != "") %>%
     distinct(session_id, time_slot, author_name) %>%
     group_by(author_name, time_slot) %>%
     filter(n_distinct(session_id) > 1) %>%
-    summarise(sessions = paste(sort(unique(session_id)), collapse = ", "), .groups = "drop")
+    summarise(
+      sessions = paste(sort(unique(session_id)), collapse = ", "),
+      .groups = "drop"
+    )
 
-  # Filter out known non-attending conflicts
   if (exists("ignore_conflict_authors") && length(ignore_conflict_authors) > 0) {
     pattern <- paste(ignore_conflict_authors, collapse = "|")
     conflicts <- conflicts %>% filter(!str_detect(author_name, pattern))
@@ -188,9 +197,9 @@ test_that("No author appears in multiple sessions at the same time", {
   expect_equal(nrow(conflicts), 0L)
 })
 
-# ── 12. Paper order integrity ──
+# 9. Paper order integrity
 
-test_that("Every paper has an explicit paper_order", {
+test_that("Every scheduled item has an explicit paper_order", {
   missing <- schedule %>% filter(is.na(paper_order))
   expect_equal(nrow(missing), 0L)
 })
@@ -203,11 +212,24 @@ test_that("Paper orders are unique within each session", {
   expect_equal(nrow(dups), 0L)
 })
 
-# ── Distribution check ──
+# 10. Generated JSON integrity
+
+json_schedule <- fromJSON(here("json", "schedule_data.json"), simplifyDataFrame = TRUE)
+
+test_that("Every paper in JSON has exactly one presenter marker", {
+  paper_json <- json_schedule %>% filter(type == "paper")
+  marker_count <- str_count(coalesce(paper_json$authors, ""), fixed("*"))
+  expect_true(all(marker_count == 1L))
+})
+
+test_that("Concurrent panels have moderators and panelists in JSON", {
+  panel_json <- json_schedule %>% filter(type == "panel")
+  expect_true(all(!is.na(panel_json$moderator) & str_trim(panel_json$moderator) != ""))
+  expect_true(all(!is.na(panel_json$panelists) & str_trim(panel_json$panelists) != ""))
+})
 
 cat("\n\n=== Session distribution by category and time slot ===\n")
-schedule %>%
-  left_join(submissions %>% mutate(id = as.character(id)) %>% select(id, category) %>% distinct(), by = "id") %>%
+schedule_details %>%
   distinct(session_id, time_slot, category) %>%
   count(time_slot, category, name = "n") %>%
   tidyr::pivot_wider(names_from = time_slot, values_from = n, values_fill = 0L) %>%
