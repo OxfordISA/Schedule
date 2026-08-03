@@ -1,173 +1,152 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ISA Oxford 2026 Conference Schedule</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <div id="lightbox-overlay" role="dialog" aria-modal="true" aria-label="Image preview">
-        <img id="lightbox-img" src="" alt="">
-    </div>
-    <header>
-        <img src="images/logo.png" alt="ISA Logo" class="logo">
-        <div class="header-text">
-            <h1>ISA Oxford 2026 Conference Schedule</h1>
-            <p>Industry Studies Association International Conference | September 3-5, 2026</p>
-        </div>
-        <div class="header-btns">
-            <a href="flipbook.html" class="header-btn header-btn-blue">Flipbook (PDF)</a>
-            <a href="schedule.pdf" download class="header-btn header-btn-gray">Download (PDF)</a>
-        </div>
-    </header>
-
-    <nav class="view-nav">
-        <button class="view-btn active" data-view="schedule">Schedule</button>
-        <button class="view-btn" data-view="speakers">Special Session Speakers</button>
-        <button class="view-btn" data-view="awards">Awards</button>
-        <button class="view-btn" data-view="map">Venue</button>
-        <button class="view-btn" data-view="sponsors">Sponsors</button>
-    </nav>
-
-    <div id="mapView" style="display:none; padding: 1.5rem; max-width: 1060px; margin: 0 auto;">
-        <div style="display:flex; gap:2rem; align-items:flex-start;">
-            <nav style="position:sticky; top:1rem; align-self:flex-start; flex-shrink:0; width:155px; background:#f8f8f8; border:1px solid #ddd; border-radius:6px; padding:0.9rem 1rem;">
-                <p style="margin:0 0 0.6rem; font-weight:700; font-size:0.78rem; text-transform:uppercase; letter-spacing:0.06em; color:#777;">On this page</p>
-                <ul style="margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:0.5rem;">
-                    <li><a href="#venue-map" style="color:#333; text-decoration:none; font-size:0.88rem;">Map</a></li>
-                    <li><a href="#venue-floors" style="color:#333; text-decoration:none; font-size:0.88rem;">Floor Plans</a></li>
-                    <li><a href="#venue-internet" style="color:#333; text-decoration:none; font-size:0.88rem;">Internet</a></li>
-                    <li><a href="#venue-it" style="color:#333; text-decoration:none; font-size:0.88rem;">IT Support</a></li>
-                </ul>
-            </nav>
-            <div style="flex:1; min-width:0;">
-                <h2 id="venue-map" style="margin-bottom: 1rem;">Map of the George Washington University</h2>
-                <div style="display:flex; align-items:flex-start; gap: 1.5rem;">
-                    <img src="images/map.png" style="flex:1; min-width:0; display:block;" alt="GWU Venue Map" data-lightbox>
-                    <div style="flex-shrink:0; width:160px; display:flex; flex-direction:column; align-items:center; gap:1rem; padding-top:0.5rem;">
-                        <img src="images/qr-map.png" style="width:140px;" alt="QR code for interactive map">
-                        <p style="margin:0; font-size:0.9rem; color:#555; text-align:center;">Scan for interactive map</p>
-                        <a href="https://www.google.com/maps/d/viewer?mid=1YxxEPfjWhI0q6cc99z3QuXxW8Ew4Xrc" target="_blank" rel="noopener" style="display:inline-block; padding:0.6rem 1.2rem; background:#17A2B8; color:#fff; border-radius:4px; text-decoration:none; font-size:1rem; text-align:center;">View Live Google Map</a>
-                    </div>
-                </div>
-                <h2 id="venue-floors" style="margin-top: 2rem; margin-bottom: 1rem;">Venue Floor Plans</h2>
-                <div style="display:flex; align-items:flex-start; gap: 1.5rem;">
-                    <div style="flex:1; min-width:0; display:flex; flex-direction:column; align-items:center; gap:0.5rem;">
-                        <img src="images/gh-seh-b1.png" style="width:100%; display:block;" alt="SEH B1 Floor Plan" data-lightbox>
-                        <p style="margin:0; font-size:0.9rem; color:#555; text-align:center; font-style:italic;">Wednesday, June 3<br>Classrooms on other floors will also be used for paper sessions</p>
-                    </div>
-                    <div style="flex:1; min-width:0; display:flex; flex-direction:column; align-items:center; gap:0.5rem;">
-                        <img src="images/gw-sc.png" style="width:100%; display:block;" alt="GW Student Center Floor Plan" data-lightbox>
-                        <p style="margin:0; font-size:0.9rem; color:#555; text-align:center; font-style:italic;">Thursday, June 4 &amp; Friday, June 5<br>All programming will be on the 3rd floor these days</p>
-                    </div>
-                </div>
-                <h2 id="venue-internet" style="margin-top: 2.5rem; margin-bottom: 0.25rem;">Connecting to the Internet</h2>
-                <p style="margin:0 0 1rem; color:#555; font-size:0.95rem;">All Conference Venues &mdash; Science &amp; Engineering Hall &middot; University Student Center (Marvin Center)</p>
-                <hr style="border:none; border-top:2px solid #333; margin-bottom:1.25rem;">
-                <h3 style="margin:0 0 0.4rem;">Option 1 &mdash; Guest WiFi (GWguest)</h3>
-                <p style="margin:0 0 0.75rem; color:#444;">For all conference attendees without a GW or eduroam account.</p>
-                <div style="background:#f5f5f5; border:1.5px solid #17A2B8; border-radius:6px; padding:0.85rem 1.25rem; margin-bottom:1.25rem;">
-                    <ol style="margin:0; padding-left:1.4rem; line-height:1.8;">
-                        <li>Open your device&rsquo;s <strong>WiFi settings</strong> and select <strong>GWguest</strong>.</li>
-                        <li>If prompted with a certificate warning for <code>cppm.it.gwu.edu</code>, tap <strong>Accept</strong> or <strong>Trust</strong>.</li>
-                        <li>Open a <strong>web browser</strong> &mdash; you will be redirected to the self-registration page.</li>
-                        <li>Enter your name and email address. Access is valid for <strong>72 hours</strong>.</li>
-                    </ol>
-                </div>
-                <h3 style="margin:0 0 0.4rem;">Option 2 &mdash; eduroam (Academic Institutions)</h3>
-                <p style="margin:0 0 0.75rem; color:#444;">If your home institution participates in eduroam, you can connect directly.</p>
-                <div style="background:#f5f5f5; border:1.5px solid #c8a000; border-radius:6px; padding:0.85rem 1.25rem; margin-bottom:1.5rem;">
-                    <ol style="margin:0; padding-left:1.4rem; line-height:1.8;">
-                        <li>Open your device&rsquo;s <strong>WiFi settings</strong> and select <strong>eduroam</strong>.</li>
-                        <li>Sign in using your <strong>home institution credentials</strong>.</li>
-                        <li>No additional registration is required.</li>
-                    </ol>
-                </div>
-                <hr id="venue-it" style="border:none; border-top:1px solid #ccc; margin-bottom:1rem;">
-                <h3 style="margin:0 0 0.75rem;">IT Support</h3>
-                <table style="border-collapse:collapse; font-size:0.95rem; line-height:2;">
-                    <tr><td style="padding-right:1.5rem; white-space:nowrap;"><strong>Help Desk</strong></td><td>202-994-4948 &nbsp;<span style="color:#777;">(24/7)</span></td></tr>
-                    <tr><td style="padding-right:1.5rem; white-space:nowrap;"><strong>Classroom / AV</strong></td><td>202-994-7900</td></tr>
-                    <tr><td style="padding-right:1.5rem; white-space:nowrap;"><strong>Email</strong></td><td><a href="mailto:ithelp@gwu.edu">ithelp@gwu.edu</a></td></tr>
-                    <tr><td style="padding-right:1.5rem; white-space:nowrap;"><strong>Online</strong></td><td><a href="https://go.gwu.edu/ithelp" target="_blank" rel="noopener">go.gwu.edu/ithelp</a></td></tr>
-                    <tr><td style="padding-right:1.5rem; white-space:nowrap;"><strong>Walk-in</strong></td><td>Academic Center, 801 22nd St NW, Room B101</td></tr>
-                </table>
-                <hr style="border:none; border-top:1px solid #ccc; margin-top:1rem;">
-            </div>
-        </div>
-    </div>
-
-    <div id="sponsorsView" style="display:none; padding: 2rem 1.5rem; max-width: 900px; margin: 0 auto; text-align: center;">
-        <h2 style="margin-bottom: 2rem;">Thank You to Our Sponsors</h2>
-        <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 2.5rem 3rem;">
-            <img src="images/sponsors/byu-marriot.png" style="height: 110px; object-fit: contain;" alt="BYU Marriott School of Business">
-            <img src="images/sponsors/cambridge.png" style="height: 110px; object-fit: contain;" alt="Cambridge">
-            <img src="images/sponsors/gwu.png" style="height: 110px; object-fit: contain;" alt="George Washington University">
-            <img src="images/sponsors/said-oxford.png" style="height: 110px; object-fit: contain;" alt="Said Business School, Oxford">
-            <img src="images/sponsors/vcu-business.jpg" style="height: 110px; object-fit: contain;" alt="VCU Business">
-            <img src="images/sponsors/wsb-madison.png" style="height: 110px; object-fit: contain;" alt="Wisconsin School of Business">
-        </div>
-        <div id="committeeContainer" style="margin-top: 3rem;"></div>
-    </div>
-
-    <div id="speakersView" class="speakers-view" style="display:none;">
-        <div class="speakers-grid" id="speakersGrid"></div>
-    </div>
-
-    <div id="awardsView" class="awards-view" style="display:none;">
-        <div id="awardsGrid"></div>
-    </div>
-
-    <div class="main-container" id="scheduleView">
-        <div class="sidebar-overlay" id="sidebarOverlay"></div>
-        <aside class="sidebar" id="sidebar">
-            <h2>Filters & Options</h2>
-            <div class="day-tabs">
-                <button class="day-tab active" data-day="">All Days</button>
-                <button class="day-tab" data-day="Thursday">Thu</button>
-                <button class="day-tab" data-day="Friday">Fri</button>
-                <button class="day-tab" data-day="Saturday">Sat</button>
-            </div>
-            <div class="control-item">
-                <label for="search">Search</label>
-                <input type="text" id="search" placeholder="Title, authors, abstract...">
-            </div>
-            <div class="control-item">
-                <label for="timeSlotFilter">Time Slot</label>
-                <select id="timeSlotFilter"><option value="">All Time Slots</option></select>
-            </div>
-            <div class="control-item">
-                <label for="trackFilter">Track</label>
-                <div class="track-select-wrapper">
-                    <select id="trackFilter"><option value="">All Tracks</option></select>
-                </div>
-            </div>
-            <div class="control-item">
-                <label for="typeFilter">Session Type</label>
-                <select id="typeFilter">
-                    <option value="">All Types</option>
-                    <option value="paper">Paper Sessions</option>
-                    <option value="special">Special Sessions</option>
-                    <option value="event">Social Events</option>
-                </select>
-            </div>
-            <div class="button-group">
-                <button class="expand-all" id="expandAll">Expand All Sessions</button>
-                <button class="expand-all" id="collapseAll" style="background: #dc3545; border-color: #dc3545;">Collapse All Sessions</button>
-                <button class="expand-all" id="resetFilters" style="background: #6c757d; border-color: #6c757d;">Reset All Filters</button>
-            </div>
-            <div class="stats">
-                <div class="stat">Sessions: <strong id="sessionCount">0</strong></div>
-                <div class="stat">Papers: <strong id="paperCount">0</strong></div>
-            </div>
-        </aside>
-        <main class="content">
-            <div id="schedule"><div class="loading">Loading schedule...</div></div>
-        </main>
-        <button class="mobile-filter-toggle" id="mobileFilterToggle">&#9776;</button>
-    </div>
-
-    <script src="js/app.js"></script>
-</body>
-</html>
+id,session_id,session_name,paper_order,time_slot,room,date,day,start_time,end_time,time_order
+66,GIS1,"Market Power, Competition, and Social Outcomes",1,TH01,Rhodes Trust,2026-09-03,Thursday,14:05:00,15:15:00,1
+31,GIS1,"Market Power, Competition, and Social Outcomes",2,TH01,Rhodes Trust,2026-09-03,Thursday,14:05:00,15:15:00,1
+97,GIS1,"Market Power, Competition, and Social Outcomes",3,TH01,Rhodes Trust,2026-09-03,Thursday,14:05:00,15:15:00,1
+178,GIS1,"Market Power, Competition, and Social Outcomes",4,TH01,Rhodes Trust,2026-09-03,Thursday,14:05:00,15:15:00,1
+29,I&E1,AI and Entrepreneurial Experimentation,1,TH01,Edmund Safra,2026-09-03,Thursday,14:05:00,15:15:00,1
+83,I&E1,AI and Entrepreneurial Experimentation,2,TH01,Edmund Safra,2026-09-03,Thursday,14:05:00,15:15:00,1
+33,I&E1,AI and Entrepreneurial Experimentation,3,TH01,Edmund Safra,2026-09-03,Thursday,14:05:00,15:15:00,1
+67,I&E1,AI and Entrepreneurial Experimentation,4,TH01,Edmund Safra,2026-09-03,Thursday,14:05:00,15:15:00,1
+163,LAB1,Labor Markets and Institutional Environments,1,TH01,LT4,2026-09-03,Thursday,14:05:00,15:15:00,1
+84,LAB1,Labor Markets and Institutional Environments,2,TH01,LT4,2026-09-03,Thursday,14:05:00,15:15:00,1
+207,LAB1,Labor Markets and Institutional Environments,3,TH01,LT4,2026-09-03,Thursday,14:05:00,15:15:00,1
+135,OSCM1,Sourcing and Supply Networks,1,TH01,LT5,2026-09-03,Thursday,14:05:00,15:15:00,1
+214,OSCM1,Sourcing and Supply Networks,2,TH01,LT5,2026-09-03,Thursday,14:05:00,15:15:00,1
+198,OSCM1,Sourcing and Supply Networks,3,TH01,LT5,2026-09-03,Thursday,14:05:00,15:15:00,1
+16,OSCM1,Sourcing and Supply Networks,4,TH01,LT5,2026-09-03,Thursday,14:05:00,15:15:00,1
+51,SUS1,Climate Legitimacy and Adaptation,1,TH01,SR A,2026-09-03,Thursday,14:05:00,15:15:00,1
+142,SUS1,Climate Legitimacy and Adaptation,2,TH01,SR A,2026-09-03,Thursday,14:05:00,15:15:00,1
+187,SUS1,Climate Legitimacy and Adaptation,3,TH01,SR A,2026-09-03,Thursday,14:05:00,15:15:00,1
+196,SUS1,Climate Legitimacy and Adaptation,4,TH01,SR A,2026-09-03,Thursday,14:05:00,15:15:00,1
+81,PP1,Industrial Upgrading,1,TH01,Founders Room,2026-09-03,Thursday,14:05:00,15:15:00,1
+174,PP1,Industrial Upgrading,2,TH01,Founders Room,2026-09-03,Thursday,14:05:00,15:15:00,1
+215,PP1,Industrial Upgrading,3,TH01,Founders Room,2026-09-03,Thursday,14:05:00,15:15:00,1
+137,GIS2,"Policy, Infrastructure, and Industrial Capability",1,TH02,Rhodes Trust,2026-09-03,Thursday,16:50:00,18:00:00,2
+123,GIS2,"Policy, Infrastructure, and Industrial Capability",2,TH02,Rhodes Trust,2026-09-03,Thursday,16:50:00,18:00:00,2
+203,GIS2,"Policy, Infrastructure, and Industrial Capability",3,TH02,Rhodes Trust,2026-09-03,Thursday,16:50:00,18:00:00,2
+58,GIS2,"Policy, Infrastructure, and Industrial Capability",4,TH02,Rhodes Trust,2026-09-03,Thursday,16:50:00,18:00:00,2
+37,I&E2,AI Risk and Governance,1,TH02,Edmund Safra,2026-09-03,Thursday,16:50:00,18:00:00,2
+118,I&E2,AI Risk and Governance,2,TH02,Edmund Safra,2026-09-03,Thursday,16:50:00,18:00:00,2
+53,I&E2,AI Risk and Governance,3,TH02,Edmund Safra,2026-09-03,Thursday,16:50:00,18:00:00,2
+121,I&E2,AI Risk and Governance,4,TH02,Edmund Safra,2026-09-03,Thursday,16:50:00,18:00:00,2
+59,LAB2,AI and Professional Work,1,TH02,LT4,2026-09-03,Thursday,16:50:00,18:00:00,2
+129,LAB2,AI and Professional Work,2,TH02,LT4,2026-09-03,Thursday,16:50:00,18:00:00,2
+165,LAB2,AI and Professional Work,3,TH02,LT4,2026-09-03,Thursday,16:50:00,18:00:00,2
+156,LAB2,AI and Professional Work,4,TH02,LT4,2026-09-03,Thursday,16:50:00,18:00:00,2
+105,OSCM2,Sustainable Operations,1,TH02,LT5,2026-09-03,Thursday,16:50:00,18:00:00,2
+134,OSCM2,Sustainable Operations,2,TH02,LT5,2026-09-03,Thursday,16:50:00,18:00:00,2
+145,OSCM2,Sustainable Operations,3,TH02,LT5,2026-09-03,Thursday,16:50:00,18:00:00,2
+190,OSCM2,Sustainable Operations,4,TH02,LT5,2026-09-03,Thursday,16:50:00,18:00:00,2
+48,SUS2,Low Carbon Mobility,1,TH02,SR A,2026-09-03,Thursday,16:50:00,18:00:00,2
+49,SUS2,Low Carbon Mobility,2,TH02,SR A,2026-09-03,Thursday,16:50:00,18:00:00,2
+140,SUS2,Low Carbon Mobility,3,TH02,SR A,2026-09-03,Thursday,16:50:00,18:00:00,2
+185,SUS2,Low Carbon Mobility,4,TH02,SR A,2026-09-03,Thursday,16:50:00,18:00:00,2
+86,HC1,Pharmaceutical Markets and Drug Supply Chains,1,TH02,SR13,2026-09-03,Thursday,16:50:00,18:00:00,2
+45,HC1,Pharmaceutical Markets and Drug Supply Chains,2,TH02,SR13,2026-09-03,Thursday,16:50:00,18:00:00,2
+96,HC1,Pharmaceutical Markets and Drug Supply Chains,3,TH02,SR13,2026-09-03,Thursday,16:50:00,18:00:00,2
+41,HC1,Pharmaceutical Markets and Drug Supply Chains,4,TH02,SR13,2026-09-03,Thursday,16:50:00,18:00:00,2
+12,PP2,Industrial Statecraft,1,TH02,Founders Room,2026-09-03,Thursday,16:50:00,18:00:00,2
+5,PP2,Industrial Statecraft,2,TH02,Founders Room,2026-09-03,Thursday,16:50:00,18:00:00,2
+46,PP2,Industrial Statecraft,3,TH02,Founders Room,2026-09-03,Thursday,16:50:00,18:00:00,2
+180,XTrack1,Semiconductor Sovereignty and Supply Chain Resilience,1,FR01,Rhodes Trust,2026-09-04,Friday,08:45:00,09:55:00,3
+205,XTrack1,Semiconductor Sovereignty and Supply Chain Resilience,2,FR01,Rhodes Trust,2026-09-04,Friday,08:45:00,09:55:00,3
+79,XTrack1,Semiconductor Sovereignty and Supply Chain Resilience,3,FR01,Rhodes Trust,2026-09-04,Friday,08:45:00,09:55:00,3
+110,XTrack1,Semiconductor Sovereignty and Supply Chain Resilience,4,FR01,Rhodes Trust,2026-09-04,Friday,08:45:00,09:55:00,3
+57,I&E3,Digital Platforms and Institutional Change,1,FR01,Edmund Safra,2026-09-04,Friday,08:45:00,09:55:00,3
+132,I&E3,Digital Platforms and Institutional Change,2,FR01,Edmund Safra,2026-09-04,Friday,08:45:00,09:55:00,3
+143,I&E3,Digital Platforms and Institutional Change,3,FR01,Edmund Safra,2026-09-04,Friday,08:45:00,09:55:00,3
+192,I&E3,Digital Platforms and Institutional Change,4,FR01,Edmund Safra,2026-09-04,Friday,08:45:00,09:55:00,3
+114,LAB3,"The Past, Present, and Future of HRM Research: Theoretical and Methodological Developments",1,FR01,LT4,2026-09-04,Friday,08:45:00,09:55:00,3
+92,OSCM3,AI in Operations,1,FR01,LT5,2026-09-04,Friday,08:45:00,09:55:00,3
+101,OSCM3,AI in Operations,2,FR01,LT5,2026-09-04,Friday,08:45:00,09:55:00,3
+201,OSCM3,AI in Operations,3,FR01,LT5,2026-09-04,Friday,08:45:00,09:55:00,3
+150,OSCM3,AI in Operations,4,FR01,LT5,2026-09-04,Friday,08:45:00,09:55:00,3
+91,SUS3,Assessing Green Industrial Policy Design and Outcomes,1,FR01,SR A,2026-09-04,Friday,08:45:00,09:55:00,3
+91,SUS3,Assessing Green Industrial Policy Design and Outcomes,2,FR01,SR A,2026-09-04,Friday,08:45:00,09:55:00,3
+91,SUS3,Assessing Green Industrial Policy Design and Outcomes,3,FR01,SR A,2026-09-04,Friday,08:45:00,09:55:00,3
+91,SUS3,Assessing Green Industrial Policy Design and Outcomes,4,FR01,SR A,2026-09-04,Friday,08:45:00,09:55:00,3
+26,PP3,Trade and Geopolitical Risk,1,FR01,Founders Room,2026-09-04,Friday,08:45:00,09:55:00,3
+70,PP3,Trade and Geopolitical Risk,2,FR01,Founders Room,2026-09-04,Friday,08:45:00,09:55:00,3
+176,PP3,Trade and Geopolitical Risk,3,FR01,Founders Room,2026-09-04,Friday,08:45:00,09:55:00,3
+153,GIS3,Industry Adaptation and Persistence,1,FR02,Rhodes Trust,2026-09-04,Friday,13:30:00,14:40:00,4
+88,GIS3,Industry Adaptation and Persistence,2,FR02,Rhodes Trust,2026-09-04,Friday,13:30:00,14:40:00,4
+162,GIS3,Industry Adaptation and Persistence,3,FR02,Rhodes Trust,2026-09-04,Friday,13:30:00,14:40:00,4
+11,I&E4,Founders and Entrepreneurial Identity,1,FR02,Edmund Safra,2026-09-04,Friday,13:30:00,14:40:00,4
+36,I&E4,Founders and Entrepreneurial Identity,2,FR02,Edmund Safra,2026-09-04,Friday,13:30:00,14:40:00,4
+164,I&E4,Founders and Entrepreneurial Identity,3,FR02,Edmund Safra,2026-09-04,Friday,13:30:00,14:40:00,4
+115,XTrack2,"Conducting Field Research with Organizations: Opportunities, Challenges, and Best Practices",1,FR02,LT4,2026-09-04,Friday,13:30:00,14:40:00,4
+219,OSCM4,Supply Network Visibility,1,FR02,LT5,2026-09-04,Friday,13:30:00,14:40:00,4
+213,OSCM4,Supply Network Visibility,2,FR02,LT5,2026-09-04,Friday,13:30:00,14:40:00,4
+166,OSCM4,Supply Network Visibility,3,FR02,LT5,2026-09-04,Friday,13:30:00,14:40:00,4
+7,SUS4,Circular Economy and Firm Strategy,1,FR02,SR A,2026-09-04,Friday,13:30:00,14:40:00,4
+158,SUS4,Circular Economy and Firm Strategy,2,FR02,SR A,2026-09-04,Friday,13:30:00,14:40:00,4
+160,SUS4,Circular Economy and Firm Strategy,3,FR02,SR A,2026-09-04,Friday,13:30:00,14:40:00,4
+19,HC2,Healthcare Operations,1,FR02,SR13,2026-09-04,Friday,13:30:00,14:40:00,4
+93,HC2,Healthcare Operations,2,FR02,SR13,2026-09-04,Friday,13:30:00,14:40:00,4
+157,HC2,Healthcare Operations,3,FR02,SR13,2026-09-04,Friday,13:30:00,14:40:00,4
+102,PP4,Competition in Strategic Industries,1,FR02,Founders Room,2026-09-04,Friday,13:30:00,14:40:00,4
+193,PP4,Competition in Strategic Industries,2,FR02,Founders Room,2026-09-04,Friday,13:30:00,14:40:00,4
+99,GIS4,Rules and Governance in Digital Markets,1,FR03,Rhodes Trust,2026-09-04,Friday,16:20:00,17:30:00,5
+189,GIS4,Rules and Governance in Digital Markets,2,FR03,Rhodes Trust,2026-09-04,Friday,16:20:00,17:30:00,5
+179,GIS4,Rules and Governance in Digital Markets,3,FR03,Rhodes Trust,2026-09-04,Friday,16:20:00,17:30:00,5
+151,I&E5,Innovation Search and Diffusion,1,FR03,Edmund Safra,2026-09-04,Friday,16:20:00,17:30:00,5
+171,I&E5,Innovation Search and Diffusion,2,FR03,Edmund Safra,2026-09-04,Friday,16:20:00,17:30:00,5
+211,I&E5,Innovation Search and Diffusion,3,FR03,Edmund Safra,2026-09-04,Friday,16:20:00,17:30:00,5
+152,I&E5,Innovation Search and Diffusion,4,FR03,Edmund Safra,2026-09-04,Friday,16:20:00,17:30:00,5
+61,LAB4,"Uneven Ground: How Context Shapes Who Builds, Who Stays, and Who Thrives",1,FR03,LT4,2026-09-04,Friday,16:20:00,17:30:00,5
+61,LAB4,"Uneven Ground: How Context Shapes Who Builds, Who Stays, and Who Thrives",2,FR03,LT4,2026-09-04,Friday,16:20:00,17:30:00,5
+61,LAB4,"Uneven Ground: How Context Shapes Who Builds, Who Stays, and Who Thrives",3,FR03,LT4,2026-09-04,Friday,16:20:00,17:30:00,5
+61,LAB4,"Uneven Ground: How Context Shapes Who Builds, Who Stays, and Who Thrives",4,FR03,LT4,2026-09-04,Friday,16:20:00,17:30:00,5
+209,SUS5,Sustainable Innovation and Digital Transformations,1,FR03,SR A,2026-09-04,Friday,16:20:00,17:30:00,5
+30,SUS5,Sustainable Innovation and Digital Transformations,2,FR03,SR A,2026-09-04,Friday,16:20:00,17:30:00,5
+217,SUS5,Sustainable Innovation and Digital Transformations,3,FR03,SR A,2026-09-04,Friday,16:20:00,17:30:00,5
+34,SUS5,Sustainable Innovation and Digital Transformations,4,FR03,SR A,2026-09-04,Friday,16:20:00,17:30:00,5
+212,OSCM5,"Supply Chain Discovery - Emergence, Evolution and Growth",1,FR03,LT5,2026-09-04,Friday,16:20:00,17:30:00,5
+10,PP5,Industrial Transformation and Green Transition,1,FR03,Founders Room,2026-09-04,Friday,16:20:00,17:30:00,5
+133,PP5,Industrial Transformation and Green Transition,2,FR03,Founders Room,2026-09-04,Friday,16:20:00,17:30:00,5
+175,PP5,Industrial Transformation and Green Transition,3,FR03,Founders Room,2026-09-04,Friday,16:20:00,17:30:00,5
+216,PP5,Industrial Transformation and Green Transition,4,FR03,Founders Room,2026-09-04,Friday,16:20:00,17:30:00,5
+24,XTrack3,Commercial Space and Market Formation,1,FR03,NMLT,2026-09-04,Friday,16:20:00,17:30:00,5
+107,XTrack3,Commercial Space and Market Formation,2,FR03,NMLT,2026-09-04,Friday,16:20:00,17:30:00,5
+146,XTrack3,Commercial Space and Market Formation,3,FR03,NMLT,2026-09-04,Friday,16:20:00,17:30:00,5
+117,XTrack3,Commercial Space and Market Formation,4,FR03,NMLT,2026-09-04,Friday,16:20:00,17:30:00,5
+75,GIS5,Firm Capabilities and Strategic Renewal,1,SA01,Rhodes Trust,2026-09-05,Saturday,09:00:00,10:10:00,6
+182,GIS5,Firm Capabilities and Strategic Renewal,2,SA01,Rhodes Trust,2026-09-05,Saturday,09:00:00,10:10:00,6
+177,GIS5,Firm Capabilities and Strategic Renewal,3,SA01,Rhodes Trust,2026-09-05,Saturday,09:00:00,10:10:00,6
+112,GIS5,Firm Capabilities and Strategic Renewal,4,SA01,Rhodes Trust,2026-09-05,Saturday,09:00:00,10:10:00,6
+62,I&E6,"Navigating Uncertainty: IP, Commercialization, and AI-Driven Changes in Biotech",1,SA01,Edmund Safra,2026-09-05,Saturday,09:00:00,10:10:00,6
+62,I&E6,"Navigating Uncertainty: IP, Commercialization, and AI-Driven Changes in Biotech",2,SA01,Edmund Safra,2026-09-05,Saturday,09:00:00,10:10:00,6
+62,I&E6,"Navigating Uncertainty: IP, Commercialization, and AI-Driven Changes in Biotech",3,SA01,Edmund Safra,2026-09-05,Saturday,09:00:00,10:10:00,6
+71,LAB5,Careers and Employee Mobility,1,SA01,LT4,2026-09-05,Saturday,09:00:00,10:10:00,6
+149,LAB5,Careers and Employee Mobility,2,SA01,LT4,2026-09-05,Saturday,09:00:00,10:10:00,6
+78,LAB5,Careers and Employee Mobility,3,SA01,LT4,2026-09-05,Saturday,09:00:00,10:10:00,6
+65,LAB5,Careers and Employee Mobility,4,SA01,LT4,2026-09-05,Saturday,09:00:00,10:10:00,6
+202,XTrack4,"Autonomy Without Abdication: Ethics, Control, and Responsibility in Agentic AI",1,SA01,LT5,2026-09-05,Saturday,09:00:00,10:10:00,6
+169,SUS6,Sustainable Resources and Investment,1,SA01,SR A,2026-09-05,Saturday,09:00:00,10:10:00,6
+64,SUS6,Sustainable Resources and Investment,2,SA01,SR A,2026-09-05,Saturday,09:00:00,10:10:00,6
+139,SUS6,Sustainable Resources and Investment,3,SA01,SR A,2026-09-05,Saturday,09:00:00,10:10:00,6
+206,HC3,"Politics, Institutions, and Strategy in Health Markets",1,SA01,SR13,2026-09-05,Saturday,09:00:00,10:10:00,6
+44,HC3,"Politics, Institutions, and Strategy in Health Markets",2,SA01,SR13,2026-09-05,Saturday,09:00:00,10:10:00,6
+220,HC3,"Politics, Institutions, and Strategy in Health Markets",3,SA01,SR13,2026-09-05,Saturday,09:00:00,10:10:00,6
+54,GIS6,"Digital Transformation, Data Governance and Policy",1,SA02,Rhodes Trust,2026-09-05,Saturday,11:35:00,12:45:00,7
+111,GIS6,"Digital Transformation, Data Governance and Policy",2,SA02,Rhodes Trust,2026-09-05,Saturday,11:35:00,12:45:00,7
+72,GIS6,"Digital Transformation, Data Governance and Policy",3,SA02,Rhodes Trust,2026-09-05,Saturday,11:35:00,12:45:00,7
+173,GIS6,"Digital Transformation, Data Governance and Policy",4,SA02,Rhodes Trust,2026-09-05,Saturday,11:35:00,12:45:00,7
+94,I&E7,Industry Change and Strategic Adaptation,1,SA02,Edmund Safra,2026-09-05,Saturday,11:35:00,12:45:00,7
+200,I&E7,Industry Change and Strategic Adaptation,2,SA02,Edmund Safra,2026-09-05,Saturday,11:35:00,12:45:00,7
+38,I&E7,Industry Change and Strategic Adaptation,3,SA02,Edmund Safra,2026-09-05,Saturday,11:35:00,12:45:00,7
+195,I&E7,Industry Change and Strategic Adaptation,4,SA02,Edmund Safra,2026-09-05,Saturday,11:35:00,12:45:00,7
+87,OSCM6,Food and Resource Supply Chains,1,SA02,LT5,2026-09-05,Saturday,11:35:00,12:45:00,7
+218,OSCM6,Food and Resource Supply Chains,2,SA02,LT5,2026-09-05,Saturday,11:35:00,12:45:00,7
+136,OSCM6,Food and Resource Supply Chains,3,SA02,LT5,2026-09-05,Saturday,11:35:00,12:45:00,7
+127,OSCM6,Food and Resource Supply Chains,4,SA02,LT5,2026-09-05,Saturday,11:35:00,12:45:00,7
+9,LAB6,Human Capital and Workplace Performance,1,SA02,LT4,2026-09-05,Saturday,11:35:00,12:45:00,7
+14,LAB6,Human Capital and Workplace Performance,2,SA02,LT4,2026-09-05,Saturday,11:35:00,12:45:00,7
+161,LAB6,Human Capital and Workplace Performance,3,SA02,LT4,2026-09-05,Saturday,11:35:00,12:45:00,7
+63,LAB6,Human Capital and Workplace Performance,4,SA02,LT4,2026-09-05,Saturday,11:35:00,12:45:00,7
+125,SUS7,Industrial Decarbonisation,1,SA02,SR A,2026-09-05,Saturday,11:35:00,12:45:00,7
+147,SUS7,Industrial Decarbonisation,2,SA02,SR A,2026-09-05,Saturday,11:35:00,12:45:00,7
+194,SUS7,Industrial Decarbonisation,3,SA02,SR A,2026-09-05,Saturday,11:35:00,12:45:00,7
+27,XTrack5,Alternative Proteins and Category Emergence,1,SA02,Founders Room,2026-09-05,Saturday,11:35:00,12:45:00,7
+52,XTrack5,Alternative Proteins and Category Emergence,2,SA02,Founders Room,2026-09-05,Saturday,11:35:00,12:45:00,7
+47,XTrack5,Alternative Proteins and Category Emergence,3,SA02,Founders Room,2026-09-05,Saturday,11:35:00,12:45:00,7
