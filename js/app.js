@@ -17,7 +17,9 @@ const trackMap = {
     'Labor Markets, Organizations, and the Future of Work':              { short: 'Labor & Work',              color: '#F0E442' },
     'Operations, Supply Chain, and AI-Enhanced Industry 4.0':            { short: 'Operations & Supply Chain', color: '#0072B2' },
     'Public Policy and Global Competitiveness':                          { short: 'Public Policy',             color: '#D55E00' },
-    'Sustainable Innovation, Energy, and Mobility':                      { short: 'Sustainability & Energy',   color: '#009E73' }
+    'Sustainable Innovation, Energy, and Mobility':                      { short: 'Sustainability & Energy',   color: '#009E73' },
+    'Cross-track Featured Sessions':                                     { short: 'Cross-track',               color: '#6F42C1' },
+    'Cross-track':                                                       { short: 'Cross-track',               color: '#6F42C1' }
 };
 
 // Load data
@@ -64,13 +66,13 @@ Promise.all([
         Array.from(allTracks).sort().forEach(track => {
             const option = document.createElement('option');
             option.value = track;
-            option.textContent = trackMap[track] ? trackMap[track].short : track;
+            option.textContent = trackMap[track] ? trackMap[track].short : displayCategory(track);
             trackFilter.appendChild(option);
         });
 
         trackFilter.addEventListener('change', function() {
             const wrapper = this.closest('.track-select-wrapper');
-            const info = trackMap[this.value];
+            const info = trackMap[this.value] || trackMap[displayCategory(this.value)];
             wrapper.style.setProperty('--track-color', info ? info.color : '#e5e5e5');
         });
 
@@ -131,6 +133,26 @@ function expandCollapseAll(expand) {
 
 function isSpecial(type) {
     return type === 'special_session' || type === 'plenary';
+}
+
+function displayCategory(category) {
+    if (!category) return '';
+    return String(category)
+        .replace(/Cross-track Featured Sessions/g, 'Cross-track')
+        .replace(/Cross-track/g, 'Cross-track');
+}
+
+function displaySessionName(name) {
+    if (!name) return 'Untitled Session';
+    return String(name)
+        .replace(/Regular Paper Sessions/g, 'Paper Sessions')
+        .replace(/Regular Paper Session/g, 'Paper Session')
+        .replace(/Special Panel Sessions/g, 'Special Panel Sessions')
+        .replace(/Special Panel Session/g, 'Special Panel Session')
+        .replace(/Special Sessions/g, 'Special Panel Sessions')
+        .replace(/Special Session/g, 'Special Panel Session')
+        .replace(/Cross-track Featured Sessions/g, 'Cross-track')
+        .replace(/Cross-track/g, 'Cross-track');
 }
 
 function itemMatchesSearch(item, searchTerm) {
@@ -249,7 +271,7 @@ function renderSchedule() {
                     <div class="session-meta">
                         <div>
                             <div class="session-title-row">
-                                <span class="session-title">${escapeHtml(session.session_name)}</span>
+                                <span class="session-title">${escapeHtml(displaySessionName(session.session_name))}</span>
                                 <span class="session-badge badge-event">Social</span>
                             </div>
                             <div class="session-info">
@@ -272,7 +294,7 @@ function renderSchedule() {
                     <div class="session-meta">
                         <div>
                             <div class="session-title-row">
-                                <span class="session-title">${escapeHtml(session.session_name)}</span>
+                                <span class="session-title">${escapeHtml(displaySessionName(session.session_name))}</span>
                                 <span class="session-badge badge-event">Excursion</span>
                             </div>
                             <div class="session-info">
@@ -295,20 +317,21 @@ function renderSchedule() {
         const badge = session.type === 'plenary'
             ? '<span class="session-badge badge-plenary">Plenary</span>'
             : session.type === 'special_session'
-            ? '<span class="session-badge badge-special">Special Session</span>'
+            ? '<span class="session-badge badge-special">Special Panel Session</span>'
             : '';
 
         const isAwp = session.session_name === 'Award Winners Panel';
 
         const typeLabel = isAwp                              ? '🏆 Award Winners Panel' :
                           session.type === 'plenary'        ? '🎤 Plenary Session'  :
-                          session.type === 'special_session' ? '🎤 Special Session' :
+                          session.type === 'special_session' ? '🎤 Special Panel Session' :
                           `📄 ${session.papers.length} paper${session.papers.length !== 1 ? 's' : ''}`;
 
-        const trackInfo = trackMap[session.category];
+        const displayCat = displayCategory(session.category);
+        const trackInfo = trackMap[session.category] || trackMap[displayCat];
         const categoryLabel = trackInfo
             ? `<span class="session-category" style="color:${trackInfo.color}">■ ${trackInfo.short}</span>`
-            : (session.category ? `<span class="session-category">${escapeHtml(session.category)}</span>` : '');
+            : (session.category ? `<span class="session-category">${escapeHtml(displayCat)}</span>` : '');
 
         const papersHtml = special
             ? renderPanelContent(session.papers[0])
@@ -331,7 +354,7 @@ function renderSchedule() {
                     <div class="session-meta">
                         <div>
                             <div class="session-title-row">
-                                <span class="session-title">${escapeHtml(session.session_name || 'Untitled Session')}</span>
+                                <span class="session-title">${escapeHtml(displaySessionName(session.session_name))}</span>
                                 ${badge}
                             </div>
                             <div class="session-info">
@@ -463,7 +486,7 @@ function renderPanelContent(panel) {
     let panelists = '';
     if (panel.authors && panel.authors.trim() && panel.authors.trim() !== 'TBD') {
         const items = panel.authors.split('\n').map(p => p.trim()).filter(p => p.length > 0);
-        const label = panel.type === 'plenary' ? 'Speakers' : 'Special Session Speakers';
+        const label = panel.type === 'plenary' ? 'Speakers' : 'Special Panel Session Speakers';
         panelists = `<div class="panel-panelists"><strong>${label}:</strong><ul>
             ${items.map(p => `<li>${renderPanelistLine(p)}</li>`).join('')}
         </ul></div>`;
@@ -773,7 +796,7 @@ function renderCommittee() {
         <h2 style="margin-bottom:1.5rem;">Thank You to all the ISA Organizers!</h2>
         <h3 style="margin:0 0 0.6rem; font-size:1.05rem; text-decoration:underline;">Board of Directors</h3>
         ${makeTable(committeeData.board, false)}
-        <h3 style="margin:1.5rem 0 0.6rem; font-size:1.05rem; text-decoration:underline;">Oxford International Conference Committee (ISCC)</h3>
+        <h3 style="margin:1.5rem 0 0.6rem; font-size:1.05rem; text-decoration:underline;">Industry Studies Conference Committee (ISCC)</h3>
         ${makeTable(committeeData.iscc, false)}
         <p style="margin:1.2rem 0 0.4rem; font-style:italic; font-weight:600;">Research Stream Chairs:</p>
         ${makeTable(committeeData.stream_chairs, true)}
