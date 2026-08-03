@@ -56,7 +56,48 @@
       "affiliation": "Industry Studies Association"
     }
   ],
-  "iscc": [],
+  "oxcc": [
+    {
+      "name": "Benn Lawson",
+      "role": "2026 International Conference Chair",
+      "affiliation": "University of Oxford"
+    },
+    {
+      "name": "Daniel Armanios",
+      "role": "Local Organising Committee member",
+      "affiliation": "University of Oxford"
+    },
+    {
+      "name": "Federica De Stefano",
+      "role": "Local Organising Committee member",
+      "affiliation": "University of Oxford"
+    },
+    {
+      "name": "Matthew Amengual",
+      "role": "Local Organising Committee member",
+      "affiliation": "University of Oxford"
+    },
+    {
+      "name": "Renae Sullivan",
+      "role": "Program Manager",
+      "affiliation": "Industry Studies Association"
+    },
+    {
+      "name": "Edward Anderson",
+      "role": "President",
+      "affiliation": "University of Texas at Austin"
+    },
+    {
+      "name": "John Gray",
+      "role": "Past President",
+      "affiliation": "The Ohio State University"
+    },
+    {
+      "name": "John Paul Helveston",
+      "role": "Conference Chair 2026",
+      "affiliation": "George Washington University"
+    }
+  ],
   "stream_chairs": [
     {
       "name": "Angela Garcia Calvo",
