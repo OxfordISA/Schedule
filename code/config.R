@@ -20,7 +20,7 @@ CONF_SHORT_NAME <- "ISA Oxford 2026"
 CONF_DATES      <- "September 3-5, 2026"
 CONF_VENUE      <- "University of Oxford"
 CONF_CITY       <- "Oxford UK"
-CONF_TIMEZONE   <- "United Kingdom/London"  # IANA timezone for calendar exports
+CONF_TIMEZONE   <- "Europe/London"  # IANA timezone for calendar exports
 
 # --- Conference dates (used by date_restrictions / date_exclusions) ---
 
