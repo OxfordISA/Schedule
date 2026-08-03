@@ -869,6 +869,9 @@ const lightboxOverlay = document.getElementById('lightbox-overlay');
 const lightboxImg     = document.getElementById('lightbox-img');
 
 // Calendar helpers
+const CONFERENCE_TIME_ZONE = 'Europe/London';
+const CONFERENCE_LOCATION = 'University of Oxford, Oxford, UK';
+
 function toggleCalMenu(btn, key) {
     const menu = btn.nextElementSibling;
     const isOpen = menu.style.display !== 'none';
@@ -876,13 +879,71 @@ function toggleCalMenu(btn, key) {
     if (!isOpen) menu.style.display = 'block';
 }
 
-function calFormatDTUTC(dateStr, timeStr) {
-    // Conference is in Washington DC (Eastern Daylight Time = UTC-4 in June)
-    const [year, month, day] = dateStr.split('-').map(Number);
-    const [h, m] = timeStr.split(':').map(Number);
-    const utc = new Date(Date.UTC(year, month - 1, day, h + 4, m));
+function calFormatLocal(dateStr, timeStr) {
+    const date = String(dateStr || '').replace(/-/g, '');
+    const parts = String(timeStr || '').split(':');
+    const hour = String(parts[0] || '00').padStart(2, '0');
+    const minute = String(parts[1] || '00').padStart(2, '0');
+    const second = String(parts[2] || '00').padStart(2, '0');
+    return `${date}T${hour}${minute}${second}`;
+}
+
+function calZonedDateToUTC(dateStr, timeStr, timeZone = CONFERENCE_TIME_ZONE) {
+    const [year, month, day] = String(dateStr).split('-').map(Number);
+    const [hour = 0, minute = 0, second = 0] = String(timeStr).split(':').map(Number);
+    const desiredAsUTC = Date.UTC(year, month - 1, day, hour, minute, second);
+    let instant = desiredAsUTC;
+
+    const formatter = new Intl.DateTimeFormat('en-GB', {
+        timeZone,
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hourCycle: 'h23'
+    });
+
+    // Resolve the UTC instant whose wall-clock value in Europe/London matches
+    // the date and time supplied by the conference schedule.
+    for (let i = 0; i < 3; i += 1) {
+        const values = {};
+        formatter.formatToParts(new Date(instant)).forEach(part => {
+            if (part.type !== 'literal') values[part.type] = Number(part.value);
+        });
+        const formattedAsUTC = Date.UTC(
+            values.year,
+            values.month - 1,
+            values.day,
+            values.hour,
+            values.minute,
+            values.second
+        );
+        const adjustment = desiredAsUTC - formattedAsUTC;
+        instant += adjustment;
+        if (adjustment === 0) break;
+    }
+
+    return new Date(instant);
+}
+
+function calFormatUTC(date) {
     const pad = n => String(n).padStart(2, '0');
-    return `${utc.getUTCFullYear()}${pad(utc.getUTCMonth()+1)}${pad(utc.getUTCDate())}T${pad(utc.getUTCHours())}${pad(utc.getUTCMinutes())}00Z`;
+    return `${date.getUTCFullYear()}${pad(date.getUTCMonth() + 1)}${pad(date.getUTCDate())}` +
+        `T${pad(date.getUTCHours())}${pad(date.getUTCMinutes())}${pad(date.getUTCSeconds())}Z`;
+}
+
+function calFormatDTUTC(dateStr, timeStr) {
+    return calFormatUTC(calZonedDateToUTC(dateStr, timeStr));
+}
+
+function calEscapeICS(value) {
+    return String(value || '')
+        .replace(/\\/g, '\\\\')
+        .replace(/;/g, '\\;')
+        .replace(/,/g, '\\,')
+        .replace(/\r?\n/g, '\\n');
 }
 
 function buildCalDescription(s) {
@@ -898,57 +959,86 @@ function buildCalDescription(s) {
     return lines.join('\n');
 }
 
+function calLocation(s) {
+    return (s.room ? s.room + ', ' : '') + CONFERENCE_LOCATION;
+}
+
 function calToGoogle(key) {
     const s = sessionCalendarData[key];
     if (!s || !s.date || !s.start_time || !s.end_time) return;
+
     const start = calFormatDTUTC(s.date, s.start_time);
-    const end   = calFormatDTUTC(s.date, s.end_time);
+    const end = calFormatDTUTC(s.date, s.end_time);
     const url = new URL('https://calendar.google.com/calendar/render');
     url.searchParams.set('action', 'TEMPLATE');
     url.searchParams.set('text', s.session_name);
     url.searchParams.set('dates', start + '/' + end);
-    const loc = (s.room ? s.room + ', ' : '') + 'George Washington University, Washington, DC';
-    url.searchParams.set('location', loc);
+    url.searchParams.set('ctz', CONFERENCE_TIME_ZONE);
+    url.searchParams.set('location', calLocation(s));
     const desc = buildCalDescription(s);
     if (desc) url.searchParams.set('details', desc);
-    window.open(url.toString(), '_blank');
+    window.open(url.toString(), '_blank', 'noopener');
     document.querySelectorAll('.cal-menu').forEach(m => m.style.display = 'none');
 }
 
 function calDownloadICS(key) {
     const s = sessionCalendarData[key];
     if (!s || !s.date || !s.start_time || !s.end_time) return;
-    const start = calFormatDTUTC(s.date, s.start_time);
-    const end   = calFormatDTUTC(s.date, s.end_time);
-    const loc = (s.room ? s.room + ', ' : '') + 'George Washington University, Washington, DC';
+
+    const startLocal = calFormatLocal(s.date, s.start_time);
+    const endLocal = calFormatLocal(s.date, s.end_time);
+    const stamp = calFormatUTC(new Date());
+    const uidPart = String(s.session_id || key || 'session').replace(/[^a-zA-Z0-9._-]/g, '-');
+    const uid = `isa-oxford-2026-${uidPart}-${startLocal}@isa2026.org`;
     const rawDesc = buildCalDescription(s);
-    const icsDesc = rawDesc
-        .replace(/\\/g, '\\\\')
-        .replace(/;/g, '\\;')
-        .replace(/,/g, '\\,')
-        .replace(/\n/g, '\\n');
-    const uid = 'isa2026-' + String(s.session_id) + '-' + s.time_slot + '@isa2026.org';
+
     const lines = [
         'BEGIN:VCALENDAR',
         'VERSION:2.0',
-        'PRODID:-//ISA 2026//Conference Schedule//EN',
+        'PRODID:-//ISA Oxford 2026//Conference Schedule//EN',
         'CALSCALE:GREGORIAN',
         'METHOD:PUBLISH',
+        'X-WR-CALNAME:ISA Oxford 2026',
+        'X-WR-TIMEZONE:' + CONFERENCE_TIME_ZONE,
+        'BEGIN:VTIMEZONE',
+        'TZID:' + CONFERENCE_TIME_ZONE,
+        'X-LIC-LOCATION:' + CONFERENCE_TIME_ZONE,
+        'BEGIN:DAYLIGHT',
+        'TZOFFSETFROM:+0000',
+        'TZOFFSETTO:+0100',
+        'TZNAME:BST',
+        'DTSTART:19700329T010000',
+        'RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU',
+        'END:DAYLIGHT',
+        'BEGIN:STANDARD',
+        'TZOFFSETFROM:+0100',
+        'TZOFFSETTO:+0000',
+        'TZNAME:GMT',
+        'DTSTART:19701025T020000',
+        'RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU',
+        'END:STANDARD',
+        'END:VTIMEZONE',
         'BEGIN:VEVENT',
         'UID:' + uid,
-        'DTSTART:' + start,
-        'DTEND:' + end,
-        'SUMMARY:' + s.session_name.replace(/,/g, '\\,'),
-        'LOCATION:' + loc.replace(/,/g, '\\,'),
+        'DTSTAMP:' + stamp,
+        'DTSTART;TZID=' + CONFERENCE_TIME_ZONE + ':' + startLocal,
+        'DTEND;TZID=' + CONFERENCE_TIME_ZONE + ':' + endLocal,
+        'SUMMARY:' + calEscapeICS(s.session_name),
+        'LOCATION:' + calEscapeICS(calLocation(s))
     ];
-    if (icsDesc) lines.push('DESCRIPTION:' + icsDesc);
+    if (rawDesc) lines.push('DESCRIPTION:' + calEscapeICS(rawDesc));
     lines.push('END:VEVENT', 'END:VCALENDAR');
+
     const blob = new Blob([lines.join('\r\n')], { type: 'text/calendar;charset=utf-8' });
     const a = document.createElement('a');
-    a.href = URL.createObjectURL(blob);
-    a.download = s.session_name.replace(/[^a-zA-Z0-9 ]/g, '').replace(/\s+/g, '_').substring(0, 50) + '.ics';
+    const objectUrl = URL.createObjectURL(blob);
+    a.href = objectUrl;
+    a.download = String(s.session_name || 'ISA_Oxford_2026')
+        .replace(/[^a-zA-Z0-9 ]/g, '')
+        .replace(/\s+/g, '_')
+        .substring(0, 50) + '.ics';
     a.click();
-    URL.revokeObjectURL(a.href);
+    setTimeout(() => URL.revokeObjectURL(objectUrl), 0);
     document.querySelectorAll('.cal-menu').forEach(m => m.style.display = 'none');
 }
 
