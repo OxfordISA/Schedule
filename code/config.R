@@ -43,7 +43,8 @@ tracks <- tribble(
   "Labor Markets, Organizations, and the Future of Work",          "Labor", "labor",          "#B8860B",
   "Operations, Supply Chain, and AI-Enhanced Industry 4.0",        "OSCM", "oscm", "#0072B2",
   "Public Policy and Global Competitiveness",                      "Policy", "policy",        "#D55E00",
-  "Sustainable Innovation, Energy, and Mobility",                  "Sustainability", "sustainability", "#009E73"
+  "Sustainable Innovation, Energy, and Mobility",                  "Sustainability", "sustainability", "#009E73",
+  "Cross-Track",                                                    "x-track", "x-track",       "#5C4D7D"
 )
 
 # Event color (social events, breaks, meals)
