@@ -17,23 +17,59 @@ const trackMap = {
     'Labor Markets, Organizations, and the Future of Work':              { short: 'Labor & Work',              color: '#F0E442' },
     'Operations, Supply Chain, and AI-Enhanced Industry 4.0':            { short: 'Operations & Supply Chain', color: '#0072B2' },
     'Public Policy and Global Competitiveness':                          { short: 'Public Policy',             color: '#D55E00' },
-    'Sustainable Innovation, Energy, and Mobility':                      { short: 'Sustainability & Energy',   color: '#009E73' }
+    'Sustainable Innovation, Energy, and Mobility':                      { short: 'Sustainability & Energy',   color: '#009E73' },
+    'Cross-Track':                                                        { short: 'Cross-Track',               color: '#5C4D7D' }
 };
+
+// Data loading helpers. These produce useful errors for missing files and
+// prevent an optional auxiliary file from taking down the schedule.
+function asArray(value, label) {
+    if (Array.isArray(value)) return value;
+    console.warn(`${label} should be a JSON array; using an empty array instead.`, value);
+    return [];
+}
+
+async function fetchJson(path, { optional = false, fallback = null } = {}) {
+    try {
+        const response = await fetch(path, { cache: 'no-store' });
+        if (!response.ok) {
+            throw new Error(`${path} returned HTTP ${response.status}`);
+        }
+        const text = await response.text();
+        try {
+            return JSON.parse(text);
+        } catch (error) {
+            throw new Error(`${path} is not valid JSON: ${error.message}`);
+        }
+    } catch (error) {
+        if (optional) {
+            console.warn(error.message);
+            return fallback;
+        }
+        throw error;
+    }
+}
 
 // Load data
 Promise.all([
-    fetch('json/schedule_data.json').then(r => r.json()),
-    fetch('json/bios_data.json').then(r => r.json()),
-    fetch('json/awards_data.json').then(r => r.json()),
-    fetch('json/excursions_data.json').then(r => r.json()).catch(() => []),
-    fetch('json/committee_data.json').then(r => r.json()).catch(() => ({}))
+    fetchJson('json/schedule_data.json'),
+    fetchJson('json/bios_data.json'),
+    fetchJson('json/awards_data.json'),
+    fetchJson('json/excursions_data.json', { optional: true, fallback: [] }),
+    fetchJson('json/committee_data.json', { optional: true, fallback: {} })
 ])
     .then(([data, bios, awards, excursions, committee]) => {
-        scheduleData = data;
-        biosData = bios;
-        awardsData = awards;
-        excursionsData = excursions;
-        committeeData = committee;
+        scheduleData = asArray(data, 'schedule_data.json');
+        biosData = asArray(bios, 'bios_data.json');
+        awardsData = asArray(awards, 'awards_data.json');
+        excursionsData = asArray(excursions, 'excursions_data.json');
+        committeeData = committee && typeof committee === 'object' && !Array.isArray(committee)
+            ? committee
+            : {};
+
+        if (!Array.isArray(data)) {
+            throw new Error('json/schedule_data.json must contain a top-level JSON array');
+        }
         renderCommittee();
         buildBioMap();
         buildAwardMap();
@@ -62,6 +98,8 @@ Promise.all([
         // Populate track dropdown
         const trackFilter = document.getElementById('trackFilter');
         Array.from(allTracks).sort().forEach(track => {
+            const exists = Array.from(trackFilter.options).some(option => option.value === track);
+            if (exists) return;
             const option = document.createElement('option');
             option.value = track;
             option.textContent = trackMap[track] ? trackMap[track].short : track;
@@ -83,8 +121,9 @@ Promise.all([
         attachEventListeners();
     })
     .catch(err => {
+        console.error('ISA schedule initialisation failed:', err);
         document.getElementById('schedule').innerHTML =
-            `<div class="no-results"><h2>Error loading schedule</h2><p>${err.message}</p></div>`;
+            `<div class="no-results"><h2>Error loading schedule</h2><p>${escapeHtml(err.message)}</p><p>Open the browser console for the full error and file name.</p></div>`;
     });
 
 function attachEventListeners() {
@@ -157,7 +196,7 @@ function renderSchedule() {
         const slotMatch = !slotFilter  || item.time_slot === slotFilter;
         const trackMatch = !trackFilter || item.category === trackFilter;
         const typeMatch = !typeFilter  ||
-            (typeFilter === 'paper'   && (item.type === 'paper' || item.type === 'self_organized_panel')) ||
+            (typeFilter === 'paper'   && (item.type === 'paper' || item.type === 'panel' || item.type === 'self_organized_panel')) ||
             (typeFilter === 'special' && isSpecial(item.type)) ||
             (typeFilter === 'event'   && item.type === 'event');
         return dayMatch && slotMatch && trackMatch && typeMatch;
@@ -228,18 +267,45 @@ function renderSchedule() {
 
     sessionList.forEach(session => {
         const isEvent = session.type === 'event';
+        const isActivity = session.type === 'activity';
+        const isPanel = session.type === 'panel';
         const special = isSpecial(session.type);
 
-        if (!isEvent) {
+        if (!isEvent && !isActivity) {
             totalSessions++;
-            if (!special && session.session_name !== 'Award Winners Panel') totalPapers += session.papers.length;
+            if (!special && !isPanel && session.session_name !== 'Award Winners Panel') {
+                totalPapers += session.papers.filter(p => p.type === 'paper' || p.type === 'self_organized_panel').length;
+            }
         }
 
         const timeStr = session.start_time && session.end_time
             ? `${formatTime(session.start_time)} – ${formatTime(session.end_time)}`
             : session.time_slot;
 
-        // Render events: excursions are expandable, all others are non-expandable banner cards
+        // Render social events and other programme activities as banner cards.
+        if (isActivity) {
+            html += `
+            <div class="session-group cat-activity event-card">
+                <div class="session-header">
+                    <div class="session-meta">
+                        <div>
+                            <div class="session-title-row">
+                                <span class="session-title">${escapeHtml(session.session_name)}</span>
+                                <span class="session-badge badge-activity">Activity</span>
+                            </div>
+                            <div class="session-info">
+                                <span>📅 ${session.day}, ${formatDate(session.date)}</span>
+                                <span>🕒 ${timeStr}</span>
+                                <span>📍 ${session.room || 'TBA'}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>`;
+            return;
+        }
+
+        // Social events are tagged separately from papers, panels, plenaries, and special sessions.
         if (isEvent) {
             const excursion = findExcursion(session.session_name);
             if (!excursion) {
@@ -296,13 +362,16 @@ function renderSchedule() {
             ? '<span class="session-badge badge-plenary">Plenary</span>'
             : session.type === 'special_session'
             ? '<span class="session-badge badge-special">Special Session</span>'
+            : session.type === 'panel'
+            ? '<span class="session-badge badge-panel">Panel</span>'
             : '';
 
         const isAwp = session.session_name === 'Award Winners Panel';
 
-        const typeLabel = isAwp                              ? '🏆 Award Winners Panel' :
-                          session.type === 'plenary'        ? '🎤 Plenary Session'  :
+        const typeLabel = isAwp                               ? '🏆 Award Winners Panel' :
+                          session.type === 'plenary'         ? '🎤 Plenary Session' :
                           session.type === 'special_session' ? '🎤 Special Session' :
+                          session.type === 'panel'           ? '🗣 Panel' :
                           `📄 ${session.papers.length} paper${session.papers.length !== 1 ? 's' : ''}`;
 
         const trackInfo = trackMap[session.category];
@@ -310,15 +379,15 @@ function renderSchedule() {
             ? `<span class="session-category" style="color:${trackInfo.color}">■ ${trackInfo.short}</span>`
             : (session.category ? `<span class="session-category">${escapeHtml(session.category)}</span>` : '');
 
-        const papersHtml = special
+        const papersHtml = special || isPanel
             ? renderPanelContent(session.papers[0])
             : session.papers.map(renderPaper).join('');
 
-        const chairHtml = !special && session.session_chair
+        const chairHtml = !special && !isPanel && session.session_chair
             ? `<div class="session-chair"><strong>Session Chair:</strong> ${escapeHtml(session.session_chair)}</div>`
             : '';
 
-        const discussantHtml = !special && session.discussant
+        const discussantHtml = !special && !isPanel && session.discussant
             ? `<div class="session-discussant"><strong>Discussant:</strong> ${escapeHtml(session.discussant)}</div>`
             : '';
 
@@ -356,7 +425,8 @@ function renderSchedule() {
 }
 
 function findExcursion(session_name) {
-    return excursionsData.find(e => e.session_name === session_name) || null;
+    return asArray(excursionsData, 'excursions_data.json')
+        .find(e => e && e.session_name === session_name) || null;
 }
 
 function getExcursionSearchText(session_name) {
@@ -462,8 +532,8 @@ function renderPanelContent(panel) {
 
     let panelists = '';
     if (panel.authors && panel.authors.trim() && panel.authors.trim() !== 'TBD') {
-        const items = panel.authors.split('\n').map(p => p.trim()).filter(p => p.length > 0);
-        const label = panel.type === 'plenary' ? 'Speakers' : 'Special Session Speakers';
+        const items = panel.authors.split(/[;\n]+/).map(p => p.trim()).filter(p => p.length > 0);
+        const label = panel.type === 'plenary' ? 'Speakers' : panel.type === 'panel' ? 'Panelists' : 'Special Session Speakers';
         panelists = `<div class="panel-panelists"><strong>${label}:</strong><ul>
             ${items.map(p => `<li>${renderPanelistLine(p)}</li>`).join('')}
         </ul></div>`;
@@ -745,16 +815,30 @@ function getCategoryClass(category) {
     if (category.includes('Public Policy') || category.includes('Global Competitiveness'))  return 'cat-policy';
     if (category.includes('Sustainable Innovation') || category.includes('Energy'))         return 'cat-sustainability';
     if (category.includes('Innovation') || category.includes('Entrepreneurship'))           return 'cat-innovation';
+    if (category === 'Cross-Track')                                                           return 'cat-cross-track';
     return '';
 }
 
 // Committee rendering
 function renderCommittee() {
     const container = document.getElementById('committeeContainer');
-    if (!container || !committeeData.board) return;
+    if (!container) return;
+
+    const board = asArray(committeeData.board, 'committee_data.json board');
+    const oxcc = asArray(committeeData.oxcc || committeeData.iscc || [], 'committee_data.json oxcc');
+    const streamChairs = asArray(committeeData.stream_chairs || [], 'committee_data.json stream_chairs');
+
+    // The committee is supplementary content. Missing committee groups should
+    // never prevent the main schedule from loading.
+    if (board.length === 0 && oxcc.length === 0 && streamChairs.length === 0) {
+        container.innerHTML = '';
+        return;
+    }
 
     function makeTable(members, isStream) {
-        const rows = members.map(m => {
+        const safeMembers = asArray(members, 'committee members');
+        if (safeMembers.length === 0) return '<p style="color:#666;">No entries available.</p>';
+        const rows = safeMembers.map(m => {
             const left = isStream
                 ? `<strong>${escapeHtml(m.role)}</strong>—${escapeHtml(m.name)}`
                 : `<strong>${escapeHtml(m.name)}</strong>`;
@@ -772,11 +856,11 @@ function renderCommittee() {
     container.innerHTML = `
         <h2 style="margin-bottom:1.5rem;">Thank You to all the ISA Organizers!</h2>
         <h3 style="margin:0 0 0.6rem; font-size:1.05rem; text-decoration:underline;">Board of Directors</h3>
-        ${makeTable(committeeData.board, false)}
-        <h3 style="margin:1.5rem 0 0.6rem; font-size:1.05rem; text-decoration:underline;">Industry Studies Conference Committee (ISCC)</h3>
-        ${makeTable(committeeData.iscc, false)}
+        ${makeTable(board, false)}
+        <h3 style="margin:1.5rem 0 0.6rem; font-size:1.05rem; text-decoration:underline;">Oxford International Conference Committee</h3>
+        ${makeTable(oxcc, false)}
         <p style="margin:1.2rem 0 0.4rem; font-style:italic; font-weight:600;">Research Stream Chairs:</p>
-        ${makeTable(committeeData.stream_chairs, true)}
+        ${makeTable(streamChairs, true)}
     `;
 }
 
