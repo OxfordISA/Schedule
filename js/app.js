@@ -773,8 +773,8 @@ function renderCommittee() {
         <h2 style="margin-bottom:1.5rem;">Thank You to all the ISA Organizers!</h2>
         <h3 style="margin:0 0 0.6rem; font-size:1.05rem; text-decoration:underline;">Board of Directors</h3>
         ${makeTable(committeeData.board, false)}
-        <h3 style="margin:1.5rem 0 0.6rem; font-size:1.05rem; text-decoration:underline;">Oxford International Conference Committee (OICC)</h3>
-        ${makeTable(committeeData.oicc, false)}
+        <h3 style="margin:1.5rem 0 0.6rem; font-size:1.05rem; text-decoration:underline;">Oxford International Conference Committee (OXCC)</h3>
+        ${makeTable(committeeData.oxcc, false)}
         <p style="margin:1.2rem 0 0.4rem; font-style:italic; font-weight:600;">Research Stream Chairs:</p>
         ${makeTable(committeeData.stream_chairs, true)}
     `;
