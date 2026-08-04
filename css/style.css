@@ -921,7 +921,7 @@ img[data-lightbox]:hover { opacity: 0.85; }
 }
 
 /* See Oxford view */
-.see-oxford-btn { color: #174f3f; font-weight: 650; }
+.see-oxford-btn { margin-left: auto; color: #174f3f; font-weight: 650; }
 .oxford-view { max-width: 1180px; margin: 0 auto; padding: 1.5rem; }
 .oxford-hero { position: relative; min-height: 300px; border-radius: 16px; overflow: hidden; box-shadow: 0 0.6rem 1.8rem rgba(31,48,42,0.18); margin-bottom: 1.5rem; background: #203f35; }
 .oxford-hero img { width: 100%; height: 360px; object-fit: cover; display: block; }
