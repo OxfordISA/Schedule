@@ -898,8 +898,30 @@ img[data-lightbox]:hover { opacity: 0.85; }
 .badge-activity { background: #6c757d; color: #fff; }
 
 
+/* Sponsor logos */
+.sponsor-logo-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem 3rem;
+}
+.sponsor-logo-box {
+    width: 255px;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sponsor-logo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
 /* See Oxford view */
-.see-oxford-btn { margin-left: auto; color: #174f3f; font-weight: 650; }
+.see-oxford-btn { color: #174f3f; font-weight: 650; }
 .oxford-view { max-width: 1180px; margin: 0 auto; padding: 1.5rem; }
 .oxford-hero { position: relative; min-height: 300px; border-radius: 16px; overflow: hidden; box-shadow: 0 0.6rem 1.8rem rgba(31,48,42,0.18); margin-bottom: 1.5rem; background: #203f35; }
 .oxford-hero img { width: 100%; height: 360px; object-fit: cover; display: block; }
@@ -919,7 +941,6 @@ img[data-lightbox]:hover { opacity: 0.85; }
 .oxford-two-column-list { columns: 2; column-gap: 2.2rem; }
 .oxford-two-column-list li { break-inside: avoid; }
 @media (max-width: 760px) {
-  .see-oxford-btn { margin-left: 0; }
   .oxford-view { padding: 0.9rem; }
   .oxford-hero { min-height: 270px; }
   .oxford-hero img { height: 320px; }
