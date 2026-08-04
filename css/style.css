@@ -890,3 +890,41 @@ img[data-lightbox]:hover { opacity: 0.85; }
     white-space: nowrap;
 }
 .cal-menu a:hover { background: #f8f9fa; }
+
+/* Cross-Track and non-social programme activity styles */
+.cat-cross-track { border-left: 5px solid #5C4D7D !important; }
+.cat-activity { border-left: 5px solid #6c757d !important; background: #f7f7f7; }
+.badge-panel { background: #5C4D7D; color: #fff; }
+.badge-activity { background: #6c757d; color: #fff; }
+
+
+/* See Oxford view */
+.see-oxford-btn { margin-left: auto; color: #174f3f; font-weight: 650; }
+.oxford-view { max-width: 1180px; margin: 0 auto; padding: 1.5rem; }
+.oxford-hero { position: relative; min-height: 300px; border-radius: 16px; overflow: hidden; box-shadow: 0 0.6rem 1.8rem rgba(31,48,42,0.18); margin-bottom: 1.5rem; background: #203f35; }
+.oxford-hero img { width: 100%; height: 360px; object-fit: cover; display: block; }
+.oxford-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(13,38,31,0.88) 0%, rgba(13,38,31,0.58) 48%, rgba(13,38,31,0.08) 100%); }
+.oxford-hero-overlay { position: absolute; z-index: 1; left: 0; bottom: 0; max-width: 620px; padding: 2.3rem; color: white; }
+.oxford-kicker { margin: 0 0 0.35rem; text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.78rem; font-weight: 700; opacity: 0.86; }
+.oxford-hero h2 { margin: 0; font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1.05; }
+.oxford-hero p:last-child { margin: 0.8rem 0 0; font-size: 1.05rem; line-height: 1.55; }
+.oxford-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.15rem; }
+.oxford-card { background: white; border: 1px solid #dde5e1; border-radius: 12px; padding: 1.35rem 1.45rem; box-shadow: 0 0.18rem 0.55rem rgba(25,55,45,0.07); }
+.oxford-card-wide { grid-column: 1 / -1; }
+.oxford-card h3 { margin: 0 0 0.85rem; color: #174f3f; font-size: 1.2rem; display: flex; gap: 0.55rem; align-items: center; }
+.oxford-card ul { margin: 0; padding-left: 1.2rem; }
+.oxford-card li { padding-left: 0.2rem; margin-bottom: 0.72rem; color: #38453f; line-height: 1.58; }
+.oxford-card li:last-child { margin-bottom: 0; }
+.oxford-card strong { color: #1f2d28; }
+.oxford-two-column-list { columns: 2; column-gap: 2.2rem; }
+.oxford-two-column-list li { break-inside: avoid; }
+@media (max-width: 760px) {
+  .see-oxford-btn { margin-left: 0; }
+  .oxford-view { padding: 0.9rem; }
+  .oxford-hero { min-height: 270px; }
+  .oxford-hero img { height: 320px; }
+  .oxford-hero-overlay { padding: 1.35rem; }
+  .oxford-grid { grid-template-columns: 1fr; }
+  .oxford-card-wide { grid-column: auto; }
+  .oxford-two-column-list { columns: 1; }
+}
