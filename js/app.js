@@ -845,11 +845,9 @@ function renderCommittee() {
         const safeMembers = asArray(members, 'committee members');
         if (safeMembers.length === 0) return '<p style="color:#666;">No entries available.</p>';
         const rows = safeMembers.map(m => {
-            const left = isStream
-                ? `<strong>${escapeHtml(m.role)}</strong>—${escapeHtml(m.name)}`
-                : `<strong>${escapeHtml(m.name)}</strong>`;
+            const left = `<strong>${escapeHtml(m.name)}</strong>`;
             const right = isStream
-                ? `<em>${escapeHtml(m.affiliation)}</em>`
+                ? `<em>${escapeHtml(m.role)}</em>`
                 : `<em>${escapeHtml(m.role)}, ${escapeHtml(m.affiliation)}</em>`;
             return `<tr>
                 <td style="padding:0.35rem 1.2rem 0.35rem 0; white-space:nowrap; vertical-align:top;">${left}</td>
@@ -865,7 +863,7 @@ function renderCommittee() {
         ${makeTable(board, false)}
         <h3 style="margin:1.5rem 0 0.6rem; font-size:1.05rem; text-decoration:underline;">Oxford International Conference Committee</h3>
         ${makeTable(oxcc, false)}
-        <p style="margin:1.2rem 0 0.4rem; font-style:italic; font-weight:600;">Research Stream Chairs:</p>
+        <h3 style="margin:1.5rem 0 0.6rem; font-size:1.05rem; text-decoration:underline;">Research Stream Chairs</h3>
         ${makeTable(streamChairs, true)}
     `;
 }
