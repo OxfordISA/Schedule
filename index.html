@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ISA Oxford 2026 Conference Schedule</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=20260804-oxford1">
 </head>
 <body>
     <div id="lightbox-overlay" role="dialog" aria-modal="true" aria-label="Image preview">
@@ -28,7 +28,75 @@
         <button class="view-btn" data-view="awards">Awards</button>
         <button class="view-btn" data-view="map">Venue</button>
         <button class="view-btn" data-view="sponsors">Sponsors</button>
+        <button class="view-btn see-oxford-btn" data-view="oxford">See Oxford</button>
     </nav>
+
+
+    <div id="oxfordView" class="oxford-view" style="display:none;">
+        <section class="oxford-hero" aria-labelledby="oxford-title">
+            <img src="images/oxford.png" alt="Oxford skyline with the Radcliffe Camera">
+            <div class="oxford-hero-overlay">
+                <p class="oxford-kicker">Beyond the conference</p>
+                <h2 id="oxford-title">Things to Do in Oxford</h2>
+                <p>Places to eat, drink, visit, shop, walk, and run during your stay.</p>
+            </div>
+        </section>
+        <div class="oxford-grid">
+            <section class="oxford-card">
+                <h3><span aria-hidden="true">🍺</span> Historic Pubs</h3>
+                <ul>
+                    <li><strong>Turf Tavern</strong>, 7 Bath Place, Oxford OX1 3SU – Oxford’s most famous hidden pub, tucked beside the medieval city wall and a long-standing haunt of students, academics and visitors.</li>
+                    <li><strong>The Bear Inn</strong>, 6 Alfred Street, Oxford OX1 4EH – One of Oxford’s oldest pubs, dating from 1242, renowned for its historic atmosphere and collection of college ties.</li>
+                    <li><strong>The King's Arms</strong>, 40 Holywell Street, Oxford OX1 3SP – A classic Oxford academic pub opposite the University’s historic centre, popular with faculty and students alike.</li>
+                    <li><strong>The Oxford Retreat</strong>, 1 Hythe Bridge Street, Oxford OX1 2EW – A popular Oxford pub and restaurant, and the closest pub to Saïd Business School.</li>
+                    <li><strong>Sandy’s Piano Bar</strong>, 4 King Edward Street, Oxford OX1 4HS – A late-night piano bar offering live music and cocktails in the heart of the city centre (open 9pm-12pm/1pm).</li>
+                </ul>
+            </section>
+            <section class="oxford-card">
+                <h3><span aria-hidden="true">🍽️</span> Restaurants</h3>
+                <ul>
+                    <li><strong>Westgate Oxford.</strong> Located in the city centre, the Westgate centre (and immediate surrounds) offers a wide range of casual dining options, including Sticks'n'Sushi, Mowgli Street Food, Dishoom, The Alchemist, and Flight Club for darts and drinks.</li>
+                    <li><strong>Little Clarendon Street.</strong> One of Oxford's best-known dining streets, within a few minutes' walk of the city centre. Options include French cuisine (<em>Pierre Victoire</em>), Japanese (<em>Edamame</em>), Spanish tapas (<em>Al-Andalus</em>), and our iconic icecream bar, G&amp;Ds.</li>
+                    <li><strong>Jericho.</strong> A 10-minute walk from city centre, Jericho is one of Oxford’s most popular neighbourhoods for dining and socialising. Popular pubs include The Old Bookbinders Ale House, The Rickety Press, and The Victoria, while notable dining options include The Standard (Indian), Branca (Italian), Japonais (sushi).</li>
+                </ul>
+            </section>
+            <section class="oxford-card">
+                <h3><span aria-hidden="true">🏛️</span> Museums</h3>
+                <ul>
+                    <li><strong>Ashmolean Museum</strong>, Beaumont Street, Oxford OX1 2PH – Britain’s first public museum, with world-class collections spanning art, archaeology and culture.</li>
+                    <li><strong>Oxford University Museum of Natural History</strong>, Parks Road, Oxford OX1 3PW – A spectacular Victorian museum housing dinosaur skeletons, scientific collections and architectural treasures.</li>
+                    <li><strong>Pitt Rivers Museum</strong>, South Parks Road, Oxford OX1 3PP – One of the world’s most fascinating anthropological museums, displaying objects from every continent.</li>
+                </ul>
+            </section>
+            <section class="oxford-card">
+                <h3><span aria-hidden="true">📚</span> Food, Books &amp; Shopping</h3>
+                <ul>
+                    <li><strong>Oxford Covered Market</strong>, Market Street, Oxford OX1 3DZ – A historic market featuring independent food stalls, cafés, bars and artisan retailers.</li>
+                    <li><strong>Blackwell’s Bookshop</strong>, 48–51 Broad Street, Oxford OX1 3BQ – Oxford’s legendary academic bookshop and a paradise for scholars and readers.</li>
+                    <li><strong>Westgate Oxford.</strong> Oxford’s main shopping and leisure centre.</li>
+                </ul>
+            </section>
+            <section class="oxford-card oxford-card-wide">
+                <h3><span aria-hidden="true">🎓</span> Historic Oxford</h3>
+                <ul class="oxford-two-column-list">
+                    <li><strong>Radcliffe Camera</strong> – Oxford's most iconic building and one of the most recognisable images of the University, located in the heart of the historic city centre.</li>
+                    <li><strong>Bodleian Library</strong> – One of the world's great research libraries and the intellectual heart of the University of Oxford, with a history spanning over 400 years.</li>
+                    <li><strong>Bridge of Sighs</strong> – Oxford's most photographed bridge, linking two parts of Hertford College and a favourite stop on walking tours of the city.</li>
+                    <li><strong>Sheldonian Theatre</strong> – Sir Christopher Wren's architectural masterpiece and the ceremonial home of the University, used for matriculation, graduation and major university events.</li>
+                    <li><strong>Punting on the Cherwell</strong> – Hire a punt from Magdalen Bridge Boathouse and glide along the River Cherwell past Magdalen College, the Botanic Garden, college boathouses and riverside meadows.</li>
+                    <li><strong>Christ Church Meadow</strong> – A beautiful riverside green space offering classic views of Christ Church College, Merton College, Magdalen Tower and the meeting point of the Thames and Cherwell rivers.</li>
+                </ul>
+            </section>
+            <section class="oxford-card oxford-card-wide">
+                <h3><span aria-hidden="true">🏃</span> Going for a run? (or walk!)</h3>
+                <ul class="oxford-route-list">
+                    <li><strong>Christ Church Meadow.</strong> A city-centre loop around Christ Church meadow. Walk to St Aldate’s, enter via the meadow gates next to Christ Church college. Ideal for a quick run.</li>
+                    <li><strong>Oxford Canal &amp; Port Meadow (flexible distance)</strong> – From Park End Street or Hythe Bridge Street, join the Oxford Canal towpath and follow it north through Jericho to Port Meadow.</li>
+                    <li><strong>Thames Path &amp; Iffley (flexible distance)</strong> – Start at Folly Bridge and follow the Thames riverside path along the Christ Church Meadow side of the river toward Iffley Lock.</li>
+                </ul>
+            </section>
+        </div>
+    </div>
 
     <div id="mapView" style="display:none; padding: 1.5rem; max-width: 1060px; margin: 0 auto;">
         <div style="display:flex; gap:2rem; align-items:flex-start;">
@@ -168,6 +236,6 @@
         <button class="mobile-filter-toggle" id="mobileFilterToggle">&#9776;</button>
     </div>
 
-    <script src="js/app.js?v=20260803-calendar-chairs2"></script>
+    <script src="js/app.js?v=20260804-oxford1"></script>
 </body>
 </html>
