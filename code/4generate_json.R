@@ -101,10 +101,20 @@ mark_contact_author <- function(authors_str, contact_author) {
   idx <- matches[[1]]
   entry <- str_trim(parts[[idx]])
   if (!str_detect(entry, "\\*")) {
-    entry <- if (str_detect(entry, "\\(")) {
-      str_replace(entry, "\\s*\\(", "* (")
+    # Mark the end of the contact author's full name. This keeps
+    # parenthetical nicknames inside the name and places the marker before
+    # the affiliation.
+    loc <- str_locate(str_to_lower(entry), fixed(str_to_lower(str_trim(contact_author))))
+    if (!is.na(loc[[1]])) {
+      entry <- paste0(
+        str_sub(entry, 1, loc[[2]]),
+        "*",
+        str_sub(entry, loc[[2]] + 1)
+      )
+    } else if (str_detect(entry, "\\s+\\([^()]*\\)\\s*$")) {
+      entry <- str_replace(entry, "\\s+(\\([^()]*\\))\\s*$", "* \\1")
     } else {
-      paste0(entry, "*")
+      entry <- paste0(entry, "*")
     }
   }
   parts[[idx]] <- entry
