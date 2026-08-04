@@ -714,7 +714,8 @@ function switchView(view) {
     document.getElementById('speakersView').style.display  = view === 'speakers'  ? '' : 'none';
     document.getElementById('awardsView').style.display    = view === 'awards'    ? '' : 'none';
     document.getElementById('mapView').style.display       = view === 'map'       ? '' : 'none';
-    document.getElementById('sponsorsView').style.display   = view === 'sponsors'  ? '' : 'none';
+    document.getElementById('sponsorsView').style.display  = view === 'sponsors' ? '' : 'none';
+    document.getElementById('oxfordView').style.display    = view === 'oxford'   ? '' : 'none';
     document.getElementById('mobileFilterToggle').style.display = view === 'schedule' ? '' : 'none';
 }
 
