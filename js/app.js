@@ -556,8 +556,15 @@ function toggleSession(element) {
 }
 
 function toggleAbstract(button, event) {
-    event.stopPropagation();
+    if (event) {
+        event.stopPropagation();
+    }
+
     const abstract = button.nextElementSibling;
+    if (!abstract || !abstract.classList.contains('abstract')) {
+        return;
+    }
+
     abstract.classList.toggle('visible');
     button.textContent = abstract.classList.contains('visible') ? 'Hide Abstract' : 'View Abstract';
 }
