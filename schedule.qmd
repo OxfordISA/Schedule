@@ -76,9 +76,9 @@ panels_raw <- read_csv(
   mutate(
     date_parsed = lubridate::mdy(date),
     day_name = case_when(
-      date_parsed == as.Date("2026-09-03") ~ "Thursday",
-      date_parsed == as.Date("2026-09-04") ~ "Friday",
-      date_parsed == as.Date("2026-09-05") ~ "Saturday",
+      date_parsed == as.Date("2026-06-03") ~ "Wednesday",
+      date_parsed == as.Date("2026-06-04") ~ "Thursday",
+      date_parsed == as.Date("2026-06-05") ~ "Friday",
       TRUE ~ format(date_parsed, "%A")
     ),
     start_dt = as.POSIXct(
@@ -1079,7 +1079,7 @@ for (pid in panel_order_ids) {
 
   for (i in seq_len(nrow(spkrs))) {
     spk <- spkrs[i, ]
-    person <- bios %>% filter(image == spk$person_id)
+    person <- bios %>% filter(person_id == spk$person_id)
 
     if (nrow(person) == 0) {
       next
@@ -1104,8 +1104,9 @@ for (pid in panel_order_ids) {
       pan_done <- TRUE
     }
 
-    img_path <- file.path("images", "bios", paste0(spk$person_id, ".png"))
-    has_image <- file.exists(img_path)
+    image_id <- if (nrow(person) > 0 && !is.na(person$image[[1]])) str_trim(person$image[[1]]) else ""
+    img_path <- file.path("images", "bios", paste0(image_id, ".png"))
+    has_image <- image_id != "" && file.exists(img_path)
 
     cat("\\noindent%\n")
     if (has_image) {
