@@ -17,7 +17,7 @@
             <p>Industry Studies Association International Conference | September 3-5, 2026</p>
         </div>
         <div class="header-btns">
-            <a href="schedule.pdf" download class="header-btn header-btn-gray">Download (PDF)</a>
+            <a href="schedule.pdf" download class="header-btn header-btn-gray" id="downloadPdfButton">Download (PDF)</a>
         </div>
     </header>
 
@@ -221,6 +221,13 @@
         <button class="mobile-filter-toggle" id="mobileFilterToggle">&#9776;</button>
     </div>
 
+    <script>
+        const titleHeading = document.querySelector('.header-text h1');
+        const downloadPdfButton = document.getElementById('downloadPdfButton');
+        if (titleHeading && downloadPdfButton) {
+            downloadPdfButton.style.borderColor = getComputedStyle(titleHeading).color;
+        }
+    </script>
     <script src="js/app.js?v=20260805-speakers1"></script>
 </body>
 </html>
