@@ -225,7 +225,10 @@
         const titleHeading = document.querySelector('.header-text h1');
         const downloadPdfButton = document.getElementById('downloadPdfButton');
         if (titleHeading && downloadPdfButton) {
-            downloadPdfButton.style.borderColor = getComputedStyle(titleHeading).color;
+            const titleColor = getComputedStyle(titleHeading).color;
+            downloadPdfButton.style.borderColor = titleColor;
+            downloadPdfButton.style.color = titleColor;
+            downloadPdfButton.style.fontWeight = '700';
         }
     </script>
     <script src="js/app.js?v=20260805-speakers1"></script>
