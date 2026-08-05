@@ -5,6 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ISA Oxford 2026 Conference Schedule</title>
     <link rel="stylesheet" href="css/style.css?v=20260805-badges1">
+    <style id="selected-filter-styles">
+        :root {
+            --filter-active-blue: #007bff;
+        }
+
+        .day-tab.active,
+        #search.filter-selected,
+        #timeSlotFilter.filter-selected,
+        #trackFilter.filter-selected,
+        #typeFilter.filter-selected {
+            background-color: var(--filter-active-blue) !important;
+            border-color: var(--filter-active-blue) !important;
+            color: #fff !important;
+            font-weight: 700 !important;
+            box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.12) !important;
+        }
+
+        #search.filter-selected::placeholder {
+            color: rgba(255, 255, 255, 0.8);
+        }
+    </style>
 </head>
 <body>
     <div id="lightbox-overlay" role="dialog" aria-modal="true" aria-label="Image preview">
@@ -221,7 +242,7 @@
         <button class="mobile-filter-toggle" id="mobileFilterToggle">&#9776;</button>
     </div>
 
-    <script>
+    <script id="download-button-styling">
         const titleHeading = document.querySelector('.header-text h1');
         const downloadPdfButton = document.getElementById('downloadPdfButton');
         if (titleHeading && downloadPdfButton) {
@@ -232,5 +253,35 @@
         }
     </script>
     <script src="js/app.js?v=20260805-speakers1"></script>
+    <script id="selected-filter-behaviour">
+        document.addEventListener('DOMContentLoaded', () => {
+            const expandAllButton = document.getElementById('expandAll');
+            if (expandAllButton) {
+                const expandAllBlue = getComputedStyle(expandAllButton).backgroundColor;
+                document.documentElement.style.setProperty('--filter-active-blue', expandAllBlue);
+            }
+
+            const searchInput = document.getElementById('search');
+            const filterSelects = [
+                document.getElementById('timeSlotFilter'),
+                document.getElementById('trackFilter'),
+                document.getElementById('typeFilter')
+            ].filter(Boolean);
+
+            const updateSelectedFilterStyles = () => {
+                searchInput?.classList.toggle('filter-selected', searchInput.value.trim() !== '');
+                filterSelects.forEach(select => {
+                    select.classList.toggle('filter-selected', select.value !== '');
+                });
+            };
+
+            searchInput?.addEventListener('input', updateSelectedFilterStyles);
+            filterSelects.forEach(select => select.addEventListener('change', updateSelectedFilterStyles));
+            document.getElementById('resetFilters')?.addEventListener('click', () => {
+                setTimeout(updateSelectedFilterStyles, 0);
+            });
+            updateSelectedFilterStyles();
+        });
+    </script>
 </body>
 </html>
