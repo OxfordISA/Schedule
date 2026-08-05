@@ -744,7 +744,7 @@
     "abstract": "Using detailed product- and invention-level data from the pharmaceutical industry, we demonstrate that firms with high-selling ``blockbuster'' products concentrate their development efforts on new products that target the same customer segments and are technologically similar to existing offerings, rather than diversifying into new approaches. We propose that this pattern can be explained by an expectation of sales stickiness, whereby firms expect current product sales to persist, making investing in R&D within that customer segment more appealing. In addition, firm's marketing and R&D capabilities reinforce this behavior, but they do not fully explain it. By shifting the focus from firm-level characteristics to product-level drivers of innovation, our findings highlight how the commercial success of individual products shapes the direction of technological change, contributing to incremental innovation in R\\&D-intensive industries.",
     "moderator": null,
     "panelists": null,
-    "session_chair": "TBC",
+    "session_chair": "Vincent Hargaden (University College Dublin)",
     "discussant": null
   },
   {
@@ -766,7 +766,7 @@
     "abstract": "Pharmaceutical drug shortages represent a persistent public health challenge, yet limited research has examined how quickly shortages are resolved once they occur. This study investigates how regulatory inspections influence the time-to-resolution (TTR) of drug shortages, focusing on two dimensions: inspection frequency and inspection scrutiny. Using longitudinal drug-shortage level data from Health Canada, we link 10,850 resolved shortages reported between 2017 and 2023 to 6,757 regulatory inspections conducted at the associated manufacturing facilities. We analyze these relationships before and after the COVID pandemic. Our findings show that regulatory inspections do not exert a uniform or linear effect on shortage resolution. Pre-COVID, inspection frequency had no measurable effect, while inspection scrutiny was associated with faster resolution. Post-COVID, however, both inspection frequency and scrutiny display nonlinear patterns: frequency follows an U-shaped relationship with TTR, and scrutiny follows an inverted U-shape. To develop nascent theory for these effects, we conceptualize regulatory inspections as simultaneously generating value and imposing burden on regulatory targets, with their net effect lying on a value-to-burden continuum. We leverage this conceptualization to propose Regulatory Traction and Regulatory Friction, and the moderating role of exogenous disruption triggers, as theoretical explanations for when and why regulatory inspections hasten or impede drug shortage resolution.",
     "moderator": null,
     "panelists": null,
-    "session_chair": "TBC",
+    "session_chair": "Vincent Hargaden (University College Dublin)",
     "discussant": null
   },
   {
@@ -788,7 +788,7 @@
     "abstract": "Drug shortages are widely recognised as a serious problem across developed and developing countries, as they directly impact the quality of healthcare outcomes for patients in hospital and primary care settings. The range of drugs regularly reported by healthcare professional bodies, regulators and the general media as being on shortage vary from basic commodities such as intravenous saline, to analgesics, antibiotics, vaccines and cancer therapeutics. The problem is highly pervasive and complex owing to the increasingly long, globalised nature of drug supply chains that operate across a wide variety of stakeholders and countries. While the issue of drug shortages is not a new phenomenon, the challenges presented during and since the COVID-19 pandemic seem to have exacerbated the problem, making the issue more topical than ever on healthcare and political agendas. A large body of academic research exists that describes the nature of the drug shortages issue. This is supported through reports from healthcare professional bodies and regulatory authorities. However, relatively few of these works develop analytical models that can assess the magnitude of the problem, suggest mechanisms to alleviate shortages, and improve the resilience of drug chains. To address this apparent gap, this research develops a preliminary machine learning model for the prediction of shortages in drug supply chains. It starts with acquiring publicly available drug shortages data from two European countries (Belgium and Italy). The machine learning approach used to develop the prediction model is Extreme Gradient Boosting (XGBoost) due to its regression and classification potential. The output from the model is a prediction when a particular drug will be unavailable. While the model is in the preliminary stage of development, the results underscore the importance of the availability of more extensive historical shortage data through harmonised reporting, larger sample sizes and diverse features for better prediction of drug shortages.",
     "moderator": null,
     "panelists": null,
-    "session_chair": "TBC",
+    "session_chair": "Vincent Hargaden (University College Dublin)",
     "discussant": null
   },
   {
@@ -1888,7 +1888,7 @@
     "abstract": "Prosocial supply chains often lack effective coordination due to multi-stakeholder involvement and constraints at different levels, especially in developing countries. Ineffective coordination leads to sub-optimal utilisation and decreasing social welfare, especially when the demand greatly exceeds supply. We study the case of deceased organ donation in Indian states to investigate (i) how coordination is affected in a pro-social supply chain and (ii) how to improve coordination to maximise utility, respecting the constraints. Our findings suggest that a shared vision across the value chain is the first step in ensuring coordination. The input constraints can be managed by creating an idiosyncratic resource environment, such as the “factory-within-factory” approach, and through opportunistic collaboration, such as public-private partnerships. The process constraints can be bypassed with the help of social capital, where a “nexus-of-contracts” perspective is transformed into a “team” perspective for the greater good. We also find that enforcing output constraints through accountability and rewards helps ensure coordination.",
     "moderator": null,
     "panelists": null,
-    "session_chair": "TBC",
+    "session_chair": "Pinelopi Stamou (University of Oxford)",
     "discussant": null
   },
   {
@@ -1910,7 +1910,7 @@
     "abstract": "The National Health Service (NHS) faces critical operational challenges, including constrained budgets, limited capacity and workforce shortages. Elective care waiting lists have reached about 7.25 million cases, with nearly 40% of patients waiting more than 18 weeks. Similar pressures are evident in the Hertfordshire region, which the services support 1.6 million people across three hospital trusts. To address these challenges, we developed a web-based decision support tool (DST) for cardiology services to reduce waiting times and improve capacity planning. The tool integrates a discrete event simulation model with a workforce optimisation model, implemented in JavaScript. Through qualitative mapping and extensive stakeholder engagement, including clinicians, nurses, service managers, data specialists, and senior leadership, we conceptualised seven distinct cardiology pathways. The pathways cover the complexity of care from referral through outpatient and inpatient services. The DST captures the system’s complexity while remaining user-friendly and visually accessible. It enables users to test a range of intervention scenarios, with over 100 parameters per pathway. The tool has undergone rigorous testing and validation. It generates 23 interactive dashboard pages presenting key outputs across pathways, services, and workforce settings. The DST has enhanced the capacity planning for the Cardiology departments in Hertfordshire by providing actionable and evidence-based solutions with zero software licensing cost and an intuitive interface. The research advances operations management by integrating patient pathway modelling with dynamic workforce optimisation. This innovation supports tackling operational challenges in complex multi-level services.",
     "moderator": null,
     "panelists": null,
-    "session_chair": "TBC",
+    "session_chair": "Pinelopi Stamou (University of Oxford)",
     "discussant": null
   },
   {
@@ -1932,7 +1932,7 @@
     "abstract": "Maternity units operate under constrained capacity, creating a fundamental scheduling tension: planned caesarean sections and inductions compete with unplanned spontaneous births for limited resources. Using detailed national pregnancy data from the NHS England Maternity Services Data Set (MSDS), we examine how different demand flows interact and how congestion due to planned birth appointments affects the risk of emergency caesarean sections. We use statistical modelling to estimate the effect of congestion due to elective caesareans and inductions on the risk of emergency caesarean section interventions for spontaneous arrivals. To address endogeneity, we follow an instrumental variables approach that exploits exogenous variation in congestion at neighbouring hospitals outside a mother’s catchment area. We find that higher load from planned appointments increases the likelihood of emergency caesarean sections for spontaneous arrivals, with an effect size comparable to established clinical risk factors such as age or BMI. In addition, imbalance between planned and spontaneous births further increases emergency caesarean risk. These findings highlight the importance of better balancing planned and unplanned demand to manage congestion and maintain control over delivery timing under capacity constraints. In light of this, we discuss operational and managerial implications for healthcare managers and clinical practitioners.",
     "moderator": null,
     "panelists": null,
-    "session_chair": "TBC",
+    "session_chair": "Pinelopi Stamou (University of Oxford)",
     "discussant": null
   },
   {
@@ -1954,7 +1954,7 @@
     "abstract": "Professional decision making has long been conceptualized as a balance between autonomy and control. In contemporary hospitals, however, that dichotomy is increasingly inadequate. We develop a theory of supervised autonomy in which expert judgment is preserved formally but embedded within distributed, data-mediated, and increasingly algorithmic systems of oversight. Focusing on antibiotic prescribing in large U.S. hospitals, we conceptualize antibiotic stewardship programs as second-order judgment systems that evaluate how clinicians exercise discretion rather than replacing that discretion outright. We argue that artificial intelligence is unlikely to enter these settings primarily as a substitute for physicians. More plausibly, it becomes enmeshed in existing stewardship architectures, intensifying evaluative visibility, shifting accountability forward in time, amplifying ethical tension between patient-centered and population-centered logics, and transforming the nature of professional expertise. The paper contributes to management theory by extending work on professional autonomy, institutional logics, evaluation, audit, and algorithms at work. It also contributes to the growing literature on AI in organizations by showing that the main organizational effect of AI in high-stakes settings may be less direct substitution than the institutional augmentation of distributed oversight. We develop propositions and conclude with an empirical agenda that includes designs closely aligned with comparative work on clinician and AI prescribing decisions in antibiotic contexts.",
     "moderator": null,
     "panelists": null,
-    "session_chair": "TBC",
+    "session_chair": "Pinelopi Stamou (University of Oxford)",
     "discussant": null
   },
   {
@@ -2128,6 +2128,28 @@
     "title": "Industrial Transformation in the Rocket Launch Sector: SpaceX, State Support, and Competitive Dynamics",
     "authors": "Oguz Karasu* (University of Oxford); Marc Ventresca (University of Oxford)",
     "abstract": "The rocket launch sector has undergone a major industrial transformation over the past two decades, shifting from a state-dominated procurement model toward a more competitive system centred on private firms. Before the rise of SpaceX, launch services for NASA and other public agencies were largely organized through cost-plus contracting, limited competition, and dependence on established space players. This model prioritized reliability and mission assurance but often generated high costs and slow innovation cycles. This paper examines how NASA’s procurement reforms helped create a viable market for private launch companies. NASA shifted toward milestone-based, fixed-price contracting that transferred greater technical and financial responsibility to firms while preserving public demand through long-term contracts. These policy changes reduced entry barriers and enabled new actors to scale rapidly. Using SpaceX as the primary case study, the paper analyses how state support, procurement design, and competitive pressure reshaped market structure in the global launch industry. The firm’s extraordinary private valuation and persistent IPO speculation which is approximately $1.75 trillion underscore how state-created markets may culminate in concentrated private rewards. The paper argues that SpaceX’s emergence was not simply the result of entrepreneurial innovation, but of a public-policy framework combining risk sharing, demand guarantees, and performance-based competition. The study contributes to comparative industry research by showing how procurement institutions can transform technologically complex strategic sectors. It also raises broader policy questions concerning public dependence on dominant private suppliers, market concentration, and the governance of strategic industries in an era of renewed state involvement in markets.",
+    "moderator": null,
+    "panelists": null,
+    "session_chair": null,
+    "discussant": null
+  },
+  {
+    "id": "216",
+    "session_id": "PP4",
+    "session_name": "Competition in Strategic Industries",
+    "paper_order": 3,
+    "type": "paper",
+    "category": "Public Policy and Global Competitiveness",
+    "date": "2026-09-04",
+    "day": "Friday",
+    "start_time": "13:30:00",
+    "end_time": "14:40:00",
+    "time_slot": "FR02",
+    "time_order": 1788528600.0,
+    "room": "Founders Room",
+    "title": "The Transition from Oil to Electricity: Reshaping the Global Automotive Industry and Energy System",
+    "authors": "Martin Kenney (University of California, Davis); Jun Sun* (East China University of Science and Technology)",
+    "abstract": "The ongoing transition from internal combustion engine (ICE) vehicles to electric vehicles (EVs) represents more than a technological substitution; it constitutes a fundamental restructuring of the global energy landscape and the geopolitical configuration of the automotive industry. This paper frames this shift through the lens of Carlota Perez’s techno-economic paradigm theory, arguing that the world is moving from a long-dominant Fossil Fuel Triad (oil extraction, refining, and ICE vehicles) to an emerging Cleantech Triad (solar photovoltaics, batteries, and EVs). The Cleantech Triad, wherein renewable assets enable the manufacturing of energy rather than the continuous importation of combustible fuels, offers a systemic alternative for nations seeking to reduce long-term energy import dependence. China has emerged to lead global technology diffusion during this paradigm shift, as evidenced by its “New Trio” of photovoltaics, batteries, and EVs becoming a central pillar of the export economy. Through an integrated analysis of global trade and investment data, semi-structured interviews, and supply chain projects, this paper examines the global transition from ICE vehicles to EVs. Empirically, we show how China, as the world's largest producer, market, and—since 2024—exporter of automobiles, is driving this transition. This transition is unfolding unevenly across space. We map how the diffusion of the Cleantech Triad, led by Chinese firms like BYD and CATL, is actively redrawing the global map of automobile manufacturing, instigating a new industrial spatial fix. This includes the pivotal shift to Lithium Iron Phosphate (LFP) battery chemistry and the movement from exports to foreign direct investment by Chinese manufacturers. Simultaneously, this spatial shift is reconfiguring the global automotive order at its core—away from oil and toward electricity—directly challenging established petroleum usage patterns and industry incumbents and fueling new geopolitical tensions and trade resistance.",
     "moderator": null,
     "panelists": null,
     "session_chair": null,
@@ -2618,28 +2640,6 @@
     "discussant": null
   },
   {
-    "id": "216",
-    "session_id": "PP5",
-    "session_name": "Industrial Transformation and Green Transition",
-    "paper_order": 4,
-    "type": "paper",
-    "category": "Public Policy and Global Competitiveness",
-    "date": "2026-09-04",
-    "day": "Friday",
-    "start_time": "16:20:00",
-    "end_time": "17:30:00",
-    "time_slot": "FR03",
-    "time_order": 1788538800.0,
-    "room": "Founders Room",
-    "title": "The Transition from Oil to Electricity: Reshaping the Global Automotive Industry and Energy System",
-    "authors": "Martin Kenney (University of California, Davis); Jun Sun* (East China University of Science and Technology)",
-    "abstract": "The ongoing transition from internal combustion engine (ICE) vehicles to electric vehicles (EVs) represents more than a technological substitution; it constitutes a fundamental restructuring of the global energy landscape and the geopolitical configuration of the automotive industry. This paper frames this shift through the lens of Carlota Perez’s techno-economic paradigm theory, arguing that the world is moving from a long-dominant Fossil Fuel Triad (oil extraction, refining, and ICE vehicles) to an emerging Cleantech Triad (solar photovoltaics, batteries, and EVs). The Cleantech Triad, wherein renewable assets enable the manufacturing of energy rather than the continuous importation of combustible fuels, offers a systemic alternative for nations seeking to reduce long-term energy import dependence. China has emerged to lead global technology diffusion during this paradigm shift, as evidenced by its “New Trio” of photovoltaics, batteries, and EVs becoming a central pillar of the export economy. Through an integrated analysis of global trade and investment data, semi-structured interviews, and supply chain projects, this paper examines the global transition from ICE vehicles to EVs. Empirically, we show how China, as the world's largest producer, market, and—since 2024—exporter of automobiles, is driving this transition. This transition is unfolding unevenly across space. We map how the diffusion of the Cleantech Triad, led by Chinese firms like BYD and CATL, is actively redrawing the global map of automobile manufacturing, instigating a new industrial spatial fix. This includes the pivotal shift to Lithium Iron Phosphate (LFP) battery chemistry and the movement from exports to foreign direct investment by Chinese manufacturers. Simultaneously, this spatial shift is reconfiguring the global automotive order at its core—away from oil and toward electricity—directly challenging established petroleum usage patterns and industry incumbents and fueling new geopolitical tensions and trade resistance.",
-    "moderator": null,
-    "panelists": null,
-    "session_chair": "Sonja Avlijaš (University of Belgrade)",
-    "discussant": null
-  },
-  {
     "id": "209",
     "session_id": "SUS5",
     "session_name": "Sustainable Innovation and Digital Transformations",
@@ -2988,7 +2988,7 @@
     "abstract": "This study examines pharmaceutical industry pricing dynamics in response to governmental price control regulations, particularly for essential drugs. The context of the study is India's price control regulation adoption to manage the escalation of prices for pharmaceutical drugs. We evaluate the effectiveness of India's Drug Price Control Order 2013 (DPCO 13) using difference-in-differences analysis on pharmaceutical pricing data from January 2010 through March 2021. We analyze three regulatory phases: initial announcement (June 2013), mandatory price information submission (June 2015), and establishment of state-level vigilance infrastructure (June 2019). Using coarsened exact matching and multiple robustness checks including Lewbel IV estimation, Arellano-Bond dynamic panel models, and regression discontinuity design, we find that regulatory effectiveness follows a non-linear pattern. The announcement phase produced minimal price reductions. However, the information mandate phase generated significant price decreases of approximately 6% for treated drugs, representing the most substantial impact relative to prior periods. The enforcement infrastructure phase showed further reductions (15% overall) but with diminishing marginal effects. Exploring the mechanisms of the price control through competition, firm characteristics, and drug characteristics. We find that the effectiveness of price control varies significantly across different drug types categorized by the broad-level ICD codes they are approved for. We find that the price dampening effect of price control regulation is the highest for cardiovascular drugs, followed by pain medication and cancer drugs. We find that the effect of regulation is higher when industry concentration is low, and the presence of large firms with high industry concentration negates the affect of regulation to a large extent. Price elasticity of a drug is an important predictor of industry reaction to price regulations. Foreign MNCs as compared to domestic corporations are more conforming to the price regulation mandates. Finally, the number of drug options within a therapeutic class moderates the effect of price regulation on pricing of drugs. Critically, we identify two spillover mechanisms. Competition-driven spillover reduced prices of untreated drugs within the same therapeutic class by 3-5%, with effects strongest in fragmented markets (low HHI) and among high-volume products. Product commonality spillover reduced combination drug prices by 7-8%. Market concentration, firm origin (MNC vs. Indian), and therapeutic category significantly moderate treatment effects. Analysis of likelihood of violation of price ceilings for specific drugs reveals that while violations decreased over time, market leaders in concentrated markets remain more prone to non-compliance. Penalty analysis using Hawkes process modeling demonstrates that regulatory sanctions significantly dampen future violations, though effects decay rapidly. These findings suggest information-based interventions may yield higher marginal impact than enforcement expansion in pharmaceutical price regulation. Finally, we conduct consumer welfare analysis and show that such regulations improve consumer welfare significantly. The study has significant implications for pharmaceutical drug industry in India and globally. The evidence supports that price cap regulation not only directly lowers prices of controlled drugs but also indirectly reduces prices of untreated substitutes through competitive pressure. The effect is stronger in competitive markets, grows over time, and is reinforced by credible penalties. Regulators should design enforcement strategies that are swift, targeted, and risk‑based, while also addressing market concentration where spillovers are weak.",
     "moderator": null,
     "panelists": null,
-    "session_chair": "TBC",
+    "session_chair": "Yu Li (SKEMA Business School)",
     "discussant": null
   },
   {
@@ -3010,7 +3010,7 @@
     "abstract": "The U.S. blood plasma industry is dominated by four foreign multinationals (CSL, Grifols, Takeda, and KEDPLASMA) that collectively control over 85% of more than 1,000 collection centers. Unlike most healthcare markets, growth is constrained not by demand but by regulatory access to plasma donors, making the political environment a first-order determinant of where firms can profitably operate. We ask whether nonmarket strategy (NMS) capabilities shape not only policy outcomes, but firms' prior identification of politically viable market opportunities. Specifically, we examine whether plasma collection centers are systematically more likely to open in areas represented by legislators with relevant committee assignments (Health, Appropriations) even after controlling for market-level demand characteristics. If firms with stronger NMS capabilities can read the political landscape ahead of entry decisions, center locations should cluster on the politically safer side of legislative district boundaries, where otherwise similar communities differ primarily in their political representation. We exploit legislative district boundary discontinuities as a source of quasi-random variation in political representation, comparing census tracts on opposite sides of district boundaries that are similar in demographic and economic characteristics but differ in their political exposure. Using FDA establishment data on more than 1,000 U.S. plasma center locations (2014 to 2021), we present preliminary evidence consistent with politically informed location choice. These findings illuminate how political factors shape firm expansion decisions and the geographic distribution of capacity in highly regulated, supply-constrained industries, extending NMS theory to the ex ante stage of market entry.",
     "moderator": null,
     "panelists": null,
-    "session_chair": "TBC",
+    "session_chair": "Yu Li (SKEMA Business School)",
     "discussant": null
   },
   {
@@ -3032,7 +3032,7 @@
     "abstract": "Problem Definition. In many developing economies, the public sector bears primary responsibility for ensuring access to essential health commodities and services such as contraceptives. However, despite extensive government-led initiatives, contraceptive uptake remains persistently low in such settings, leaving over 160 million women with an unmet need. We investigate the impact of an oft-overlooked yet potentially consequential driver of contraceptive uptake: female vs. male publicly elected leaders. Methodology/results. Using a quasi-experimental design based on close elections across 653 districts in India over a decade (2010–2019), we examine the impact of publicly elected female legislators on contraceptive uptake. We find method-specific effects: female legislators increase uptake of intrauterine devices (IUDs)—a long-acting, reversible contraceptive—while having no meaningful effect on short-acting reversible (i.e., oral pills) or permanent non-reversible methods (i.e., tubal ligation). Interestingly, this increase in IUD uptake is concentrated among younger women, for whom the distinct features of IUDs—minimal client adherence, preserving future childbearing potential and easier concealability—are particularly valuable. We also find that, in districts with higher representation of female legislators, frontline health workers engage more with younger women on reproductive health—likely raising awareness of IUD-specific benefits and driving its uptake among this client segment. Managerial Implications. Our findings demonstrate the importance of aligning contraceptive method features with the needs of specific client segments, particularly younger women, to enhance uptake. Meaningful engagement by frontline health workers with younger women on reproductive health facilitates this alignment, serving as a scalable pathway to improve awareness and informed decision-making on uptake. More broadly, our study strengthens the case for institutional reforms—such as quotas for female political leaders—to improve reproductive health outcomes.",
     "moderator": null,
     "panelists": null,
-    "session_chair": "TBC",
+    "session_chair": "Yu Li (SKEMA Business School)",
     "discussant": null
   },
   {
