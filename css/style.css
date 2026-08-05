@@ -870,3 +870,209 @@ display: block;
 .oxford-card-wide { grid-column: auto; }
 .oxford-two-column-list { columns: 1; }
 }
+
+/* ===== Mobile compatibility layer: iOS and Android ===== */
+html {
+    width: 100%;
+    min-width: 0;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    min-width: 0;
+}
+
+img, svg, video, canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+button, input, select, textarea, a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.header-btn-gray {
+    color: #0d6efd;
+    border-color: #0d6efd;
+    font-weight: 700;
+}
+.header-btn-gray:hover,
+.header-btn-gray:focus-visible {
+    color: #fff;
+    background: #0d6efd;
+}
+
+/* Make active filters unmistakable and use the Expand All blue. */
+.day-tab.active,
+#search.filter-selected,
+#timeSlotFilter.filter-selected,
+#trackFilter.filter-selected,
+#typeFilter.filter-selected {
+    background: #0d6efd;
+    border-color: #0d6efd;
+    color: #fff;
+    font-weight: 700;
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.22);
+}
+#search.filter-selected::placeholder { color: rgba(255,255,255,0.82); }
+
+/* Keyboard focus remains visible on desktop and mobile keyboards. */
+:focus-visible {
+    outline: 3px solid rgba(13, 110, 253, 0.45);
+    outline-offset: 2px;
+}
+
+@media (max-width: 1024px) {
+    .main-container {
+        display: block;
+        width: 100%;
+        max-width: none;
+        min-width: 0;
+        margin: 0;
+    }
+
+    .content {
+        width: 100%;
+        min-width: 0;
+        padding: 16px;
+        overflow: visible;
+    }
+
+    .sidebar {
+        position: fixed;
+        z-index: 1001;
+        top: 0;
+        left: 0;
+        width: min(88vw, 360px);
+        max-width: 100%;
+        height: 100vh;
+        height: 100dvh;
+        padding: max(1.25rem, env(safe-area-inset-top)) 1.25rem max(1.25rem, env(safe-area-inset-bottom));
+        border-right: 1px solid #dee2e6;
+        box-shadow: 0.5rem 0 1.5rem rgba(0,0,0,0.22);
+        transform: translateX(-105%);
+        transition: transform 220ms ease;
+        overscroll-behavior: contain;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .sidebar.mobile-open { transform: translateX(0); }
+    .sidebar-overlay.show { display: block; }
+
+    body.filters-open { overflow: hidden; touch-action: none; }
+
+    .mobile-filter-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        bottom: calc(1rem + env(safe-area-inset-bottom));
+        right: calc(1rem + env(safe-area-inset-right));
+        width: 58px;
+        height: 58px;
+        min-width: 58px;
+        min-height: 58px;
+        padding: 0;
+        touch-action: manipulation;
+    }
+
+    .mobile-filter-toggle[aria-expanded="true"] {
+        background: #0b5ed7;
+    }
+}
+
+@media (max-width: 760px) {
+    header {
+        width: 100%;
+        padding: 12px;
+        gap: 10px;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .logo { height: 42px; max-width: 76px; object-fit: contain; }
+    .header-text { flex: 1 1 calc(100% - 90px); min-width: 0; }
+    .header-text h1 { font-size: clamp(1.05rem, 4.8vw, 1.35rem); line-height: 1.2; overflow-wrap: anywhere; }
+    .header-text p { font-size: 0.78rem; line-height: 1.35; }
+    .header-btns { width: 100%; margin-left: 0; }
+    .header-btn { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; padding: 9px 14px; }
+
+    .view-nav {
+        width: 100%;
+        padding: 0 8px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        flex-wrap: nowrap;
+        gap: 0;
+        scrollbar-width: thin;
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior-x: contain;
+    }
+    .view-nav-spacer { display: none; }
+    .view-btn { flex: 0 0 auto; min-height: 46px; padding: 0.7rem 0.85rem; font-size: 0.88rem; }
+
+    .content { padding: 10px; }
+    .session-group { width: 100%; margin-bottom: 10px; border-radius: 0.45rem; }
+    .session-header { padding: 0.85rem 0.9rem; }
+    .session-title { font-size: 1.05rem; line-height: 1.3; overflow-wrap: anywhere; }
+    .session-title-row { align-items: flex-start; }
+    .session-info { display: grid; grid-template-columns: 1fr; gap: 4px; font-size: 0.88rem; }
+    .session-info span { min-width: 0; overflow-wrap: anywhere; }
+    .paper { padding: 14px; }
+    .paper-title, .paper-authors, .abstract, .panel-description { overflow-wrap: anywhere; }
+    .abstract { padding: 0.85rem; }
+    .abstract-toggle, .cal-btn { min-height: 44px; }
+    .cal-wrapper { max-width: 100%; }
+    .cal-menu { position: fixed; left: 12px; right: 12px; top: auto; bottom: calc(5rem + env(safe-area-inset-bottom)); min-width: 0; }
+    .cal-menu a { min-height: 48px; display: flex; align-items: center; white-space: normal; }
+
+    /* 16px prevents Safari zooming the page when a form field receives focus. */
+    input, select, textarea { min-height: 46px; font-size: 16px; }
+    .day-tab { min-height: 44px; font-size: 0.9rem; }
+    .expand-all { min-height: 46px; }
+
+    .speakers-view, .awards-view, .oxford-view { width: 100%; max-width: none; padding: 10px; }
+    .speaker-card { padding: 1rem; gap: 0.85rem; align-items: flex-start; }
+    .speaker-photo, .speaker-photo-placeholder { width: 68px; height: 68px; }
+    .speaker-bio { overflow-wrap: anywhere; }
+    .award-header, .award-entries { padding-left: 1rem; padding-right: 1rem; }
+    .award-entry { flex-direction: column; gap: 0.45rem; }
+
+    #mapView, #sponsorsView {
+        width: 100% !important;
+        max-width: none !important;
+        padding: 12px !important;
+        margin: 0 !important;
+    }
+    #mapView > div { display: block !important; }
+    #mapView > div > nav { position: static !important; width: 100% !important; margin-bottom: 1rem; }
+    #mapView img[data-lightbox] { width: 100% !important; height: auto !important; }
+    #mapView table, #committeeContainer table { display: block; width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    #committeeContainer td { white-space: normal !important; overflow-wrap: anywhere; }
+
+    .sponsor-logo-row { flex-wrap: wrap !important; gap: 1rem !important; }
+    .sponsor-logo-box { flex: 1 1 100% !important; max-width: 100% !important; width: 100% !important; height: auto; min-height: 90px; }
+
+    .oxford-hero { min-height: 250px; border-radius: 10px; }
+    .oxford-hero img { height: 280px; }
+    .oxford-hero-overlay { padding: 1rem; }
+    .oxford-hero h2 { font-size: clamp(1.7rem, 8vw, 2.3rem); }
+    .oxford-card { padding: 1rem; }
+    .oxford-two-column-list { columns: 1; }
+}
+
+@media (max-width: 380px) {
+    .content { padding: 8px; }
+    .logo { height: 36px; max-width: 62px; }
+    .header-text { flex-basis: calc(100% - 74px); }
+    .header-text h1 { font-size: 1rem; }
+    .header-text p { font-size: 0.72rem; }
+    .speaker-card { flex-direction: column; }
+    .day-tabs { display: grid; grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}
+
