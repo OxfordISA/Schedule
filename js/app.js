@@ -678,32 +678,42 @@ function getAwardForTitle(title) {
     return null;
 }
 
+function canonicalPersonName(value) {
+    return String(value || '')
+        .split('(')[0]
+        .trim()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/[‘’]/g, "'")
+        .replace(/^(?:the\s+rt\s+hon\s+|professor\s+sir\s+|professor\s+|prof\.?\s+|dr\.?\s+|sir\s+)+/i, '')
+        .replace(/(?:\s+(?:cbe|ceng|fice|freng|frs))+$/i, '')
+        .replace(/\s+/g, ' ')
+        .toLowerCase();
+}
+
+function speakerKey(bio) {
+    return String((bio && (bio.person_id || bio.image)) || '')
+        .trim()
+        .replace(/[^a-zA-Z0-9_-]/g, '-');
+}
+
 function findBioForName(panelistStr) {
     if (!panelistStr || panelistStr.trim() === 'TBD') return null;
-    const s = panelistStr.trim();
-    for (const bio of biosData) {
-        const variants = [bio.name];
-        if (bio.name.startsWith('Dr. ')) variants.push(bio.name.slice(4));
-        else variants.push('Dr. ' + bio.name);
-        if (bio.name.includes('-')) variants.push(bio.name.replace(/-/g, ' '));
-        for (const v of variants) {
-            if (s === v || s.startsWith(v + ',') || s.startsWith(v + ' (') || s.startsWith(v + ';')) {
-                return bio;
-            }
-        }
-    }
-    return null;
+    const target = canonicalPersonName(panelistStr);
+    if (!target) return null;
+    return biosData.find(bio => canonicalPersonName(bio && bio.name) === target) || null;
 }
 
 function renderPanelistLine(panelistStr) {
-    const trimmed = panelistStr.trim();
+    const trimmed = String(panelistStr || '').trim();
     if (!trimmed) return '';
     const bio = findBioForName(trimmed);
-    if (!bio) return escapeHtml(trimmed);
+    const key = speakerKey(bio);
+    if (!bio || !key) return escapeHtml(trimmed);
     const parenIdx = trimmed.indexOf('(');
     const namePart = parenIdx >= 0 ? trimmed.slice(0, parenIdx).trim() : trimmed;
     const restPart = parenIdx >= 0 ? ' ' + trimmed.slice(parenIdx) : '';
-    return `<a class="speaker-link" href="#" onclick="showSpeaker('${bio.image}'); return false;">${escapeHtml(namePart)}</a>${escapeHtml(restPart)}`;
+    return `<a class="speaker-link" href="#" onclick="showSpeaker('${key}'); return false;">${escapeHtml(namePart)}</a>${escapeHtml(restPart)}`;
 }
 
 function switchView(view) {
@@ -733,18 +743,22 @@ function showSpeaker(slug) {
 
 function renderSpeakers() {
     const sorted = [...biosData].sort((a, b) => {
-        const lastName = name => name.replace(/^Dr\.\s+/, '').split(' ').pop();
-        return lastName(a.name).localeCompare(lastName(b.name));
+        const lastName = name => canonicalPersonName(name).split(' ').pop() || '';
+        return lastName(a && a.name).localeCompare(lastName(b && b.name));
     });
 
     const html = sorted.map(bio => {
-        const imgHtml = `<img src="images/bios/${bio.image}.png" class="speaker-photo" alt="${escapeHtml(bio.name)}" onerror="this.outerHTML='<div class=\\'speaker-photo-placeholder\\'>&#128100;</div>'">`;
+        const key = speakerKey(bio);
+        const image = String((bio && bio.image) || '').trim();
+        const imgHtml = image
+            ? `<img src="images/bios/${encodeURIComponent(image)}.png" class="speaker-photo" alt="${escapeHtml(bio.name)}" onerror="this.outerHTML='<div class=\'speaker-photo-placeholder\' aria-label=\'No speaker image available\'>&#128100;</div>'">`
+            : `<div class="speaker-photo-placeholder" aria-label="No speaker image available">&#128100;</div>`;
         return `
-        <div class="speaker-card" id="speaker-${bio.image}">
+        <div class="speaker-card" id="speaker-${key}">
             ${imgHtml}
             <div class="speaker-info">
                 <div class="speaker-name">${escapeHtml(bio.name)}</div>
-                <p class="speaker-bio">${escapeHtml(bio.bio)}</p>
+                <p class="speaker-bio">${escapeHtml(bio.bio || '')}</p>
             </div>
         </div>`;
     }).join('');
