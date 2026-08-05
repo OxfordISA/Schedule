@@ -228,6 +228,93 @@ test_that("Concurrent panels have moderators and panelists in JSON", {
   expect_true(all(!is.na(panel_json$panelists) & str_trim(panel_json$panelists) != ""))
 })
 
+# 11. Auxiliary JSON structures used by JavaScript map operations
+
+test_that("Auxiliary JSON files have the expected top-level structures", {
+  bios_json <- fromJSON(here("json", "bios_data.json"), simplifyVector = FALSE)
+  awards_json <- fromJSON(here("json", "awards_data.json"), simplifyVector = FALSE)
+  excursions_json <- fromJSON(here("json", "excursions_data.json"), simplifyVector = FALSE)
+  committee_json <- fromJSON(here("json", "committee_data.json"), simplifyVector = FALSE)
+
+  expect_true(is.list(bios_json))
+  expect_true(is.list(awards_json))
+  expect_true(is.list(excursions_json))
+  expect_true(is.list(committee_json))
+  expect_true(is.list(committee_json$board))
+  expect_true(is.list(committee_json$oxcc))
+  expect_true(is.list(committee_json$stream_chairs))
+})
+
+
+# 12. Plenary and special-session speaker identity and image integrity
+
+bios_csv <- read_csv(here("data", "bios.csv"), show_col_types = FALSE)
+bio_panels_csv <- read_csv(here("data", "bio-panels.csv"), show_col_types = FALSE)
+panels_csv <- read_csv(here("data", "panels.csv"), show_col_types = FALSE)
+
+canonical_person_name <- function(x) {
+  x <- coalesce(as.character(x), "")
+  x <- str_remove(x, "\\s*\\(.*$")
+  x <- iconv(x, to = "ASCII//TRANSLIT")
+  x <- str_to_lower(str_squish(x))
+  x <- str_replace(
+    x,
+    "^(the\\s+rt\\s+hon\\s+|professor\\s+sir\\s+|professor\\s+|prof\\.?\\s+|dr\\.?\\s+|sir\\s+)+",
+    ""
+  )
+  x <- str_replace(x, "(?:\\s+(?:cbe|ceng|fice|freng|frs))+$", "")
+  str_squish(x)
+}
+
+test_that("Every speaker mapping has exactly one biography record", {
+  expect_true(all(!is.na(bios_csv$person_id) & str_trim(bios_csv$person_id) != ""))
+  expect_equal(anyDuplicated(bios_csv$person_id), 0L)
+  missing <- anti_join(
+    bio_panels_csv %>% distinct(person_id),
+    bios_csv %>% distinct(person_id),
+    by = "person_id"
+  )
+  expect_equal(nrow(missing), 0L)
+})
+
+test_that("Every nonblank biography image points to a PNG file", {
+  image_ids <- bios_csv %>%
+    filter(!is.na(image), str_trim(image) != "") %>%
+    pull(image)
+  expect_equal(anyDuplicated(image_ids), 0L)
+  missing_files <- image_ids[!file.exists(here("images", "bios", paste0(image_ids, ".png")))]
+  expect_equal(sort(missing_files), character(0))
+})
+
+test_that("All plenary and special-session names resolve to biography records", {
+  listed_people <- bind_rows(
+    panels_csv %>%
+      transmute(id, person = moderator) %>%
+      filter(!is.na(person), str_trim(person) != ""),
+    panels_csv %>%
+      transmute(id, person = str_split(panelists, ";")) %>%
+      unnest(person) %>%
+      mutate(person = str_trim(person)) %>%
+      filter(!is.na(person), person != "")
+  ) %>%
+    mutate(person_key = canonical_person_name(person))
+
+  bio_keys <- bios_csv %>%
+    transmute(person_id, name, person_key = canonical_person_name(name))
+
+  unmatched <- anti_join(listed_people, bio_keys, by = "person_key")
+  duplicate_keys <- bio_keys %>% count(person_key) %>% filter(person_key == "" | n > 1)
+  expect_equal(nrow(unmatched), 0L)
+  expect_equal(nrow(duplicate_keys), 0L)
+})
+
+test_that("Biography JSON preserves stable speaker IDs and optional image fields", {
+  bios_json_df <- fromJSON(here("json", "bios_data.json"), simplifyDataFrame = TRUE)
+  expect_true(all(c("person_id", "image", "name", "bio") %in% names(bios_json_df)))
+  expect_equal(anyDuplicated(bios_json_df$person_id), 0L)
+  expect_equal(sort(bios_json_df$person_id), sort(bios_csv$person_id))
+})
+
 cat("\n\n=== Session distribution by category and time slot ===\n")
 schedule_details %>%
   distinct(session_id, time_slot, category) %>%
