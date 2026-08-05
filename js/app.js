@@ -152,14 +152,34 @@ function attachEventListeners() {
     const mobileToggle = document.getElementById('mobileFilterToggle');
     const sidebar = document.getElementById('sidebar');
     const overlay = document.getElementById('sidebarOverlay');
-    mobileToggle.addEventListener('click', () => {
-        sidebar.classList.add('mobile-open');
-        overlay.classList.add('show');
+
+    const setMobileFiltersOpen = (open) => {
+        if (!mobileToggle || !sidebar || !overlay) return;
+        sidebar.classList.toggle('mobile-open', open);
+        overlay.classList.toggle('show', open);
+        document.body.classList.toggle('filters-open', open);
+        mobileToggle.setAttribute('aria-expanded', String(open));
+        mobileToggle.setAttribute('aria-label', open ? 'Close filters' : 'Open filters');
+        const icon = mobileToggle.querySelector('span');
+        if (icon) icon.innerHTML = open ? '&times;' : '&#9776;';
+        if (open) sidebar.querySelector('input, select, button')?.focus({ preventScroll: true });
+        else mobileToggle.focus({ preventScroll: true });
+    };
+
+    mobileToggle?.addEventListener('click', () => {
+        setMobileFiltersOpen(!sidebar.classList.contains('mobile-open'));
     });
-    overlay.addEventListener('click', () => {
-        sidebar.classList.remove('mobile-open');
-        overlay.classList.remove('show');
+    overlay?.addEventListener('click', () => setMobileFiltersOpen(false));
+    document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && sidebar?.classList.contains('mobile-open')) {
+            setMobileFiltersOpen(false);
+        }
     });
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 1024 && sidebar?.classList.contains('mobile-open')) {
+            setMobileFiltersOpen(false);
+        }
+    }, { passive: true });
 }
 
 function expandCollapseAll(expand) {
@@ -626,6 +646,10 @@ function updateFilterIndicators() {
     document.querySelector('label[for="timeSlotFilter"]').classList.toggle('filter-active', !!slotVal);
     document.querySelector('label[for="trackFilter"]').classList.toggle('filter-active', !!trackVal);
     document.querySelector('label[for="typeFilter"]').classList.toggle('filter-active', !!typeVal);
+    document.getElementById('search').classList.toggle('filter-selected', !!searchVal.trim());
+    document.getElementById('timeSlotFilter').classList.toggle('filter-selected', !!slotVal);
+    document.getElementById('trackFilter').classList.toggle('filter-selected', !!trackVal);
+    document.getElementById('typeFilter').classList.toggle('filter-selected', !!typeVal);
 }
 
 function resetAllFilters() {
