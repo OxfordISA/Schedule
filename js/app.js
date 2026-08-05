@@ -779,7 +779,7 @@ function renderAwards() {
     });
 
     const luncheonNote = `<div class="awards-luncheon-note">
-        Join us Friday, June 6 at the awards luncheon, when we will recognize all awardees.
+        Join us Saturday, September 5, at the awards luncheon, when we will recognise all awardees.
     </div>`;
 
     const cardsHtml = groups.map(g => {
