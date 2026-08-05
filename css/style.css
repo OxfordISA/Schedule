@@ -237,9 +237,9 @@ overflow-y: auto;
 .event-card .session-header { cursor: default; }
 .event-card .session-header:hover   
 .badge-event {
-background: #d1f0ff;
-color: #05445e;
-border: 1px solid #b6e0ff;
+background: #d1ecf1;
+color: #0c5460;
+border: 1px solid #bee5eb;
 }  
 .session-group {
 background: white;
@@ -303,27 +303,27 @@ border: 1px solid #c49af0;
 }  
 /* Panel badge — distinct from .badge-special */
 .badge-panel {
-background: #e7f4ff;
-color: #0b3b66;
-border: 1px solid #a8d0ff;
+background: #e8d5ff;
+color: #3d0070;
+border: 1px solid #c49af0;
 }
 /* Activity badge */
 .badge-activity {
 background: #e2f5e9;
 color: #14532d;
-border: 1px solid #86c757;
+border: 1px solid #86cfa3;
 }
 /* Ensure badges use a continuous shade (no hover change) */
 .badge-panel:hover {
-    background: #e7f4ff;
-    color: #0b3b66;
-    border: 1px solid #a8d0ff;
+    background: #e8d5ff;
+    color: #3d0070;
+    border: 1px solid #c49af0;
     transition: none;
 }
 .badge-activity:hover {
     background: #e2f5e9;
     color: #14532d;
-    border: 1px solid #86c757;
+    border: 1px solid #86cfa3;
     transition: none;
 }
 .badge-special:hover {
@@ -339,17 +339,17 @@ border: 1px solid #86c757;
     transition: none;
 }
 .badge-event:hover {
-    background: #d1f0ff;
-    color: #05445e;
-    border: 1px solid #b6e0ff;
+    background: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
     transition: none;
 }
 .session-badge:hover { transition: none; }
 /* Ensure Social badges always show the event color (higher specificity) */
 .session-badge.badge-event {
-    background: #d1f0ff;
-    color: #05445e;
-    border: 1px solid #b6e0ff;
+    background: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
 }
 .session-info {
 display: flex;
