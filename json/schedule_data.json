@@ -80,10 +80,10 @@
     "time_order": 1788440400.0,
     "room": "Rhodes Trust",
     "title": "Drones",
-    "authors": "Drone 1; Drone 2",
-    "abstract": "Insert abstract here",
+    "authors": null,
+    "abstract": null,
     "moderator": "Mike Lewis",
-    "panelists": "Drone 1; Drone 2",
+    "panelists": null,
     "session_chair": null,
     "discussant": null
   },
@@ -198,32 +198,10 @@
     "discussant": null
   },
   {
-    "id": "29",
-    "session_id": "I&E1",
-    "session_name": "AI and Entrepreneurial Experimentation",
-    "paper_order": 1,
-    "type": "paper",
-    "category": "Innovation, Entrepreneurship, and AI-Driven Transformation",
-    "date": "2026-09-03",
-    "day": "Thursday",
-    "start_time": "14:05:00",
-    "end_time": "15:15:00",
-    "time_slot": "TH05",
-    "time_order": 1788444300.0,
-    "room": "Edmund Safra",
-    "title": "Entrepreneurship, Experimentation, and Generative AI: Evidence from ChatGPT",
-    "authors": "Andrea Contigiani* (Ohio State University)",
-    "abstract": "Experimentation has long been viewed as a core strategic tool for entrepreneurs. However, its role may be shifting in the age of generative AI (GenAI). This paper provides early evidence on how GenAI is reshaping experimentation in early-stage ventures. We propose three mechanisms through which GenAI may affect experimentation. First, an *efficiency channel*: GenAI reduces the cost of running each experiment. Second, a *precision channel*: GenAI increases the amount of learning extracted from each experiment. Third, a *substitution channel*: GenAI enables low-cost, non-experimental learning that may partially replace field experimentation. To examine these mechanisms, we exploit the November 2022 release of ChatGPT as an exogenous technological shock. We construct a firm-month panel of 25,766 U.S. software ventures and classify ventures as *AI-ready* based on whether members of their top management team have prior deep learning or machine learning experience, capturing domain-specific absorptive capacity. Our findings reveal a nuanced pattern. Following the shock, AI-ready ventures grow significantly faster overall, including in roles associated with experimentation. However, their growth in experimentation-related roles is smaller relative to other functions, resulting in a modest compositional shift away from experimentation. At the same time, these ventures increase their adoption of A/B testing tools, reallocate talent from engineering toward commercialization, and raise external funding less frequently. Taken together, these results are most consistent with the efficiency channel. Rather than replacing experimentation, AI-ready ventures appear to use GenAI to conduct it more efficiently—reducing the resources required per experiment while maintaining, or even expanding, experimental activity.",
-    "moderator": null,
-    "panelists": null,
-    "session_chair": "Andrea Contigiani (Ohio State University)",
-    "discussant": null
-  },
-  {
     "id": "83",
     "session_id": "I&E1",
     "session_name": "AI and Entrepreneurial Experimentation",
-    "paper_order": 2,
+    "paper_order": 1,
     "type": "paper",
     "category": "Innovation, Entrepreneurship, and AI-Driven Transformation",
     "date": "2026-09-03",
@@ -238,14 +216,14 @@
     "abstract": "Early-stage ventures face a pre-validation funding gap. Traditional early-stage investment instruments are associated with high transaction costs, making small investments required for initial hypothesis testing unprofitable. Consequently, low-stakes entrepreneurs outside established ecosystems face the challenge of mobilizing resources and capital. At the same time, Generative Artificial Intelligence (AI) and cloud computing reduce cost and time required to develop a Minimum Viable Product (MVP). In this study, we examine the “AI dividend” in early-stage entrepreneurship. Specifically, we investigate the impact of AI tools on the capital (ticket size) and time required for initial idea validation and MVP development. Therefore, we are conducting a quantitative survey targeting early-stage entrepreneurs across diverse entrepreneurial ecosystems. By comparing high- and low-AI adopters, we measure how the intensity of AI adoption affects financial and time-related costs of experimentation. To distinguish between the two groups, we introduce an AI adoption index. We hypothesize that AI reduces initial validation costs to a small fraction of those associated with traditional business angel investments. In providing empirical support for a significantly reduced “affordable loss” threshold, this research contributes to the literature on entrepreneurial finance and innovation. It demonstrates how AI democratizes entrepreneurship, empowering marginalized founders to bypass existing early-stage investment constraints and efficiently achieve either venture validation or failure.",
     "moderator": null,
     "panelists": null,
-    "session_chair": "Andrea Contigiani (Ohio State University)",
+    "session_chair": "Marco Ceccagnoli (Georgia Institute of Technology)",
     "discussant": null
   },
   {
     "id": "33",
     "session_id": "I&E1",
     "session_name": "AI and Entrepreneurial Experimentation",
-    "paper_order": 3,
+    "paper_order": 2,
     "type": "paper",
     "category": "Innovation, Entrepreneurship, and AI-Driven Transformation",
     "date": "2026-09-03",
@@ -260,14 +238,14 @@
     "abstract": "How do platform-driven AI innovations reshape complementor dynamics and entrepreneurial opportunity within digital ecosystems? We study the introduction of Agentforce, Salesforce’s agentic AI platform that enables developers to embed autonomous agents into applications, as a technology shock to the AppExchange ecosystem. We construct a novel dataset covering the universe of AppExchange applications at monthly frequency between 2024 and early 2026, which we combine with external data on firm characteristics and business focus. Using these data, we track when Agentforce-related features first appear in complementors’ listings, which we interpret as a measure of observable commercialization and market-facing availability within the platform, rather than precise technical adoption. The introduction of Agentforce unfolds through multiple stages, including early announcement, the emergence of marketplace features, and subsequent improvements in functionality and deployability. We leverage this evolution to examine how complementors respond over time and across different dimensions of the ecosystem. Our preliminary analysis identifies three broad patterns. First, visible commercialization is limited in early phases and increases substantially only as Salesforce provides the tools, integration, and enablement needed to deploy the technology at scale. Second, responses are heterogeneous across complementors, with a higher propensity to commercialize through the platform among applications more closely aligned with data-intensive and automatable workflows. Third, adaptation appears to occur primarily among incumbent complementors, while entry patterns also shift as new capabilities become integrated into the platform. Together, these preliminary findings suggest that the impact of agentic AI in platform ecosystems is shaped not only by the technology itself, but also by the timing of platform enablement and the alignment between new capabilities and existing complementor activities.",
     "moderator": null,
     "panelists": null,
-    "session_chair": "Andrea Contigiani (Ohio State University)",
+    "session_chair": "Marco Ceccagnoli (Georgia Institute of Technology)",
     "discussant": null
   },
   {
     "id": "67",
     "session_id": "I&E1",
     "session_name": "AI and Entrepreneurial Experimentation",
-    "paper_order": 4,
+    "paper_order": 3,
     "type": "paper",
     "category": "Innovation, Entrepreneurship, and AI-Driven Transformation",
     "date": "2026-09-03",
@@ -282,7 +260,7 @@
     "abstract": "AI-assisted programming tools are increasingly adopted to enhance developer productivity by automating routine tasks and accelerating software development. While early evidence highlights short-term productivity gains, our study shows that excessive reliance on AI can unintentionally accelerate the accumulation of technical debt, leading nto escalating maintenance costs and eventual revenue erosion. Drawing on interviews with software engineers and insights from the literature, we build a dynamic simulation model to examine the long-term impacts of AI-assisted coding under varying conditions of project horizon, legacy-system interaction, developer skill, and market dynamism. Our results reveal that productivity benefits follow an inverted-U pattern: there exists a “sweet spot” where AI assistance improves overall performance, but beyond this threshold, compounded technical debt undermines system maintainability and profitability. We further show that greenfield environments and fast-evolving markets can tolerate higher levels of AI assistance, whereas brownfield (legacy) settings and teams with less skilled developers are substantially more susceptible to long-term decline. We identify technical-debt retirement as a strategic guardrail that can help sustain AI benefits over time. These findings demonstrate that AI-assisted development is not simply a choice of productivity tool, but a strategic decision that must consider programming environment constraints, system longevity, skill composition, and market factors.",
     "moderator": null,
     "panelists": null,
-    "session_chair": "Andrea Contigiani (Ohio State University)",
+    "session_chair": "Marco Ceccagnoli (Georgia Institute of Technology)",
     "discussant": null
   },
   {
@@ -718,7 +696,7 @@
     "time_order": 1788454200.0,
     "room": "Rhodes Trust",
     "title": "Communication failures surrounding Data Centers",
-    "authors": "Prathyaj Mantha* (Univeristy of Virginia);  (Nomad Futurist)",
+    "authors": "Prathyaj Mantha* (Univeristy of Virginia); (Nomad Futurist)",
     "abstract": "There is an unprecedented data center growth, with over $3 trillion in planned investment through 2030. However, over 60% of proposed projects face significant community or regulatory opposition. This paper looks to identify the systematic communication failure across the stakeholder ecosystem surrounding digital infrastructure development. Drawing on a multi-stakeholder analytical framework, this study examines twelve distinct groups — hyperscalers, AI companies, data center developers, utility providers infrastructure investors, local policymakers, regulators and permit agencies, environmental organizations, host communities, media, research institution and universities and trade associations. With each group mapped across axes of institutional power and community proximity. Each group operates with distinct information access levels, narrative frames, and communication styles, and the misalignments between them produce predictable, recurring breakdowns. This research employs a five-phase methodology: a structured literature review spanning NIMBY theory, risk communication, and stakeholder engagement; primary interviews across all stakeholder groups; systematic media and discourse analysis; synthesis into a Communications Failure Typology; and production of an actionable stakeholder engagement protocol. The study addresses four core research questions: why data center projects generate disproportionate opposition relative to their actual footprint; how different groups narratively frame the same infrastructure; what structural and institutional factors drive developer-community breakdown; and what policy and communication mechanisms can reduce friction. The research contributes original research that does not currently exist in the literature, with direct applicability to developers, regulators, community advocates, and policymakers navigating the next decade of digital infrastructure expansion.",
     "moderator": null,
     "panelists": null,
@@ -1276,32 +1254,10 @@
     "discussant": null
   },
   {
-    "id": "132",
-    "session_id": "I&E3",
-    "session_name": "Digital Platforms and Institutional Change",
-    "paper_order": 2,
-    "type": "paper",
-    "category": "Innovation, Entrepreneurship, and AI-Driven Transformation",
-    "date": "2026-09-04",
-    "day": "Friday",
-    "start_time": "08:45:00",
-    "end_time": "09:55:00",
-    "time_slot": "FR02",
-    "time_order": 1788511500.0,
-    "room": "Edmund Safra",
-    "title": "From Data Assets to Institutional Intermediaries: The Role of Bricolage Approaches",
-    "authors": "Xiangfeng Chen (Fudan University); Shenghao Xie (University of Liverpool); Ning Su* (Western University)",
-    "abstract": "The past decade has witnessed digitalization across a wide range of industries, fueling the emergence of industrial digital platforms. However, the development of these platforms has been hindered by the absence or ineffectiveness of supporting institutions such as industry standards and regulations, commonly known as institutional voids. While prior research has identified data as a strategic asset that can drive firms’ digital transformation in general, how data assets can enable firms to address these voids remain underexplored. In this study, we investigate the evolution of an industrial digital platform in the manufacturing industry. Drawing on the concept of bricolage lens, we unpack three processes by which the platform leverages the data it had accumulated to address institutional voids: institutional bricolage, platform bricolage, and data bricolage. These processes enable the platform to build digital infrastructure, expand digital resources, and develop scalable data asset products. This process also marks the platform’s evolution into an institutional intermediary. Our findings contribute to the understanding of how digital platforms can leverage institutional voids to address industry challenges and promote digital industrialization. Furthermore, this study advances the literature on data asset, demonstrating that the data-based bricolage is not merely a second-best coping mechanism but a generative force that drives the emergence of institutional intermediation. These insights offer actionable guidance for the development of nascent digital platforms seeking to harness institutional voids to accelerate digital transformation.",
-    "moderator": null,
-    "panelists": null,
-    "session_chair": "Gregory Young (University of Minnesota)",
-    "discussant": null
-  },
-  {
     "id": "143",
     "session_id": "I&E3",
     "session_name": "Digital Platforms and Institutional Change",
-    "paper_order": 3,
+    "paper_order": 2,
     "type": "paper",
     "category": "Innovation, Entrepreneurship, and AI-Driven Transformation",
     "date": "2026-09-04",
@@ -1323,7 +1279,7 @@
     "id": "192",
     "session_id": "I&E3",
     "session_name": "Digital Platforms and Institutional Change",
-    "paper_order": 4,
+    "paper_order": 3,
     "type": "paper",
     "category": "Innovation, Entrepreneurship, and AI-Driven Transformation",
     "date": "2026-09-04",
@@ -1518,7 +1474,7 @@
     "discussant": null
   },
   {
-    "id": "91",
+    "id": "91-1",
     "session_id": "SUS3",
     "session_name": "Assessing Green Industrial Policy Design and Outcomes",
     "paper_order": 1,
@@ -1532,7 +1488,7 @@
     "time_order": 1788511500.0,
     "room": "SR A",
     "title": "Can Green Subsidies Build Green Industries? Analyzing IPCEI subsidy effects on firm collaborations",
-    "authors": "Clara Krämer* (School of Social Sciences and Technology, Technical University of Munich); Malte Toetzke (School of Social Sciences and Technology, Technical University of Munich);  (Max Planck Institute for Innovation and Competition); Florian Egli (School of Social Sciences and Technology, Technical University of Munich); ",
+    "authors": "Clara Krämer* (School of Social Sciences and Technology, Technical University of Munich); Malte Toetzke (School of Social Sciences and Technology, Technical University of Munich); (Max Planck Institute for Innovation and Competition); Florian Egli (School of Social Sciences and Technology, Technical University of Munich)",
     "abstract": "Green industrial policies have expanded rapidly in recent years, as governments seek to align industrial development with climate and sustainability objectives, alongside other concerns including energy security and economic competitiveness. To achieve these goals, countries combine different approaches ranging from funding packages and deployment incentives to infrastructure provision and networking support, applied at different stages of technological development and sometimes attached to conditionalities. A systematic understanding of the range of policy design options, policy outcomes, and the relationships between them is of paramount importance to guide policy decision-making in this space. This four-paper panel establishes patterns in green industrial policy design and connects them to several policy outcomes across different sectors and jurisdictions. The first paper, Institutional design models of green industrial policies supporting clean technology commercialisation in the EU, US, UK and Germany, introduces a framework for analysing institutional design models in green industrial policy. The second paper, The impact of demand-side incentives for electric vehicles on innovation, connects subsidy policy as an input to patenting outcomes in the transportation sector. The third paper, More than Derisking: Bundles of Functions and their Effectiveness in Cleantech Industrial Policy, expands to seven combinations of three policy inputs – including both subsidies and conditionalities – and estimates impacts on patenting and funding outcomes in the U.S. context. The fourth paper, Can Green Subsidies Build Green Industries? Analyzing IPCEI subsidy effects on firm collaborations, picks up the thread of conditionalities and connects it to a further outcome, firm-level collaboration, in the European context.",
     "moderator": null,
     "panelists": null,
@@ -1540,7 +1496,7 @@
     "discussant": null
   },
   {
-    "id": "91",
+    "id": "91-2",
     "session_id": "SUS3",
     "session_name": "Assessing Green Industrial Policy Design and Outcomes",
     "paper_order": 2,
@@ -1554,7 +1510,7 @@
     "time_order": 1788511500.0,
     "room": "SR A",
     "title": "Can Green Subsidies Build Green Industries? Analyzing IPCEI subsidy effects on firm collaborations",
-    "authors": "Clara Krämer* (School of Social Sciences and Technology, Technical University of Munich); Malte Toetzke (School of Social Sciences and Technology, Technical University of Munich);  (Max Planck Institute for Innovation and Competition); Florian Egli (School of Social Sciences and Technology, Technical University of Munich); ",
+    "authors": "Clara Krämer* (School of Social Sciences and Technology, Technical University of Munich); Malte Toetzke (School of Social Sciences and Technology, Technical University of Munich); (Max Planck Institute for Innovation and Competition); Florian Egli (School of Social Sciences and Technology, Technical University of Munich)",
     "abstract": "Green industrial policies have expanded rapidly in recent years, as governments seek to align industrial development with climate and sustainability objectives, alongside other concerns including energy security and economic competitiveness. To achieve these goals, countries combine different approaches ranging from funding packages and deployment incentives to infrastructure provision and networking support, applied at different stages of technological development and sometimes attached to conditionalities. A systematic understanding of the range of policy design options, policy outcomes, and the relationships between them is of paramount importance to guide policy decision-making in this space. This four-paper panel establishes patterns in green industrial policy design and connects them to several policy outcomes across different sectors and jurisdictions. The first paper, Institutional design models of green industrial policies supporting clean technology commercialisation in the EU, US, UK and Germany, introduces a framework for analysing institutional design models in green industrial policy. The second paper, The impact of demand-side incentives for electric vehicles on innovation, connects subsidy policy as an input to patenting outcomes in the transportation sector. The third paper, More than Derisking: Bundles of Functions and their Effectiveness in Cleantech Industrial Policy, expands to seven combinations of three policy inputs – including both subsidies and conditionalities – and estimates impacts on patenting and funding outcomes in the U.S. context. The fourth paper, Can Green Subsidies Build Green Industries? Analyzing IPCEI subsidy effects on firm collaborations, picks up the thread of conditionalities and connects it to a further outcome, firm-level collaboration, in the European context.",
     "moderator": null,
     "panelists": null,
@@ -1562,7 +1518,7 @@
     "discussant": null
   },
   {
-    "id": "91",
+    "id": "91-3",
     "session_id": "SUS3",
     "session_name": "Assessing Green Industrial Policy Design and Outcomes",
     "paper_order": 3,
@@ -1576,7 +1532,7 @@
     "time_order": 1788511500.0,
     "room": "SR A",
     "title": "Can Green Subsidies Build Green Industries? Analyzing IPCEI subsidy effects on firm collaborations",
-    "authors": "Clara Krämer* (School of Social Sciences and Technology, Technical University of Munich); Malte Toetzke (School of Social Sciences and Technology, Technical University of Munich);  (Max Planck Institute for Innovation and Competition); Florian Egli (School of Social Sciences and Technology, Technical University of Munich); ",
+    "authors": "Clara Krämer* (School of Social Sciences and Technology, Technical University of Munich); Malte Toetzke (School of Social Sciences and Technology, Technical University of Munich); (Max Planck Institute for Innovation and Competition); Florian Egli (School of Social Sciences and Technology, Technical University of Munich)",
     "abstract": "Green industrial policies have expanded rapidly in recent years, as governments seek to align industrial development with climate and sustainability objectives, alongside other concerns including energy security and economic competitiveness. To achieve these goals, countries combine different approaches ranging from funding packages and deployment incentives to infrastructure provision and networking support, applied at different stages of technological development and sometimes attached to conditionalities. A systematic understanding of the range of policy design options, policy outcomes, and the relationships between them is of paramount importance to guide policy decision-making in this space. This four-paper panel establishes patterns in green industrial policy design and connects them to several policy outcomes across different sectors and jurisdictions. The first paper, Institutional design models of green industrial policies supporting clean technology commercialisation in the EU, US, UK and Germany, introduces a framework for analysing institutional design models in green industrial policy. The second paper, The impact of demand-side incentives for electric vehicles on innovation, connects subsidy policy as an input to patenting outcomes in the transportation sector. The third paper, More than Derisking: Bundles of Functions and their Effectiveness in Cleantech Industrial Policy, expands to seven combinations of three policy inputs – including both subsidies and conditionalities – and estimates impacts on patenting and funding outcomes in the U.S. context. The fourth paper, Can Green Subsidies Build Green Industries? Analyzing IPCEI subsidy effects on firm collaborations, picks up the thread of conditionalities and connects it to a further outcome, firm-level collaboration, in the European context.",
     "moderator": null,
     "panelists": null,
@@ -1584,7 +1540,7 @@
     "discussant": null
   },
   {
-    "id": "91",
+    "id": "91-4",
     "session_id": "SUS3",
     "session_name": "Assessing Green Industrial Policy Design and Outcomes",
     "paper_order": 4,
@@ -1598,7 +1554,7 @@
     "time_order": 1788511500.0,
     "room": "SR A",
     "title": "Can Green Subsidies Build Green Industries? Analyzing IPCEI subsidy effects on firm collaborations",
-    "authors": "Clara Krämer* (School of Social Sciences and Technology, Technical University of Munich); Malte Toetzke (School of Social Sciences and Technology, Technical University of Munich);  (Max Planck Institute for Innovation and Competition); Florian Egli (School of Social Sciences and Technology, Technical University of Munich); ",
+    "authors": "Clara Krämer* (School of Social Sciences and Technology, Technical University of Munich); Malte Toetzke (School of Social Sciences and Technology, Technical University of Munich); (Max Planck Institute for Innovation and Competition); Florian Egli (School of Social Sciences and Technology, Technical University of Munich)",
     "abstract": "Green industrial policies have expanded rapidly in recent years, as governments seek to align industrial development with climate and sustainability objectives, alongside other concerns including energy security and economic competitiveness. To achieve these goals, countries combine different approaches ranging from funding packages and deployment incentives to infrastructure provision and networking support, applied at different stages of technological development and sometimes attached to conditionalities. A systematic understanding of the range of policy design options, policy outcomes, and the relationships between them is of paramount importance to guide policy decision-making in this space. This four-paper panel establishes patterns in green industrial policy design and connects them to several policy outcomes across different sectors and jurisdictions. The first paper, Institutional design models of green industrial policies supporting clean technology commercialisation in the EU, US, UK and Germany, introduces a framework for analysing institutional design models in green industrial policy. The second paper, The impact of demand-side incentives for electric vehicles on innovation, connects subsidy policy as an input to patenting outcomes in the transportation sector. The third paper, More than Derisking: Bundles of Functions and their Effectiveness in Cleantech Industrial Policy, expands to seven combinations of three policy inputs – including both subsidies and conditionalities – and estimates impacts on patenting and funding outcomes in the U.S. context. The fourth paper, Can Green Subsidies Build Green Industries? Analyzing IPCEI subsidy effects on firm collaborations, picks up the thread of conditionalities and connects it to a further outcome, firm-level collaboration, in the European context.",
     "moderator": null,
     "panelists": null,
@@ -1731,7 +1687,7 @@
     "room": "NMLT",
     "title": "Plenary: Value Chains and Industrial Innovation Policy",
     "authors": "Julia Sutcliffe; Eoin O’Sullivan",
-    "abstract": "Insert abstract here",
+    "abstract": null,
     "moderator": "Professor Sir Mike Gregory",
     "panelists": "Julia Sutcliffe; Eoin O’Sullivan",
     "session_chair": null,
@@ -2108,7 +2064,7 @@
     "abstract": "Marketplace platforms are central players in online retail and are in an advantageous position to leverage data generated by third-party sellers. This paper analyzes how a platform's encroachment decision--whether to enter its marketplace as a direct competitor--is shaped by regulations that restrict its use of seller data. We show that the platform's encroachment decision follows a non-monotonic pattern: it enters against sellers with either relatively low or sufficiently high brand value, but remains a pure intermediary for intermediate brand values. The data ban regulation alters this strategy by making the platform more likely to exclude low brand-value sellers and more likely to accommodate high brand-value sellers. This creates a Matthew Effect in platform ecosystems: the regulation favors high-value sellers and harms low-value sellers. These results underscore the need for more nuanced regulatory approaches that promote data sharing in emerging markets and targeted bans in mature, established markets to better balance welfare and competition.",
     "moderator": null,
     "panelists": null,
-    "session_chair": null,
+    "session_chair": "Shiva Shekhar (Tilburg University)",
     "discussant": null
   },
   {
@@ -2130,7 +2086,7 @@
     "abstract": "The rocket launch sector has undergone a major industrial transformation over the past two decades, shifting from a state-dominated procurement model toward a more competitive system centred on private firms. Before the rise of SpaceX, launch services for NASA and other public agencies were largely organized through cost-plus contracting, limited competition, and dependence on established space players. This model prioritized reliability and mission assurance but often generated high costs and slow innovation cycles. This paper examines how NASA’s procurement reforms helped create a viable market for private launch companies. NASA shifted toward milestone-based, fixed-price contracting that transferred greater technical and financial responsibility to firms while preserving public demand through long-term contracts. These policy changes reduced entry barriers and enabled new actors to scale rapidly. Using SpaceX as the primary case study, the paper analyses how state support, procurement design, and competitive pressure reshaped market structure in the global launch industry. The firm’s extraordinary private valuation and persistent IPO speculation which is approximately $1.75 trillion underscore how state-created markets may culminate in concentrated private rewards. The paper argues that SpaceX’s emergence was not simply the result of entrepreneurial innovation, but of a public-policy framework combining risk sharing, demand guarantees, and performance-based competition. The study contributes to comparative industry research by showing how procurement institutions can transform technologically complex strategic sectors. It also raises broader policy questions concerning public dependence on dominant private suppliers, market concentration, and the governance of strategic industries in an era of renewed state involvement in markets.",
     "moderator": null,
     "panelists": null,
-    "session_chair": null,
+    "session_chair": "Shiva Shekhar (Tilburg University)",
     "discussant": null
   },
   {
@@ -2152,7 +2108,7 @@
     "abstract": "The ongoing transition from internal combustion engine (ICE) vehicles to electric vehicles (EVs) represents more than a technological substitution; it constitutes a fundamental restructuring of the global energy landscape and the geopolitical configuration of the automotive industry. This paper frames this shift through the lens of Carlota Perez’s techno-economic paradigm theory, arguing that the world is moving from a long-dominant Fossil Fuel Triad (oil extraction, refining, and ICE vehicles) to an emerging Cleantech Triad (solar photovoltaics, batteries, and EVs). The Cleantech Triad, wherein renewable assets enable the manufacturing of energy rather than the continuous importation of combustible fuels, offers a systemic alternative for nations seeking to reduce long-term energy import dependence. China has emerged to lead global technology diffusion during this paradigm shift, as evidenced by its “New Trio” of photovoltaics, batteries, and EVs becoming a central pillar of the export economy. Through an integrated analysis of global trade and investment data, semi-structured interviews, and supply chain projects, this paper examines the global transition from ICE vehicles to EVs. Empirically, we show how China, as the world's largest producer, market, and—since 2024—exporter of automobiles, is driving this transition. This transition is unfolding unevenly across space. We map how the diffusion of the Cleantech Triad, led by Chinese firms like BYD and CATL, is actively redrawing the global map of automobile manufacturing, instigating a new industrial spatial fix. This includes the pivotal shift to Lithium Iron Phosphate (LFP) battery chemistry and the movement from exports to foreign direct investment by Chinese manufacturers. Simultaneously, this spatial shift is reconfiguring the global automotive order at its core—away from oil and toward electricity—directly challenging established petroleum usage patterns and industry incumbents and fueling new geopolitical tensions and trade resistance.",
     "moderator": null,
     "panelists": null,
-    "session_chair": null,
+    "session_chair": "Shiva Shekhar (Tilburg University)",
     "discussant": null
   },
   {
@@ -2280,10 +2236,10 @@
     "time_order": 1788534600.0,
     "room": "Rhodes Trust",
     "title": "Semiconductors",
-    "authors": "Katie Hore; YYY; Sebastian Weiske",
-    "abstract": "Insert text here",
+    "authors": "Katie Hore; Sebastian Weiske",
+    "abstract": null,
     "moderator": "Travis Mosier",
-    "panelists": "Katie Hore; YYY; Sebastian Weiske",
+    "panelists": "Katie Hore; Sebastian Weiske",
     "session_chair": null,
     "discussant": null
   },
@@ -2348,6 +2304,28 @@
     "title": "When the Apolitical Cannot Hold: Technical Discipline and Political Pressure in Critical Infrastructure Governance",
     "authors": "Pedram Pourasgari* (University of Victoria)",
     "abstract": "Across industries, critical infrastructures are increasingly governed through communities, consortia or standard bodies whose legitimacy is founded on technical discipline and apolitical norms. International financial transactions, water and energy management, fishing allocations, and scholarly publishing are among those relying on conventions that bracket the political dimensions of the work, directing attention instead toward bounded technical issues. These governance mechanisms have proven their efficiency, yet the same apolitical disposition makes them fragile. Professional communities, particularly the ones with influence over critical infrastructure, are increasingly being forced to acknowledge political dimensions that they had been disciplined to ignore. The pressure comes either from external shocks that render political contestation unavoidable, or from communities' own pragmatic accommodations of outside actors. This paper draws on the history of one such community, dedicated to maintenance and development of the Linux kernel, which is arguably one of the most critical technical infrastructures operating across industries today. The study benefits from the community's commitment to radical transparency, which offers rare analytical access to the dynamics of tension emergence and resolution. I systematically analyzed three episodes of adoption and abrupt abandonment of a proprietary version control system (2002-2005), absorption of Android's kernel fork (2008-2012), and compliance-driven removal of sanctioned Russian maintainers (2024). Read together, these episodes reveal two dimensions of the apolitical governance problem. Pragmatic accommodations generate structural dependencies to an extent that the community's procedural repertoire was not designed to absorb, while external pressures force political acknowledgements, for which the community's legitimizing rhetoric had no provisions.",
+    "moderator": null,
+    "panelists": null,
+    "session_chair": "Roberto Fontana (University of Pavia)",
+    "discussant": null
+  },
+  {
+    "id": "132",
+    "session_id": "GIS4",
+    "session_name": "Rules and Governance in Digital Markets",
+    "paper_order": 3,
+    "type": "paper",
+    "category": "Innovation, Entrepreneurship, and AI-Driven Transformation",
+    "date": "2026-09-04",
+    "day": "Friday",
+    "start_time": "16:20:00",
+    "end_time": "17:30:00",
+    "time_slot": "FR10",
+    "time_order": 1788538800.0,
+    "room": "Rhodes Trust",
+    "title": "From Data Assets to Institutional Intermediaries: The Role of Bricolage Approaches",
+    "authors": "Xiangfeng Chen (Fudan University); Shenghao Xie (University of Liverpool); Ning Su* (Western University)",
+    "abstract": "The past decade has witnessed digitalization across a wide range of industries, fueling the emergence of industrial digital platforms. However, the development of these platforms has been hindered by the absence or ineffectiveness of supporting institutions such as industry standards and regulations, commonly known as institutional voids. While prior research has identified data as a strategic asset that can drive firms’ digital transformation in general, how data assets can enable firms to address these voids remain underexplored. In this study, we investigate the evolution of an industrial digital platform in the manufacturing industry. Drawing on the concept of bricolage lens, we unpack three processes by which the platform leverages the data it had accumulated to address institutional voids: institutional bricolage, platform bricolage, and data bricolage. These processes enable the platform to build digital infrastructure, expand digital resources, and develop scalable data asset products. This process also marks the platform’s evolution into an institutional intermediary. Our findings contribute to the understanding of how digital platforms can leverage institutional voids to address industry challenges and promote digital industrialization. Furthermore, this study advances the literature on data asset, demonstrating that the data-based bricolage is not merely a second-best coping mechanism but a generative force that drives the emergence of institutional intermediation. These insights offer actionable guidance for the development of nascent digital platforms seeking to harness institutional voids to accelerate digital transformation.",
     "moderator": null,
     "panelists": null,
     "session_chair": "Roberto Fontana (University of Pavia)",
@@ -2442,7 +2420,7 @@
     "discussant": null
   },
   {
-    "id": "61",
+    "id": "61-1",
     "session_id": "LAB4",
     "session_name": "Uneven Ground: How Context Shapes Who Builds, Who Stays, and Who Thrives",
     "paper_order": 1,
@@ -2464,7 +2442,7 @@
     "discussant": null
   },
   {
-    "id": "61",
+    "id": "61-2",
     "session_id": "LAB4",
     "session_name": "Uneven Ground: How Context Shapes Who Builds, Who Stays, and Who Thrives",
     "paper_order": 2,
@@ -2486,7 +2464,7 @@
     "discussant": null
   },
   {
-    "id": "61",
+    "id": "61-3",
     "session_id": "LAB4",
     "session_name": "Uneven Ground: How Context Shapes Who Builds, Who Stays, and Who Thrives",
     "paper_order": 3,
@@ -2508,7 +2486,7 @@
     "discussant": null
   },
   {
-    "id": "61",
+    "id": "61-4",
     "session_id": "LAB4",
     "session_name": "Uneven Ground: How Context Shapes Who Builds, Who Stays, and Who Thrives",
     "paper_order": 4,
@@ -3014,7 +2992,7 @@
     "discussant": null
   },
   {
-    "id": "62",
+    "id": "62-1",
     "session_id": "I&E6",
     "session_name": "Navigating Uncertainty: IP, Commercialization, and AI-Driven Changes in Biotech",
     "paper_order": 1,
@@ -3036,7 +3014,7 @@
     "discussant": null
   },
   {
-    "id": "62",
+    "id": "62-2",
     "session_id": "I&E6",
     "session_name": "Navigating Uncertainty: IP, Commercialization, and AI-Driven Changes in Biotech",
     "paper_order": 2,
@@ -3058,7 +3036,7 @@
     "discussant": null
   },
   {
-    "id": "62",
+    "id": "62-3",
     "session_id": "I&E6",
     "session_name": "Navigating Uncertainty: IP, Commercialization, and AI-Driven Changes in Biotech",
     "paper_order": 3,
@@ -3290,7 +3268,7 @@
     "end_time": "11:30:00",
     "time_slot": "SA04",
     "time_order": 1788604200.0,
-    "room": "Rhodes Trust",
+    "room": "NMLT",
     "title": "What Is Industry Studies Research?",
     "authors": "Saurabh Bansal; Laura Dupin; Juliane Reinecke",
     "abstract": null,
@@ -3312,7 +3290,7 @@
     "end_time": "11:30:00",
     "time_slot": "SA04",
     "time_order": 1788604200.0,
-    "room": "LT4",
+    "room": "Rhodes Trust",
     "title": "Resilience and Reconfiguration of Global Supply Chains",
     "authors": "Edward Anderson; Nitin Joglekar",
     "abstract": "As geopolitical tensions, technological disruption, and systemic vulnerabilities reshape global supply chains, new approaches to resilience are emerging. This panel examines four critical themes: (1) managing cascade risks in increasingly interconnected supply networks; (2) the growing use of supply chains as instruments of statecraft through export controls, technology restrictions, and resource access; (3) industrial resilience and supply chain reconfiguration driven by breakthrough technologies and new organisational models; and (4) the opportunities and risks created by agentic AI systems, including new approaches to visibility, coordination, and risk management. Together, the discussion explores how firms, industries, and governments can adapt to an increasingly uncertain global environment.",
