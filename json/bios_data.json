@@ -129,7 +129,7 @@
     "person_id": "sebastian-weiske",
     "image": "sebastian-weiske",
     "name": "Sebastian Weiske",
-    "bio": "Sebastian Weiske is Senior Manager Strategy Development at Infineon Technologies."
+    "bio": "Sebastian Weiske is Senior Manager Strategy Development at Infineon Technologies, a global semiconductor company serving automotive, power-management and Internet of Things markets. He leads macroeconomic and market-intelligence activities within Corporate Strategy, advising senior management on global economic trends, geopolitical developments and market shifts affecting the semiconductor industry. Before joining Infineon, he worked as a macroeconomist and policy adviser at the German Council of Economic Experts. He holds a PhD in Economics from Goethe University Frankfurt."
   },
   {
     "person_id": "jagjit-srai",
@@ -152,50 +152,26 @@
   {
     "person_id": "sir-mike-gregory",
     "image": "sir-mike-gregory",
-    "name": "Professor Sir Mike Gregory",
-    "bio": null
+    "name": "Professor Emeritus Sir Mike Gregory CBE, FREng",
+    "bio": "Following an early career in industry, Professor Emeritus Sir Mike Gregory CBE, FREng was a founder member of the team that established the University of Cambridge's Institute for Manufacturing, linking science, engineering, management and policy while integrating education, research and practice. He retired as Head of the Manufacturing and Management Division in the University of Cambridge's Department of Engineering and as Head of the Institute for Manufacturing. He now chairs the Babbage Policy International Forum."
   },
   {
     "person_id": "julia-sutcliffe",
-    "image": null,
-    "name": "Julia Sutcliffe",
-    "bio": "Julia Sutcliffe is"
+    "image": "",
+    "name": "Professor Julia Sutcliffe",
+    "bio": "Professor Julia Sutcliffe was appointed Chief Scientific Adviser at the Department for Business and Trade in February 2023. She provides science and engineering advice and independent challenge to ministers and senior officials, champions evidence-based decision-making, and builds internal scientific capability. She works with the network of departmental Chief Scientific Advisers and the Government Office for Science on cross-government issues. Previously, she was Chief Technologist at BAE Systems. She is an Honorary Professor in Computer Science at the University of Manchester, a Chartered Engineer, and a Fellow of the Royal Academy of Engineering and the Royal Aeronautical Society."
   },
   {
     "person_id": "eoin-osullivan",
-    "image": null,
+    "image": "",
     "name": "Eoin O’Sullivan",
-    "bio": "Eoin O’Sullivan is"
+    "bio": "Eoin O'Sullivan is the Babbage Fellow of Technology and Innovation Policy and Director of the Centre for Science, Technology and Innovation Policy at the University of Cambridge's Institute for Manufacturing. Since joining the Institute in 2007, he has researched how science and engineering R&D is translated into new technologies, industries and economic wealth. His policy work has included studies for UK government departments and research agencies, as well as work with the OECD, European Commission, United Nations Industrial Development Organization and US National Academies."
   },
   {
     "person_id": "mike-lewis",
-    "image": null,
-    "name": "Mike Lewis",
-    "bio": "Mike Lewis is"
-  },
-  {
-    "person_id": "drone-1",
-    "image": null,
-    "name": "Drone 1",
-    "bio": null
-  },
-  {
-    "person_id": "drone-2",
-    "image": null,
-    "name": "Drone 2",
-    "bio": null
-  },
-  {
-    "person_id": "xxx",
-    "image": null,
-    "name": "XXX",
-    "bio": "XXX is"
-  },
-  {
-    "person_id": "yyy",
-    "image": null,
-    "name": "YYY",
-    "bio": "YYY is"
+    "image": "",
+    "name": "Michael A. Lewis",
+    "bio": "Michael A. Lewis is Professor of Operations Management at the University of Bristol. His research examines how firms and industries build capabilities, manage innovation, and respond to technological and geopolitical change. He is co-author of the textbook Operations Strategy and has worked with industry and policymakers on manufacturing competitiveness, supply-chain resilience, and emerging technologies. His current work focuses on the evolution of critical industrial capabilities and the resilience and security of complex supply networks."
   },
   {
     "person_id": "saurabh-bansal",
@@ -207,12 +183,30 @@
     "person_id": "laura-dupin",
     "image": "laura-dupin",
     "name": "Laura Dupin",
-    "bio": "Laura Dupin is"
+    "bio": "Laura Dupin is Assistant Professor of Entrepreneurship and Innovation at the University of Amsterdam Business School. Her research examines local, industry-specific firm competitive dynamics using archival, experimental and qualitative methods. Her work has studied the French bread market, the Dutch cannabis coffeeshop industry, and Chicago movie theatres during the transition to sound. Her research has appeared in Administrative Science Quarterly, Organization Studies and Harvard Business Review. She is a member of the Amsterdam Young Academy, a 2024 fellow of the Netherlands Institute for Advanced Study, and a recipient of an NWO Veni grant."
   },
   {
     "person_id": "juliane-reinecke",
     "image": "juliane-reinecke",
     "name": "Juliane Reinecke",
-    "bio": "Juliane Reinecke is"
+    "bio": "Juliane Reinecke is Professor of Management Studies, Academic Area Head for Research, and Faculty Director for Sustainability at Saïd Business School, University of Oxford. She uses qualitative methods to study the emergence and transformation of sustainable industries, including food, garments, minerals and energy, and the roles of collective action, social movements, multi-stakeholder collaboration and transnational governance. Her work has appeared in leading management journals. She received her MPhil and PhD from the University of Cambridge and previously held professorships at King's College London and the University of Warwick."
+  },
+  {
+    "person_id": "simon-bachelor",
+    "image": "",
+    "name": "Simon Bachelor",
+    "bio": "Simon Bachelor is Head of the Drones Programme at British Transport Police, leading the development of drone capabilities to improve safety, security and operational efficiency across the UK's rail network. He oversees the delivery of the Beyond Visual Line of Sight programme and works with the Civil Aviation Authority, Network Rail and industry partners. With more than 30 years of policing experience, he has held operational, strategic, counter-terrorism and national-security roles, including work with the Home Office Counter Drones Unit and the National Police Chiefs' Council's Counter Drones portfolio."
+  },
+  {
+    "person_id": "sofia-stayte",
+    "image": "",
+    "name": "Sofia Stayte",
+    "bio": "Sofia Stayte is Head of the Aviation Skills and Future of Flight Branch within the UK Department for Transport's Aviation Safety, Innovation and Skills Division. She leads policy development at the intersection of emerging aviation technologies, workforce capability and regulation, including drones, advanced air mobility and future-flight systems. Her government experience spans pensions, skills and employment policy, rail workforce strategy, aviation Brexit negotiations and aviation consumer policy. She is a member of the Government Policy Profession and the Chartered Institute of Public Finance and Accountancy."
+  },
+  {
+    "person_id": "katie-hore",
+    "image": "",
+    "name": "Dr Katie Hore",
+    "bio": "Dr Katie Hore is Innovation Director at REWIRE, the UK's Innovation and Knowledge Centre for next-generation power semiconductors. REWIRE brings together the Universities of Bristol, Cambridge and Warwick with industry partners to accelerate the development and commercialisation of ultra-wide-bandgap semiconductor devices. She has more than a decade of semiconductor-industry experience spanning power electronics, optoelectronics and quantum technologies, and holds a DPhil in Chemistry from the University of Oxford."
   }
 ]
