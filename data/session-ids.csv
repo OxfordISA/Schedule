@@ -1,12 +1,11 @@
-id,session_id,session_name,paper_order
+﻿id,session_id,session_name,paper_order
 66,GIS1,"Market Power, Competition, and Social Outcomes",1
 31,GIS1,"Market Power, Competition, and Social Outcomes",2
 97,GIS1,"Market Power, Competition, and Social Outcomes",3
 178,GIS1,"Market Power, Competition, and Social Outcomes",4
-29,I&E1,AI and Entrepreneurial Experimentation,1
-83,I&E1,AI and Entrepreneurial Experimentation,2
-33,I&E1,AI and Entrepreneurial Experimentation,3
-67,I&E1,AI and Entrepreneurial Experimentation,4
+83,I&E1,AI and Entrepreneurial Experimentation,1
+33,I&E1,AI and Entrepreneurial Experimentation,2
+67,I&E1,AI and Entrepreneurial Experimentation,3
 163,LAB1,Labor Markets and Institutional Environments,1
 84,LAB1,Labor Markets and Institutional Environments,2
 207,LAB1,Labor Markets and Institutional Environments,3
@@ -114,7 +113,7 @@ id,session_id,session_name,paper_order
 182,GIS5,Firm Capabilities and Strategic Renewal,2
 177,GIS5,Firm Capabilities and Strategic Renewal,3
 112,GIS5,Firm Capabilities and Strategic Renewal,4
-86,HC3,Healthcare Operations,1
+86,HC3,"Politics, Institutions, and Strategy in Health Markets",1
 44,HC3,"Politics, Institutions, and Strategy in Health Markets",2
 220,HC3,"Politics, Institutions, and Strategy in Health Markets",3
 62,I&E6,"Navigating Uncertainty: IP, Commercialization, and AI-Driven Changes in Biotech",1

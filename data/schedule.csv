@@ -1,12 +1,11 @@
-id,session_id,session_name,paper_order,time_slot,room,date,day,start_time,end_time,time_order
+﻿id,session_id,session_name,paper_order,time_slot,room,date,day,start_time,end_time,time_order
 66,GIS1,"Market Power, Competition, and Social Outcomes",1,TH01,Rhodes Trust,2026-09-03,Thursday,14:05:00,15:15:00,1
 31,GIS1,"Market Power, Competition, and Social Outcomes",2,TH01,Rhodes Trust,2026-09-03,Thursday,14:05:00,15:15:00,1
 97,GIS1,"Market Power, Competition, and Social Outcomes",3,TH01,Rhodes Trust,2026-09-03,Thursday,14:05:00,15:15:00,1
 178,GIS1,"Market Power, Competition, and Social Outcomes",4,TH01,Rhodes Trust,2026-09-03,Thursday,14:05:00,15:15:00,1
-29,I&E1,AI and Entrepreneurial Experimentation,1,TH01,Edmund Safra,2026-09-03,Thursday,14:05:00,15:15:00,1
-83,I&E1,AI and Entrepreneurial Experimentation,2,TH01,Edmund Safra,2026-09-03,Thursday,14:05:00,15:15:00,1
-33,I&E1,AI and Entrepreneurial Experimentation,3,TH01,Edmund Safra,2026-09-03,Thursday,14:05:00,15:15:00,1
-67,I&E1,AI and Entrepreneurial Experimentation,4,TH01,Edmund Safra,2026-09-03,Thursday,14:05:00,15:15:00,1
+83,I&E1,AI and Entrepreneurial Experimentation,1,TH01,Edmund Safra,2026-09-03,Thursday,14:05:00,15:15:00,1
+33,I&E1,AI and Entrepreneurial Experimentation,2,TH01,Edmund Safra,2026-09-03,Thursday,14:05:00,15:15:00,1
+67,I&E1,AI and Entrepreneurial Experimentation,3,TH01,Edmund Safra,2026-09-03,Thursday,14:05:00,15:15:00,1
 163,LAB1,Labor Markets and Institutional Environments,1,TH01,LT4,2026-09-03,Thursday,14:05:00,15:15:00,1
 84,LAB1,Labor Markets and Institutional Environments,2,TH01,LT4,2026-09-03,Thursday,14:05:00,15:15:00,1
 207,LAB1,Labor Markets and Institutional Environments,3,TH01,LT4,2026-09-03,Thursday,14:05:00,15:15:00,1
