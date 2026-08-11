@@ -14,7 +14,7 @@ const trackMap = {
     'General Industry Studies':                                          { short: 'General Industry',          color: '#E69F00' },
     'Health Care Systems, Biotechnology, and Pharmaceuticals':           { short: 'Health Care & Pharma',      color: '#56B4E9' },
     'Innovation, Entrepreneurship, and AI-Driven Transformation':        { short: 'Innovation & AI',           color: '#CC79A7' },
-    'Labor Markets, Organizations, and the Future of Work':              { short: 'Labor & Work',              color: '#806600' },
+    'Labor Markets, Organizations, and the Future of Work':              { short: 'Labor & Work',              color: '#F0E442' },
     'Operations, Supply Chain, and AI-Enhanced Industry 4.0':            { short: 'Operations & Supply Chain', color: '#0072B2' },
     'Public Policy and Global Competitiveness':                          { short: 'Public Policy',             color: '#D55E00' },
     'Sustainable Innovation, Energy, and Mobility':                      { short: 'Sustainability & Energy',   color: '#009E73' },
@@ -152,34 +152,14 @@ function attachEventListeners() {
     const mobileToggle = document.getElementById('mobileFilterToggle');
     const sidebar = document.getElementById('sidebar');
     const overlay = document.getElementById('sidebarOverlay');
-
-    const setMobileFiltersOpen = (open) => {
-        if (!mobileToggle || !sidebar || !overlay) return;
-        sidebar.classList.toggle('mobile-open', open);
-        overlay.classList.toggle('show', open);
-        document.body.classList.toggle('filters-open', open);
-        mobileToggle.setAttribute('aria-expanded', String(open));
-        mobileToggle.setAttribute('aria-label', open ? 'Close filters' : 'Open filters');
-        const icon = mobileToggle.querySelector('span');
-        if (icon) icon.innerHTML = open ? '&times;' : '&#9776;';
-        if (open) sidebar.querySelector('input, select, button')?.focus({ preventScroll: true });
-        else mobileToggle.focus({ preventScroll: true });
-    };
-
-    mobileToggle?.addEventListener('click', () => {
-        setMobileFiltersOpen(!sidebar.classList.contains('mobile-open'));
+    mobileToggle.addEventListener('click', () => {
+        sidebar.classList.add('mobile-open');
+        overlay.classList.add('show');
     });
-    overlay?.addEventListener('click', () => setMobileFiltersOpen(false));
-    document.addEventListener('keydown', event => {
-        if (event.key === 'Escape' && sidebar?.classList.contains('mobile-open')) {
-            setMobileFiltersOpen(false);
-        }
+    overlay.addEventListener('click', () => {
+        sidebar.classList.remove('mobile-open');
+        overlay.classList.remove('show');
     });
-    window.addEventListener('resize', () => {
-        if (window.innerWidth > 1024 && sidebar?.classList.contains('mobile-open')) {
-            setMobileFiltersOpen(false);
-        }
-    }, { passive: true });
 }
 
 function expandCollapseAll(expand) {
@@ -646,10 +626,6 @@ function updateFilterIndicators() {
     document.querySelector('label[for="timeSlotFilter"]').classList.toggle('filter-active', !!slotVal);
     document.querySelector('label[for="trackFilter"]').classList.toggle('filter-active', !!trackVal);
     document.querySelector('label[for="typeFilter"]').classList.toggle('filter-active', !!typeVal);
-    document.getElementById('search').classList.toggle('filter-selected', !!searchVal.trim());
-    document.getElementById('timeSlotFilter').classList.toggle('filter-selected', !!slotVal);
-    document.getElementById('trackFilter').classList.toggle('filter-selected', !!trackVal);
-    document.getElementById('typeFilter').classList.toggle('filter-selected', !!typeVal);
 }
 
 function resetAllFilters() {
