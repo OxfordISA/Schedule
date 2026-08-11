@@ -1,14 +1,19 @@
 {
   "board": [
     {
-      "name": "Edward Anderson",
+      "name": "John Gray",
       "role": "President",
-      "affiliation": "University of Texas, Austin"
+      "affiliation": "The Ohio State University"
     },
     {
-      "name": "John Gray",
+      "name": "Edward Anderson",
+      "role": "Vice President/President-elect",
+      "affiliation": "University of Texas"
+    },
+    {
+      "name": "Tonya Boone",
       "role": "Past President",
-      "affiliation": "The Ohio State University"
+      "affiliation": "College of William and Mary"
     },
     {
       "name": "John Paul MacDuffie",
@@ -36,19 +41,14 @@
       "affiliation": "George Washington University"
     },
     {
-      "name": "Monica Gorman",
-      "role": "Industrial Policy",
-      "affiliation": "Crowell Global Advisors"
-    },
-    {
       "name": "Benn Lawson",
       "role": "Non-U.S. Strategy and Programming",
       "affiliation": "University of Oxford"
     },
     {
-      "name": "Darcy Fudge Kamal",
+      "name": "Darcy K. Fudge Kamal",
       "role": "Membership",
-      "affiliation": "California State University, Sacramento"
+      "affiliation": "California State University"
     },
     {
       "name": "Renae Sullivan",
@@ -78,9 +78,14 @@
       "affiliation": "University of Oxford"
     },
     {
+      "name": "Renae Sullivan",
+      "role": "Program Manager",
+      "affiliation": "Industry Studies Association"
+    },
+    {
       "name": "Edward Anderson",
       "role": "President",
-      "affiliation": "University of Texas"
+      "affiliation": "University of Texas at Austin"
     },
     {
       "name": "John Gray",
@@ -91,11 +96,6 @@
       "name": "John Paul Helveston",
       "role": "Conference Chair 2026",
       "affiliation": "George Washington University"
-    },
-    {
-      "name": "Renae Sullivan",
-      "role": "Program Manager",
-      "affiliation": "Industry Studies Association"
     }
   ],
   "stream_chairs": [
@@ -115,9 +115,14 @@
       "affiliation": "University of Amsterdam Business School"
     },
     {
-      "name": "Guendalina Anzolin & Keno Haverkamp",
+      "name": "Guendalina Anzolin",
       "role": "General Industry Studies",
-      "affiliation": "University of Modena; University of Cambridge"
+      "affiliation": "University of Modena"
+    },
+    {
+      "name": "Keno Haverkamp",
+      "role": "General Industry Studies",
+      "affiliation": "University of Cambridge"
     },
     {
       "name": "David Reiner",

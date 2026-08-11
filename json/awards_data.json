@@ -1,6 +1,6 @@
 [
   {
-    "award_order": "1",
+    "award_order": 1,
     "award": "Best Conference Paper Award",
     "description": "The conference paper awards recognise excellent industry-based research that demonstrates deep knowledge and investment in understanding industry markets, firms, and institutions.",
     "rank": "Winner",
@@ -12,7 +12,7 @@
     "awards_committee": "Paolo Aversa (Chair, King's College London); Olenka Kacperczyk (London Business School); Forrest Briscoe (Cornell University)"
   },
   {
-    "award_order": "1",
+    "award_order": 1,
     "award": "Best Conference Paper Award",
     "description": "The conference paper awards recognise excellent industry-based research that demonstrates deep knowledge and investment in understanding industry markets, firms, and institutions.",
     "rank": "Runner-up",
@@ -24,7 +24,7 @@
     "awards_committee": "Paolo Aversa (Chair, King's College London); Olenka Kacperczyk (London Business School); Forrest Briscoe (Cornell University)"
   },
   {
-    "award_order": "2",
+    "award_order": 2,
     "award": "Babbage Best Student Paper Award",
     "description": "The conference paper awards recognise excellent industry-based research that demonstrates deep knowledge and investment in understanding industry markets, firms, and institutions.",
     "rank": "Winner",
@@ -33,10 +33,10 @@
     "publication": null,
     "doi": null,
     "committee": null,
-    "awards_committee": "Sir Mike Gregory (University of Cambridge); Roberto Scazzieri (University of Bologna); David Leal (University of Cambridge)"
+    "awards_committee": "XX"
   },
   {
-    "award_order": "2",
+    "award_order": 2,
     "award": "Babbage Best Student Paper Award",
     "description": "The conference paper awards recognise excellent industry-based research that demonstrates deep knowledge and investment in understanding industry markets, firms, and institutions.",
     "rank": "Runner-up",
@@ -45,6 +45,6 @@
     "publication": null,
     "doi": null,
     "committee": null,
-    "awards_committee": "Sir Mike Gregory (University of Cambridge); Roberto Scazzieri (University of Bologna); David Leal (University of Cambridge)"
+    "awards_committee": "XX"
   }
 ]
