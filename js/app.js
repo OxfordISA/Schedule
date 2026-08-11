@@ -14,12 +14,26 @@ const trackMap = {
     'General Industry Studies':                                          { short: 'General Industry',          color: '#E69F00' },
     'Health Care Systems, Biotechnology, and Pharmaceuticals':           { short: 'Health Care & Pharma',      color: '#56B4E9' },
     'Innovation, Entrepreneurship, and AI-Driven Transformation':        { short: 'Innovation & AI',           color: '#CC79A7' },
-    'Labor Markets, Organizations, and the Future of Work':              { short: 'Labor & Work',              color: '#F0E442' },
+    'Labor Markets, Organizations, and the Future of Work':              { short: 'Labor & Work',              color: '#806600' },
     'Operations, Supply Chain, and AI-Enhanced Industry 4.0':            { short: 'Operations & Supply Chain', color: '#0072B2' },
     'Public Policy and Global Competitiveness':                          { short: 'Public Policy',             color: '#D55E00' },
     'Sustainable Innovation, Energy, and Mobility':                      { short: 'Sustainability & Energy',   color: '#009E73' },
     'Cross-Track':                                                        { short: 'Cross-Track',               color: '#5C4D7D' }
 };
+function getTrackInfo(category) {
+    const value = String(category || '').trim();
+    if (trackMap[value]) return trackMap[value];
+    if (
+        value.includes('Labor Markets') ||
+        value.includes('Organizations and the Future of Work') ||
+        value.includes('Future of Work') ||
+        value === 'Labor & Work'
+    ) {
+        return trackMap['Labor Markets, Organizations, and the Future of Work'];
+    }
+    return null;
+}
+
 
 // Data loading helpers. These produce useful errors for missing files and
 // prevent an optional auxiliary file from taking down the schedule.
@@ -102,13 +116,13 @@ Promise.all([
             if (exists) return;
             const option = document.createElement('option');
             option.value = track;
-            option.textContent = trackMap[track] ? trackMap[track].short : track;
+            option.textContent = getTrackInfo(track) ? getTrackInfo(track).short : track;
             trackFilter.appendChild(option);
         });
 
         trackFilter.addEventListener('change', function() {
             const wrapper = this.closest('.track-select-wrapper');
-            const info = trackMap[this.value];
+            const info = getTrackInfo(this.value);
             wrapper.style.setProperty('--track-color', info ? info.color : '#e5e5e5');
         });
 
@@ -374,7 +388,7 @@ function renderSchedule() {
                           session.type === 'panel'           ? '🗣 Panel' :
                           `📄 ${session.papers.length} paper${session.papers.length !== 1 ? 's' : ''}`;
 
-        const trackInfo = trackMap[session.category];
+        const trackInfo = getTrackInfo(session.category);
         const categoryLabel = trackInfo
             ? `<span class="session-category" style="color:${trackInfo.color}">■ ${trackInfo.short}</span>`
             : (session.category ? `<span class="session-category">${escapeHtml(session.category)}</span>` : '');
