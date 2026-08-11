@@ -14,7 +14,7 @@ const trackMap = {
     'General Industry Studies':                                          { short: 'General Industry',          color: '#E69F00' },
     'Health Care Systems, Biotechnology, and Pharmaceuticals':           { short: 'Health Care & Pharma',      color: '#56B4E9' },
     'Innovation, Entrepreneurship, and AI-Driven Transformation':        { short: 'Innovation & AI',           color: '#CC79A7' },
-    'Labor Markets, Organizations, and the Future of Work':              { short: 'Labor & Work',              color: '#F0E442' },
+    'Labor Markets, Organizations, and the Future of Work':              { short: 'Labor & Work',              color: '#806600' },
     'Operations, Supply Chain, and AI-Enhanced Industry 4.0':            { short: 'Operations & Supply Chain', color: '#0072B2' },
     'Public Policy and Global Competitiveness':                          { short: 'Public Policy',             color: '#D55E00' },
     'Sustainable Innovation, Energy, and Mobility':                      { short: 'Sustainability & Energy',   color: '#009E73' },
