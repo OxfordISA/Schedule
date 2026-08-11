@@ -1,9 +1,9 @@
-﻿person_id,panel_id,role,panel_order
-monica-gorman,opening-plenary,moderator,1
+person_id,panel_id,role,panel_order
 lord-william-hague,opening-plenary,speaker,1
+monica-gorman,opening-plenary,moderator,2
 sir-mike-gregory,value-chains-industrial-innovation-policy,moderator,1
-julia-sutcliffe,value-chains-industrial-innovation-policy,speaker,2
-eoin-osullivan,value-chains-industrial-innovation-policy,speaker,3
+julia-sutcliffe,value-chains-industrial-innovation-policy,panelist,2
+eoin-osullivan,value-chains-industrial-innovation-policy,panelist,3
 mike-lewis,drones,moderator,1
 drone-1,drones,panelist,2
 drone-2,drones,panelist,3
@@ -21,9 +21,9 @@ markus-felgenhauer,drug-shortages,panelist,2
 damien-holly,drug-shortages,panelist,3
 mujaheed-shaikh,drug-shortages,panelist,4
 travis-mosier,semiconductors,moderator,1
-katie-hore,semiconductors,panelist,2
-yyy,semiconductors,panelist,3
-sebastian-weiske,semiconductors,panelist,4
+sebastian-weiske,semiconductors,panelist,2
+xxx,semiconductors,panelist,3
+yyy,semiconductors,panelist,4
 daniel-armanios,infrastructure,moderator,1
 alison-baptiste,infrastructure,panelist,2
 jim-hall,infrastructure,panelist,3
