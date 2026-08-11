@@ -123,7 +123,7 @@
     "person_id": "travis-mosier",
     "image": "travis-mosier",
     "name": "Travis Mosier",
-    "bio": "Travis Mosier is a technology, semiconductor, and global policy expert with a distinguished track record in spearheading federal initiatives that have improved market access, increased exports, enhanced the domestic investment climate, and strengthened supply chain resiliency. Mr. Mosier serves as an Executive Advisor for Technology Partnerships, Public Policy & Strategy at mySilicon Compass, LLC, a strategic consulting practice that engages clients seeking to advance their technological competitiveness; grow international sales and market share; create and foster public-private partnerships; and expand jobs, advanced manufacturing, and research and development investments in emerging growth sectors in the United States."
+    "bio": "J. Travis Mosier is a technology, semiconductor, and global policy expert with a distinguished track record in spearheading federal initiatives that have improved market access, increased exports, enhanced the domestic investment climate, and strengthened supply chain resiliency. Mr Mosier serves as an Executive Advisor for Technology Partnerships, Public Policy & Strategy at mySilicon Compass, LLC, a strategic consulting practice that engages clients seeking to advance technological competitiveness, grow international sales and market share, create and foster public-private partnerships, and expand jobs, advanced manufacturing, and research and development investments in emerging growth sectors in the United States."
   },
   {
     "person_id": "sebastian-weiske",
@@ -163,7 +163,7 @@
   },
   {
     "person_id": "eoin-osullivan",
-    "image": "eoin-osullivan",
+    "image": null,
     "name": "Eoin O’Sullivan",
     "bio": "Eoin O’Sullivan is the Babbage Fellow of Technology & Innovation Policy and the Director of the Centre for Science, Technology & Innovation Policy at the Institute for Manufacturing. He joined the Institute for Manufacturing as a Senior Policy Fellow in 2007. Since then Eoin has carried out research on the ways science and engineering R&D is translated in new technologies, industries and economic wealth. Eoin’s policy-related activities have included studies for the UK Department of Business, Innovation & Skills; the Engineering & Physical Sciences Research Council; the UK Government Office of Science; Innovate UK; and Research England. Eoin has also worked with a range of international organisations, including the OECD, EU Commission, United Nations Industrial Development Organisation and US National Academies."
   },
@@ -171,31 +171,7 @@
     "person_id": "mike-lewis",
     "image": null,
     "name": "Mike Lewis",
-    "bio": "Mike Lewis"
-  },
-  {
-    "person_id": "drone-1",
-    "image": null,
-    "name": "Drone 1",
-    "bio": "Drone 1"
-  },
-  {
-    "person_id": "drone-2",
-    "image": null,
-    "name": "Drone 2",
-    "bio": "Drone 2"
-  },
-  {
-    "person_id": "xxx",
-    "image": null,
-    "name": "XXX",
-    "bio": "XXX is"
-  },
-  {
-    "person_id": "yyy",
-    "image": null,
-    "name": "YYY",
-    "bio": "YYY is"
+    "bio": "Mike Lewis is"
   },
   {
     "person_id": "saurabh-bansal",
