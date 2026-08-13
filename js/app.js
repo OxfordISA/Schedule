@@ -166,14 +166,22 @@ function attachEventListeners() {
     const mobileToggle = document.getElementById('mobileFilterToggle');
     const sidebar = document.getElementById('sidebar');
     const overlay = document.getElementById('sidebarOverlay');
-    mobileToggle.addEventListener('click', () => {
-        sidebar.classList.add('mobile-open');
-        overlay.classList.add('show');
-    });
-    overlay.addEventListener('click', () => {
-        sidebar.classList.remove('mobile-open');
-        overlay.classList.remove('show');
-    });
+    const closeMobileFilters = ({ restoreFocus = false } = {}) => {
+        sidebar.classList.remove('mobile-open'); overlay.classList.remove('show');
+        document.body.classList.remove('sidebar-is-open');
+        mobileToggle.setAttribute('aria-expanded', 'false'); mobileToggle.setAttribute('aria-label', 'Open schedule filters');
+        if (restoreFocus) mobileToggle.focus();
+    };
+    const openMobileFilters = () => {
+        sidebar.classList.add('mobile-open'); overlay.classList.add('show');
+        document.body.classList.add('sidebar-is-open');
+        mobileToggle.setAttribute('aria-expanded', 'true'); mobileToggle.setAttribute('aria-label', 'Close schedule filters');
+        const firstControl = sidebar.querySelector('button, input, select'); if (firstControl) firstControl.focus();
+    };
+    mobileToggle.addEventListener('click', () => sidebar.classList.contains('mobile-open') ? closeMobileFilters() : openMobileFilters());
+    overlay.addEventListener('click', () => closeMobileFilters({ restoreFocus: true }));
+    document.addEventListener('keydown', event => { if (event.key === 'Escape' && sidebar.classList.contains('mobile-open')) closeMobileFilters({ restoreFocus: true }); });
+    window.addEventListener('resize', () => { if (window.innerWidth > 1024 && sidebar.classList.contains('mobile-open')) closeMobileFilters(); });
 }
 
 function expandCollapseAll(expand) {
