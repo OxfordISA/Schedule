@@ -898,3 +898,11 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,.s
 }
 @media(max-width:420px){.logo{height:36px}.header-text{flex-basis:calc(100% - 52px)}.header-btns{width:100%;justify-content:flex-end}.sidebar{width:min(92vw,340px)}.content{padding:10px}.session-title-row{align-items:flex-start}.cal-menu{left:0;right:auto;max-width:calc(100vw - 40px)}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}}
+
+.mobile-filter-icon {
+    width: 25px;
+    height: 25px;
+    display: block;
+    fill: currentColor;
+    pointer-events: none;
+}
