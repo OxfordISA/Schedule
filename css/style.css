@@ -870,3 +870,31 @@ display: block;
 .oxford-card-wide { grid-column: auto; }
 .oxford-two-column-list { columns: 1; }
 }
+
+
+/* Responsive viewing and scrolling enhancements, 13 August 2026 */
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}body.sidebar-is-open{overflow:hidden}
+button,input,select,a{touch-action:manipulation}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,.session-header:focus-visible{outline:3px solid rgba(13,110,253,.45);outline-offset:2px}
+.view-nav{overflow-x:auto;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+.content,.speaker-info,.award-entry-body,.oxford-card{min-width:0;overflow-wrap:anywhere}#mapView img{height:auto}
+@media(max-width:1024px){
+ header{align-items:flex-start;flex-wrap:wrap}.header-text{flex:1 1 340px;min-width:0}.header-btns{margin-left:auto}
+ .main-container{display:block}.content{width:100%;padding:16px;overflow:visible}
+ .sidebar{position:fixed;top:0;left:0;width:min(88vw,340px);max-width:100%;height:100dvh;padding:1.25rem;border-right:1px solid #dee2e6;box-shadow:.75rem 0 2rem rgba(0,0,0,.2);transform:translateX(-105%);transition:transform .22s ease-out;z-index:1001;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+ .sidebar.mobile-open{transform:translateX(0)}.sidebar-overlay.show{display:block}
+ .mobile-filter-toggle{display:inline-flex;align-items:center;justify-content:center;bottom:max(1rem,env(safe-area-inset-bottom));right:max(1rem,env(safe-area-inset-right));width:52px;height:52px;min-width:44px;min-height:44px}
+ #mapView>div{gap:1rem!important}
+}
+@media(max-width:760px){
+ header{padding:12px 14px;gap:10px}.logo{height:42px}.header-text h1{font-size:1.12rem;line-height:1.25}.header-text p{font-size:.78rem;line-height:1.35}.header-btns{flex:0 0 auto}.header-btn{padding:6px 10px;font-size:.76rem}
+ .view-nav{padding:0 8px;gap:0}.view-nav-spacer{display:none}.view-btn{min-height:44px;padding:.65rem .8rem;font-size:.86rem}
+ .content,.speakers-view,.awards-view{padding:12px}.session-header{padding:.85rem .9rem}.session-title{font-size:1.05rem;line-height:1.35}.session-info{display:grid;grid-template-columns:1fr;gap:4px;font-size:.88rem}
+ .paper{padding:15px}.session-chair,.session-discussant{padding-left:15px;padding-right:15px}.award-badge{display:flex;width:fit-content;margin:.4rem 0 0;white-space:normal}
+ .speaker-card{flex-direction:column;gap:.85rem;padding:1rem}.speaker-photo,.speaker-photo-placeholder{width:72px;height:72px}.award-entry{flex-direction:column;gap:.45rem}
+ #mapView{padding:1rem!important}#mapView>div{display:block!important}#mapView>div>nav{position:static!important;width:100%!important;margin-bottom:1rem}
+ .sponsor-logo-row{flex-wrap:wrap!important;gap:1.25rem!important}.sponsor-logo-box{flex:1 1 240px!important;max-width:100%!important}#committeeContainer{overflow-x:auto;-webkit-overflow-scrolling:touch}
+ .oxford-hero{min-height:230px}.oxford-hero img{height:270px}
+}
+@media(max-width:420px){.logo{height:36px}.header-text{flex-basis:calc(100% - 52px)}.header-btns{width:100%;justify-content:flex-end}.sidebar{width:min(92vw,340px)}.content{padding:10px}.session-title-row{align-items:flex-start}.cal-menu{left:0;right:auto;max-width:calc(100vw - 40px)}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}}
