@@ -639,15 +639,37 @@ function updateTimeSlotDropdown(selectedDay) {
 }
 
 function updateFilterIndicators() {
-    const searchVal  = document.getElementById('search').value;
+    const searchVal  = document.getElementById('search').value.trim();
     const slotVal    = document.getElementById('timeSlotFilter').value;
     const trackVal   = document.getElementById('trackFilter').value;
     const typeVal    = document.getElementById('typeFilter').value;
+    const dayVal     = document.querySelector('.day-tab.active')?.getAttribute('data-day') || '';
 
     document.querySelector('label[for="search"]').classList.toggle('filter-active', !!searchVal);
     document.querySelector('label[for="timeSlotFilter"]').classList.toggle('filter-active', !!slotVal);
     document.querySelector('label[for="trackFilter"]').classList.toggle('filter-active', !!trackVal);
     document.querySelector('label[for="typeFilter"]').classList.toggle('filter-active', !!typeVal);
+
+    const activeFilterCount = [dayVal, searchVal, slotVal, trackVal, typeVal]
+        .filter(value => Boolean(value)).length;
+    const countBadge = document.getElementById('mobileFilterCount');
+    const filterButton = document.getElementById('mobileFilterToggle');
+
+    if (countBadge) {
+        countBadge.textContent = String(activeFilterCount);
+        countBadge.hidden = activeFilterCount === 0;
+    }
+    if (filterButton) {
+        const stateLabel = filterButton.getAttribute('aria-expanded') === 'true'
+            ? 'Close schedule filters'
+            : 'Open schedule filters';
+        filterButton.setAttribute(
+            'aria-label',
+            activeFilterCount > 0
+                ? `${stateLabel}, ${activeFilterCount} active filter${activeFilterCount === 1 ? '' : 's'}`
+                : stateLabel
+        );
+    }
 }
 
 function resetAllFilters() {
