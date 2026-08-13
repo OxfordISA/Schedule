@@ -1,0 +1,4 @@
+data/submissions.csv
+data/bios.csv
+json/schedule_data.json
+json/bios_data.json
