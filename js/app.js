@@ -222,7 +222,7 @@ function renderSchedule() {
         const typeMatch = !typeFilter  ||
             (typeFilter === 'paper'   && (item.type === 'paper' || item.type === 'panel' || item.type === 'self_organized_panel')) ||
             (typeFilter === 'special' && isSpecial(item.type)) ||
-            (typeFilter === 'event'   && item.type === 'event');
+            (typeFilter === 'event'   && (item.type === 'event' || item.type === 'activity'));
         return dayMatch && slotMatch && trackMatch && typeMatch;
     });
 
