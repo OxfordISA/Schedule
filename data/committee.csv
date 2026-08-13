@@ -1,23 +1,23 @@
-group,sort_order,name,role,affiliation
-board,1,John Gray,President,The Ohio State University
-board,2,Edward Anderson,Vice President/President-elect,University of Texas
-board,3,Tonya Boone,Past President,College of William and Mary
-board,4,John Paul MacDuffie,Chief Fiscal Officer,University of Pennsylvania
-board,5,Jeff Shockley,Treasurer,Virginia Commonwealth University
-board,6,Jeff Furman,Early Career Development Committee,Boston University
-board,7,Raja Roy,Awards,New Jersey Institute of Technology
-board,8,Andrew Reamer,Industrial Policy,George Washington University
+﻿group,sort_order,name,role,affiliation
+board,1,Edward Anderson,President,"University of Texas, Austin"
+board,2,John Gray,Past President,The Ohio State University
+board,3,John Paul MacDuffie,Chief Fiscal Officer,University of Pennsylvania
+board,4,Jeff Shockley,Treasurer,Virginia Commonwealth University
+board,5,Jeff Furman,Early Career Development Committee,Boston University
+board,6,Raja Roy,Awards,New Jersey Institute of Technology
+board,7,Andrew Reamer,Industrial Policy,George Washington University
+board,8,Monica Gorman,Industrial Policy,Crowell Global Advisors
 board,9,Benn Lawson,Non-U.S. Strategy and Programming,University of Oxford
-board,10,Darcy K. Fudge Kamal,Membership,California State University
+board,10,Darcy Fudge Kamal,Membership,"California State University, Sacramento"
 board,11,Renae Sullivan,Program Manager,Industry Studies Association
 oxcc,1,Benn Lawson,2026 International Conference Chair,University of Oxford
-oxcc,2,Daniel Armanios,Local Organising Committee member,University of Oxford
-oxcc,3,Federica De Stefano,Local Organising Committee member,University of Oxford
-oxcc,4,Matthew Amengual,Local Organising Committee member,University of Oxford
-oxcc,5,Renae Sullivan,Program Manager,Industry Studies Association
-oxcc,6,Edward Anderson,President,University of Texas at Austin
-oxcc,7,John Gray,Past President,The Ohio State University
-oxcc,8,John Paul Helveston,Conference Chair 2026,George Washington University
+oxcc,2,Daniel Armanios,Local Organising Committee member,
+oxcc,3,Federica De Stefano,Local Organising Committee member,
+oxcc,4,Matthew Amengual,Local Organising Committee member,
+oxcc,5,Edward Anderson,President,University of Texas
+oxcc,6,John Gray,Past President,The Ohio State University
+oxcc,7,John Paul Helveston,Conference Chair 2026,George Washington University
+oxcc,8,Renae Sullivan,Program Manager,Industry Studies Association
 stream_chairs,1,Angela Garcia Calvo,Public Policy & Global Competitiveness,University of Reading
 stream_chairs,2,Federica De Stefano,"Labor Markets, Organizations, and the Future of Work",University of Oxford
 stream_chairs,3,Laura Dupin,"Innovation, Entrepreneurship, and AI-Driven Transformation",University of Amsterdam Business School

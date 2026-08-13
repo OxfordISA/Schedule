@@ -1,4 +1,4 @@
-name,email,title,affiliation
+﻿name,email,title,affiliation
 Alison Baptiste,alison.baptiste@nista.gov.uk,Infrastructure,NISTA
 Angela Garcia Calvo,a.garciacalvo@henley.ac.uk,Track chair - PP,University of Reading
 Annabelle Gawer,a.gawer@surrey.ac.uk,Digital Stack,University of Surrey
@@ -7,10 +7,10 @@ Damien Holly,damien.holly@serb.com,Pharma,SERB Pharmaceuticals
 Diane Coyle,dc700@cam.ac.uk,Digital Stack,University of Cambridge
 François Lafond,francois.lafond@inet.ox.ac.uk,Reg - Nascent supply chain,University of Oxford
 Helena Malikova,helena.malikova@ec.europa.eu,Digital Stack,"DG Comp, EU"
-Jim Hall,jim.hall@eci.ox.ac.uk,Infrastructure / nascent supply chains,Oxford University
+Jim Hall,jim.hall@eci.ox.ac.uk,Infrastructure / nascent supply chains,University of Oxford
 Julia Pyke,julia.pyke@agilia.co.uk,Infrastructure,Agilia Infrastructure Partners.
-Mike Gregory,mjg1000@cam.ac.uk,Plenary speaker,University of Cambridge
-Mike Lewis,michael.lewis@bristol.ac.uk,Drones,University of Bristol
+"Professor Emeritus Sir Mike Gregory CBE, FREng",mjg1000@cam.ac.uk,Plenary speaker,University of Cambridge
+Michael A. Lewis,michael.lewis@bristol.ac.uk,Drones,University of Bristol
 Monica Gorman,mgorman@crowellglobaladvisors.com,Plenary speaker,Crowell Global Advisors
 Mujaheed Shaikh,shaikh@hertie-school.org,Pharma,Hertie School
 Nigel Chandler,nigel.chandler@airbus.com,Space,Airbus Space and Defence
@@ -20,3 +20,6 @@ Renae Sullivan,renae.sullivan@industrystudies.org,,Industry Studies Association
 Rob Desborough,,Space,Seraphim Space
 Sebastian Weiske,sebastian.weiske@infineon.com,Semiconductors,Infineon Technologies AG
 Travis Mosier,travis@mysilicon.com,Semiconductors,mySilicon Compass
+Simon Bachelor,,Drones,British Transport Police
+Sofia Stayte,,Drones,UK Department for Transport
+Katie Hore,,Semiconductors,REWIRE
