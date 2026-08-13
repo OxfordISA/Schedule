@@ -242,11 +242,22 @@ function renderSchedule() {
         }
     });
 
-    // Sort chronologically
+    // Sort every programme item by its actual date and start time. The source
+    // data contains different time_order scales for concurrent sessions and
+    // programme-wide items, so time_order alone does not produce a genuinely
+    // chronological schedule.
     filtered.sort((a, b) => {
-        if (a.time_order !== b.time_order) return a.time_order - b.time_order;
-        const sa = String(a.session_id), sb = String(b.session_id);
-        return sa.localeCompare(sb);
+        const dateCompare = String(a.date || '').localeCompare(String(b.date || ''));
+        if (dateCompare !== 0) return dateCompare;
+
+        const timeCompare = String(a.start_time || '').localeCompare(String(b.start_time || ''));
+        if (timeCompare !== 0) return timeCompare;
+
+        const numericOrderA = Number.isFinite(Number(a.time_order)) ? Number(a.time_order) : Number.MAX_SAFE_INTEGER;
+        const numericOrderB = Number.isFinite(Number(b.time_order)) ? Number(b.time_order) : Number.MAX_SAFE_INTEGER;
+        if (numericOrderA !== numericOrderB) return numericOrderA - numericOrderB;
+
+        return String(a.session_id || '').localeCompare(String(b.session_id || ''));
     });
 
     // Group by session
