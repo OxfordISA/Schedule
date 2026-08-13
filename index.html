@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ISA Oxford 2026 Conference Schedule</title>
-    <link rel="stylesheet" href="css/style.css?v=20260813-filter-icon">
+    <link rel="stylesheet" href="css/style.css?v=20260813-pdf-link">
     <style id="selected-filter-styles">
         :root {
             --filter-active-blue: #007bff;
@@ -38,7 +38,7 @@
             <p>Industry Studies Association International Conference | September 3-5, 2026</p>
         </div>
         <div class="header-btns">
-            <a href="schedule.pdf" download class="header-btn header-btn-gray" id="downloadPdfButton">Download (PDF)</a>
+            <a href="ISA%20Oxford_Conference%20Programme.pdf" download class="header-btn header-btn-gray" id="downloadPdfButton">Download (PDF)</a>
         </div>
     </header>
 
@@ -208,11 +208,7 @@
         <main class="content">
             <div id="schedule"><div class="loading">Loading schedule...</div></div>
         </main>
-        <button class="mobile-filter-toggle" id="mobileFilterToggle" type="button" aria-label="Open schedule filters" aria-controls="sidebar" aria-expanded="false">
-            <svg class="mobile-filter-icon" aria-hidden="true" viewBox="0 0 24 24" focusable="false">
-                <path d="M3 5h18l-7 8v5.5l-4 2V13L3 5z"></path>
-            </svg>
-        </button>
+        <button class="mobile-filter-toggle" id="mobileFilterToggle">&#9776;</button>
     </div>
 
     <script id="download-button-styling">
@@ -225,7 +221,7 @@
             downloadPdfButton.style.fontWeight = '700';
         }
     </script>
-    <script src="js/app.js?v=20260813-filter-icon"></script>
+    <script src="js/app.js?v=20260813-pdf-link"></script>
     <script id="selected-filter-behaviour">
         document.addEventListener('DOMContentLoaded', () => {
             const expandAllButton = document.getElementById('expandAll');
