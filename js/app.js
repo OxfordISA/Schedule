@@ -8,8 +8,6 @@ let allTimeSlotsData = [];
 let excursionsData = [];
 let committeeData = {};
 const seenSlotKeys = new Set();
-const DATA_VERSION = '20260826-v12-performance';
-let searchFrame = 0;
 let sessionCalendarData = {};
 
 const trackMap = {
@@ -47,8 +45,7 @@ function asArray(value, label) {
 
 async function fetchJson(path, { optional = false, fallback = null } = {}) {
     try {
-        const separator = path.includes('?') ? '&' : '?';
-        const response = await fetch(`${path}${separator}v=${DATA_VERSION}`, { cache: 'default' });
+        const response = await fetch(path, { cache: 'no-store' });
         if (!response.ok) {
             throw new Error(`${path} returned HTTP ${response.status}`);
         }
@@ -67,90 +64,88 @@ async function fetchJson(path, { optional = false, fallback = null } = {}) {
     }
 }
 
-// Load the schedule first so the primary view is not blocked by supplementary data.
-async function initialiseSchedule() {
-    try {
-        const data = await fetchJson('json/schedule_data.json');
-        if (!Array.isArray(data)) throw new Error('json/schedule_data.json must contain a top-level JSON array');
-        scheduleData = data;
-        prepareScheduleMetadata();
-        populateScheduleFilters();
-        attachEventListeners();
-        renderSchedule();
+// Load data
+Promise.all([
+    fetchJson('json/schedule_data.json'),
+    fetchJson('json/bios_data.json'),
+    fetchJson('json/awards_data.json'),
+    fetchJson('json/excursions_data.json', { optional: true, fallback: [] }),
+    fetchJson('json/committee_data.json', { optional: true, fallback: {} })
+])
+    .then(([data, bios, awards, excursions, committee]) => {
+        scheduleData = asArray(data, 'schedule_data.json');
+        biosData = asArray(bios, 'bios_data.json');
+        awardsData = asArray(awards, 'awards_data.json');
+        excursionsData = asArray(excursions, 'excursions_data.json');
+        committeeData = committee && typeof committee === 'object' && !Array.isArray(committee)
+            ? committee
+            : {};
 
-        // Supplementary views load independently after the schedule is interactive.
-        Promise.all([
-            fetchJson('json/bios_data.json', { optional: true, fallback: [] }),
-            fetchJson('json/awards_data.json', { optional: true, fallback: [] }),
-            fetchJson('json/excursions_data.json', { optional: true, fallback: [] }),
-            fetchJson('json/committee_data.json', { optional: true, fallback: {} })
-        ]).then(([bios, awards, excursions, committee]) => {
-            biosData = asArray(bios, 'bios_data.json');
-            awardsData = asArray(awards, 'awards_data.json');
-            excursionsData = asArray(excursions, 'excursions_data.json');
-            committeeData = committee && typeof committee === 'object' && !Array.isArray(committee) ? committee : {};
-            buildBioMap();
-            buildAwardMap();
-            renderSpeakers();
-            renderAwards();
-            renderCommittee();
-            // Excursion text becomes searchable as soon as the optional data arrives.
-            prepareSearchText();
+        if (!Array.isArray(data)) {
+            throw new Error('json/schedule_data.json must contain a top-level JSON array');
+        }
+        renderCommittee();
+        buildBioMap();
+        buildAwardMap();
+
+        data.forEach(item => {
+            if (item.category) allTracks.add(item.category);
+            if (item.time_slot && item.day) {
+                const slotKey = `${item.time_slot}__${item.day}`;
+                if (!seenSlotKeys.has(slotKey)) {
+                    seenSlotKeys.add(slotKey);
+                    const timeLabel = item.start_time && item.end_time
+                        ? `${item.day.substring(0,3)} ${formatTime(item.start_time)} – ${formatTime(item.end_time)}`
+                        : `${item.day} ${item.time_slot}`;
+                    allTimeSlotsData.push({
+                        slot: item.time_slot,
+                        day: item.day,
+                        label: timeLabel,
+                        start_time: item.start_time,
+                        end_time: item.end_time,
+                        order: item.time_order
+                    });
+                }
+            }
         });
-    } catch (err) {
+
+        // Populate track dropdown
+        const trackFilter = document.getElementById('trackFilter');
+        Array.from(allTracks).sort().forEach(track => {
+            const exists = Array.from(trackFilter.options).some(option => option.value === track);
+            if (exists) return;
+            const option = document.createElement('option');
+            option.value = track;
+            option.textContent = getTrackInfo(track) ? getTrackInfo(track).short : track;
+            trackFilter.appendChild(option);
+        });
+
+        trackFilter.addEventListener('change', function() {
+            const wrapper = this.closest('.track-select-wrapper');
+            const info = getTrackInfo(this.value);
+            wrapper.style.setProperty('--track-color', info ? info.color : '#e5e5e5');
+        });
+
+        // Populate time slot dropdown (all slots initially)
+        updateTimeSlotDropdown('');
+
+        renderSchedule();
+        renderSpeakers();
+        renderAwards();
+        attachEventListeners();
+    })
+    .catch(err => {
         console.error('ISA schedule initialisation failed:', err);
         document.getElementById('schedule').innerHTML =
-            `<div class="no-results"><h2>Error loading schedule</h2><p>${escapeHtml(err.message)}</p><p>Please refresh the page. If the problem continues, contact the conference team.</p></div>`;
-    }
-}
-function prepareSearchText() {
-    scheduleData.forEach(item => {
-        item._searchText = [item.session_name, item.title, item.authors, item.abstract, item.moderator, item.discussant, item.session_chair,
-            item.type === 'event' ? getExcursionSearchText(item.session_name) : '']
-            .filter(Boolean).join(' ').toLocaleLowerCase();
+            `<div class="no-results"><h2>Error loading schedule</h2><p>${escapeHtml(err.message)}</p><p>Open the browser console for the full error and file name.</p></div>`;
     });
-}
-function prepareScheduleMetadata() {
-    allTracks.clear(); allTimeSlotsData = []; seenSlotKeys.clear();
-    scheduleData.forEach(item => {
-        if (item.category) allTracks.add(String(item.category).trim());
-        if (item.time_slot && item.day) {
-            const slotKey = `${item.time_slot}__${item.day}`;
-            if (!seenSlotKeys.has(slotKey)) {
-                seenSlotKeys.add(slotKey);
-                allTimeSlotsData.push({slot:item.time_slot,day:item.day,
-                    label:item.start_time&&item.end_time?`${item.day.substring(0,3)} ${formatTime(item.start_time)} – ${formatTime(item.end_time)}`:`${item.day} ${item.time_slot}`,
-                    start_time:item.start_time,end_time:item.end_time,order:item.time_order});
-            }
-        }
-    });
-    prepareSearchText();
-}
-function populateScheduleFilters() {
-    const trackFilter=document.getElementById('trackFilter');
-    Array.from(allTracks).sort().forEach(track=>{
-        if(Array.from(trackFilter.options).some(option=>option.value===track)) return;
-        const option=document.createElement('option'); option.value=track;
-        option.textContent=getTrackInfo(track)?.short||track; trackFilter.appendChild(option);
-    });
-    trackFilter.addEventListener('change',function(){
-        const info=getTrackInfo(this.value);
-        this.closest('.track-select-wrapper').style.setProperty('--track-color',info?info.color:'#e5e5e5');
-    });
-    updateTimeSlotDropdown('');
-}
-initialiseSchedule();
 
 function attachEventListeners() {
     document.querySelectorAll('.view-btn').forEach(btn => {
         btn.addEventListener('click', () => switchView(btn.getAttribute('data-view')));
     });
 
-    document.getElementById('search').addEventListener('input', () => {
-        updateFilterIndicators();
-        cancelAnimationFrame(searchFrame);
-        searchFrame = requestAnimationFrame(renderSchedule);
-    });
+    document.getElementById('search').addEventListener('input', () => { updateFilterIndicators(); renderSchedule(); });
     document.getElementById('timeSlotFilter').addEventListener('change', () => { updateFilterIndicators(); renderSchedule(); });
     document.getElementById('trackFilter').addEventListener('change', () => { updateFilterIndicators(); renderSchedule(); });
     document.getElementById('typeFilter').addEventListener('change', () => { updateFilterIndicators(); renderSchedule(); });
@@ -202,7 +197,14 @@ function isSpecial(type) {
 }
 
 function itemMatchesSearch(item, searchTerm) {
-    return !searchTerm || String(item._searchText || '').includes(searchTerm);
+    return (item.session_name && item.session_name.toLowerCase().includes(searchTerm)) ||
+        (item.title        && item.title.toLowerCase().includes(searchTerm))        ||
+        (item.authors      && item.authors.toLowerCase().includes(searchTerm))      ||
+        (item.abstract     && item.abstract.toLowerCase().includes(searchTerm))     ||
+        (item.moderator    && item.moderator.toLowerCase().includes(searchTerm))     ||
+        (item.discussant   && item.discussant.toLowerCase().includes(searchTerm))   ||
+        (item.session_chair && item.session_chair.toLowerCase().includes(searchTerm)) ||
+        (item.type === 'event' && getExcursionSearchText(item.session_name).includes(searchTerm));
 }
 
 function renderSchedule() {
@@ -458,21 +460,31 @@ function renderSchedule() {
     });
 
     scheduleDiv.innerHTML = html;
-    scheduleDiv.querySelectorAll('.session-header[onclick]').forEach(header => {
-        header.setAttribute('role', 'button'); header.setAttribute('tabindex', '0');
-        header.setAttribute('aria-expanded', 'false');
-        header.addEventListener('keydown', event => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleSession(header); } });
-    });
     document.getElementById('sessionCount').textContent = totalSessions;
     document.getElementById('paperCount').textContent = totalPapers;
 }
 
 
 function renderSocialEventContent(item, calKey) {
-    const description = item && item.abstract ? `<div class="panel-description">${escapeHtml(item.abstract)}</div>` : '';
-    const mapLink = item && item.event_url ? `<p><a href="${escapeHtml(item.event_url)}" target="_blank" rel="noopener noreferrer">View on Google Maps</a></p>` : '';
+    const mapLink = item && item.event_url
+        ? `<p class="social-event-map"><a href="${escapeHtml(item.event_url)}" target="_blank" rel="noopener noreferrer">View on Google Maps</a></p>`
+        : '';
+    let description = '';
+    if (item && item.event_format === 'welcome-reception') {
+        description = `<div class="panel-description social-event-description">
+            <p><strong>Rhodes House,</strong><br>South Parks Road, Oxford OX1 3RG.<br><em>Drinks and canapés.</em></p>
+        </div>`;
+    } else if (item && item.event_format === 'gala-dinner') {
+        description = `<div class="panel-description social-event-description">
+            <p><strong>Balliol College,</strong><br>Broad Street, Oxford OX1 3BJ.<br>Entry via Balliol College Porter's Lodge</p>
+            <p>Reception drinks will be served from 6:45pm, with dinner in Hall at 7:45pm. The evening will conclude at approximately 10:00pm.</p>
+            <p><strong>Dress code:</strong> Smart business attire is encouraged.</p>
+        </div>`;
+    } else if (item && item.abstract) {
+        description = `<div class="panel-description social-event-description">${escapeHtml(item.abstract)}</div>`;
+    }
     const calBtn = `<div class="cal-wrapper"><button class="cal-btn" onclick="event.stopPropagation();toggleCalMenu(this,'${calKey}')">&#128197; Add to Calendar &#9662;</button><div class="cal-menu" style="display:none"><a href="#" onclick="event.preventDefault();event.stopPropagation();calToGoogle('${calKey}')">&#127760; Google Calendar</a><a href="#" onclick="event.preventDefault();event.stopPropagation();calDownloadICS('${calKey}')">&#128229; Apple / Outlook (.ics)</a></div></div>`;
-    return `<div class="paper">${description}${mapLink}${calBtn}</div>`;
+    return `<div class="paper">${description}${mapLink}<div class="social-event-calendar">${calBtn}</div></div>`;
 }
 
 function findExcursion(session_name) {
@@ -603,8 +615,7 @@ function renderPanelContent(panel) {
 }
 
 function toggleSession(element) {
-    const expanded = element.parentElement.classList.toggle('expanded');
-    element.setAttribute('aria-expanded', String(expanded));
+    element.parentElement.classList.toggle('expanded');
 }
 
 function toggleAbstract(button, event) {
@@ -908,18 +919,16 @@ function renderAwards() {
 }
 
 function getCategoryClass(category) {
-    const value = String(category || '').trim();
-    const categoryClasses = {
-        'General Industry Studies': 'cat-general',
-        'Health Care Systems, Biotechnology, and Pharmaceuticals': 'cat-health',
-        'Innovation, Entrepreneurship, and AI-Driven Transformation': 'cat-innovation',
-        'Labor Markets, Organizations, and the Future of Work': 'cat-labor',
-        'Operations, Supply Chain, and AI-Enhanced Industry 4.0': 'cat-operations',
-        'Public Policy and Global Competitiveness': 'cat-policy',
-        'Sustainable Innovation, Energy, and Mobility': 'cat-sustainability',
-        'Cross-Track': 'cat-cross-track'
-    };
-    return categoryClasses[value] || '';
+    if (!category) return '';
+    if (category.includes('General Industry Studies'))                                       return 'cat-general';
+    if (category.includes('Health Care') || category.includes('Pharmaceuticals'))           return 'cat-health';
+    if (category.includes('Labor Markets') || category.includes('Future of Work'))          return 'cat-labor';
+    if (category.includes('Operations') || category.includes('Supply Chain'))               return 'cat-operations';
+    if (category.includes('Public Policy') || category.includes('Global Competitiveness'))  return 'cat-policy';
+    if (category.includes('Sustainable Innovation') || category.includes('Energy'))         return 'cat-sustainability';
+    if (category.includes('Innovation') || category.includes('Entrepreneurship'))           return 'cat-innovation';
+    if (category === 'Cross-Track')                                                           return 'cat-cross-track';
+    return '';
 }
 
 // Committee rendering
