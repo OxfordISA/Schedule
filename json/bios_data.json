@@ -48,12 +48,6 @@
     "bio": "Dr Paul Bate is the former Chief Executive Officer of the UK Space Agency, where he led the UK’s civil space agency in advancing space science, commercial growth, and the use of space for economic, environmental, and societal benefit. In his role he oversaw national efforts to support R&D, space infrastructure, and the UK’s role in international space activity."
   },
   {
-    "person_id": "rob-desborough",
-    "image": "rob-desborough",
-    "name": "Rob Desborough",
-    "bio": "Rob Desborough is General Partner at Seraphim Space and Chair and co-founder of the Seraphim Space Accelerator. He has played a central role in building Seraphim’s early-stage Space-Tech investment platform and supporting high-growth ventures across the space sector. His work focuses on identifying, backing, and scaling companies developing technologies and applications in areas such as communications, Earth observation, climate, defence, infrastructure, and space-enabled data."
-  },
-  {
     "person_id": "nigel-chandler",
     "image": "nigel-chandler",
     "name": "Nigel Chandler",
@@ -100,12 +94,6 @@
     "image": "alison-baptiste",
     "name": "Alison Baptiste CBE CEng FICE",
     "bio": "Alison Baptiste CBE CEng FICE is a Director in the National Infrastructure and Service Transformation Authority in the Treasury which is the government centre of expertise for project delivery. She drives standards, improvements and pace in government’s biggest and riskiest projects bringing. Her portfolio covers infrastructure and service delivery in Defence, Digital, Health, Education, Welfare, Home Office, Justice and Tax. She also leads the cross-government forum on Transformation programmes. Prior to this Alison led operational delivery in the Environment Agency and received a CBE for her leadership responding to nationwide flooding. Alison also holds non-executive roles in the engineering profession and leisure industry and passionate about driving positive outcomes for people."
-  },
-  {
-    "person_id": "jim-hall",
-    "image": "jim-hall",
-    "name": "Jim Hall FREng FRS",
-    "bio": "Jim Hall FREng FRS is Professor of Climate and Environmental Risks in the University of Oxford. Prof Hall is internationally recognised for his research on risk analysis and decision making under uncertainty for infrastructure systems, water resource systems, flood and coastal risk management and adaptation to climate change. Professor Hall is a member of the Prime Minister's Council for Science and Technology. He was a Commissioner of the National Infrastructure Commission until 2025 and was President of the Institution of Civil Engineers for the year 2024-25. He was a member of the UK independent Committee on Climate Change Adaptation from 2009-2019, and was Chair of the Science Advisory Committee of the International Institute for Applied Systems Analysis (IIASA) from 2020-22."
   },
   {
     "person_id": "julia-pyke",
@@ -169,7 +157,7 @@
   },
   {
     "person_id": "mike-lewis",
-    "image": "",
+    "image": "mike-lewis",
     "name": "Michael A. Lewis",
     "bio": "Michael A. Lewis is Professor of Operations Management at the University of Bristol. His research examines how firms and industries build capabilities, manage innovation, and respond to technological and geopolitical change. He is co-author of the textbook Operations Strategy and has worked with industry and policymakers on manufacturing competitiveness, supply-chain resilience, and emerging technologies. His current work focuses on the evolution of critical industrial capabilities and the resilience and security of complex supply networks."
   },
@@ -193,13 +181,13 @@
   },
   {
     "person_id": "simon-bachelor",
-    "image": "",
+    "image": "simon-bachelor",
     "name": "Simon Bachelor",
     "bio": "Simon Bachelor is Head of the Drones Programme for British Transport Police, where he leads delivery of a Beyond Visual Line of Sight (BVLOS) capability to reduce disruption across the rail network. A senior leader with a thirty-year policing career, he previously ran the NPCC counter-drones portfolio embedded with the Home Office Counter Drones Unit, advising on the ATMUA Act 2021 and working with the CAA on regulatory reform. His work spans operational deployment, risk quantification and the industry liaison that turns emerging capability into safe, funded operations."
   },
   {
     "person_id": "sofia-stayte",
-    "image": "",
+    "image": "sofia-stayte",
     "name": "Sofia Stayte",
     "bio": "Sofia Stayte is Head of Aviation Skills and Future of Flight at the UK Department for Transport, where she leads policy for the uncrewed and future-flight sector. An experienced government policy leader, she has worked closely with ministers and stakeholders across policy development, delivery and risk management, and is a CIPFA-trained public finance professional. Her work sits at the intersection of skills, regulation and industrial capability as the UK positions itself for uncrewed aviation at scale."
   },
