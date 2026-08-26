@@ -467,16 +467,17 @@ function renderSchedule() {
 
 function renderSocialEventContent(item, calKey) {
     const mapLink = item && item.event_url
-        ? `<p class="social-event-map"><a href="${escapeHtml(item.event_url)}" target="_blank" rel="noopener noreferrer">View on Google Maps</a></p>`
+        ? `<p class="social-event-map" style="margin-bottom:1.5rem;"><a href="${escapeHtml(item.event_url)}" target="_blank" rel="noopener noreferrer">View on Google Maps</a></p>`
         : '';
     let description = '';
     if (item && item.event_format === 'welcome-reception') {
         description = `<div class="panel-description social-event-description">
-            <p><strong>Rhodes House,</strong><br>South Parks Road, Oxford OX1 3RG.<br><em>Drinks and canapés.</em></p>
+            <p><strong>Rhodes House</strong><br>South Parks Road, Oxford OX1 3RG.</p>
+            <p><em>Drinks and canapés.</em></p>
         </div>`;
     } else if (item && item.event_format === 'gala-dinner') {
         description = `<div class="panel-description social-event-description">
-            <p><strong>Balliol College,</strong><br>Broad Street, Oxford OX1 3BJ.<br>Entry via Balliol College Porter's Lodge</p>
+            <p><strong>Balliol College</strong><br>Broad Street, Oxford OX1 3BJ.<br>Entry via Bailey Old College Porter’s Lodge</p>
             <p>Reception drinks will be served from 6:45pm, with dinner in Hall at 7:45pm. The evening will conclude at approximately 10:00pm.</p>
             <p><strong>Dress code:</strong> Smart business attire is encouraged.</p>
         </div>`;
