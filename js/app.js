@@ -472,13 +472,13 @@ function renderSocialEventContent(item, calKey) {
     let description = '';
     if (item && item.event_format === 'welcome-reception') {
         description = `<div class="panel-description social-event-description">
-            <p><strong>Rhodes House</strong><br>South Parks Road, Oxford OX1 3RG.</p>
+            <p style="margin-bottom:1rem;"><strong>Rhodes House</strong><br>South Parks Road, Oxford OX1 3RG.</p>
             <p><em>Drinks and canapés.</em></p>
         </div>`;
     } else if (item && item.event_format === 'gala-dinner') {
         description = `<div class="panel-description social-event-description">
-            <p><strong>Balliol College</strong><br>Broad Street, Oxford OX1 3BJ.<br>Entry via Bailey Old College Porter’s Lodge</p>
-            <p>Reception drinks will be served from 6:45pm, with dinner in Hall at 7:45pm. The evening will conclude at approximately 10:00pm.</p>
+            <p style="margin-bottom:1rem;"><strong>Balliol College</strong><br>Broad Street, Oxford OX1 3BJ.<br>Entry via Balliol College Porter’s Lodge</p>
+            <p style="margin-bottom:1rem;">Reception drinks will be served from 6:45pm, with dinner in Hall at 7:45pm. The evening will conclude at approximately 10:00pm.</p>
             <p><strong>Dress code:</strong> Smart business attire is encouraged.</p>
         </div>`;
     } else if (item && item.abstract) {
