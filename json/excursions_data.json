@@ -1,1 +1,53 @@
-[]
+[
+  {
+    "id": "EX1",
+    "option": 1,
+    "session_name": "Company visits",
+    "date": "2026-09-03",
+    "day": "Thursday",
+    "start_time": "7:45am",
+    "end_time": "12:00pm",
+    "meeting_point": "Saïd Business School",
+    "description": "Silverstone, Towcester. An exclusive behind-the-scenes visit to Aston Martin Aramco F1 Team’s state-of-the-art Technology Campus at Silverstone. The facility brings together design, engineering, manufacturing, aerodynamics, race support and commercial operations within one of the most advanced environments in world motorsport. We’ll gain a rare insight into how a Formula One car is conceived, designed, tested, manufactured, and continuously improved.",
+    "timeline": [
+      {
+        "time": "7:45am-12:00pm",
+        "activity": "Aston Martin Racing F1 Technology Campus"
+      }
+    ]
+  },
+  {
+    "id": "EX2",
+    "option": 2,
+    "session_name": "Company visits",
+    "date": "2026-09-03",
+    "day": "Thursday",
+    "start_time": "8:00am",
+    "end_time": "12:00pm",
+    "meeting_point": "Saïd Business School",
+    "description": "Wallingford, Oxford. A behind-the-scenes visit to one of the world's leading centres for water, environmental, and climate resilience research. Participants will tour HR Wallingford's unique research facilities, which combines large-scale physical modelling with advanced digital simulation to tackle some of society's most complex challenges. From flood risk and coastal protection, to offshore energy and critical infrastructure, visitors will see how the facility helps to understand, predict, and manage the behaviour of water in the real world.",
+    "timeline": [
+      {
+        "time": "8:00am-12:00pm",
+        "activity": "HR Wallingford"
+      }
+    ]
+  },
+  {
+    "id": "EX3",
+    "option": 3,
+    "session_name": "Oxford Walking Tour",
+    "date": "2026-09-03",
+    "day": "Thursday",
+    "start_time": "10:00am",
+    "end_time": "12:00pm",
+    "meeting_point": "Radcliffe Camera",
+    "description": "Depart Radcliffe Camera, 10:00am. Drop off at Saïd Business School, 12:00pm. A guided walking tour through Oxford’s historic city centre, introducing participants to the colleges, libraries, streets, and civic spaces that have shaped the University and city. The tour will connect Oxford’s academic traditions with wider themes of knowledge, institutions, science, and place.",
+    "timeline": [
+      {
+        "time": "10:00am-12:00pm",
+        "activity": "Walking Tour of Oxford"
+      }
+    ]
+  }
+]
