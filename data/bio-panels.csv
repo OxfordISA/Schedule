@@ -1,4 +1,4 @@
-﻿person_id,panel_id,role,panel_order
+person_id,panel_id,role,panel_order
 angela-garcia-calvo,digital-stack,moderator,1
 diane-coyle,digital-stack,panelist,2
 annabelle-gawer,digital-stack,panelist,3
@@ -19,17 +19,16 @@ laura-dupin,industry-studies-research,panelist,3
 juliane-reinecke,industry-studies-research,panelist,4
 daniel-armanios,infrastructure,moderator,1
 alison-baptiste,infrastructure,panelist,2
-jim-hall,infrastructure,panelist,3
 julia-pyke,infrastructure,panelist,4
 chetan-kotur,infrastructure,panelist,5
 lord-william-hague,opening-plenary,speaker,1
 monica-gorman,opening-plenary,moderator,2
 travis-mosier,semiconductors,moderator,1
-katie-hore,semiconductors,panelist,2
-sebastian-weiske,semiconductors,panelist,3
+monica-gorman,semiconductors,panelist,2
+katie-hore,semiconductors,panelist,3
+sebastian-weiske,semiconductors,panelist,4
 mehdi-montakhabi,space-market,moderator,1
 paul-bate,space-market,panelist,2
-rob-desborough,space-market,panelist,3
 nigel-chandler,space-market,panelist,4
 raja-roy,space-market,panelist,5
 sir-mike-gregory,value-chains-industrial-innovation-policy,moderator,1

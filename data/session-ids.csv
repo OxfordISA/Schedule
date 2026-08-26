@@ -1,4 +1,4 @@
-﻿id,session_id,session_name,paper_order
+id,session_id,session_name,paper_order
 66,GIS1,"Market Power, Competition, and Social Outcomes",1
 31,GIS1,"Market Power, Competition, and Social Outcomes",2
 97,GIS1,"Market Power, Competition, and Social Outcomes",3
@@ -47,9 +47,8 @@
 140,SUS2,Low Carbon Mobility,3
 185,SUS2,Low Carbon Mobility,4
 57,I&E3,Digital Platforms and Institutional Change,1
-132,I&E3,Digital Platforms and Institutional Change,2
-143,I&E3,Digital Platforms and Institutional Change,3
-192,I&E3,Digital Platforms and Institutional Change,4
+143,I&E3,Digital Platforms and Institutional Change,2
+192,I&E3,Digital Platforms and Institutional Change,3
 114,LAB3,"The Past, Present, and Future of HRM Research: Theoretical and Methodological Developments",1
 92,OSCM3,AI in Operations,1
 101,OSCM3,AI in Operations,2
@@ -61,7 +60,6 @@
 91,SUS3,Assessing Green Industrial Policy Design and Outcomes,1
 91,SUS3,Assessing Green Industrial Policy Design and Outcomes,2
 91,SUS3,Assessing Green Industrial Policy Design and Outcomes,3
-91,SUS3,Assessing Green Industrial Policy Design and Outcomes,4
 180,XTrack1,Semiconductor Sovereignty and Supply Chain Resilience,1
 205,XTrack1,Semiconductor Sovereignty and Supply Chain Resilience,2
 79,XTrack1,Semiconductor Sovereignty and Supply Chain Resilience,3
@@ -73,9 +71,10 @@
 93,HC2,Healthcare Operations,2
 157,HC2,Healthcare Operations,3
 206,HC2,Healthcare Operations,4
-11,I&E4,Founders and Entrepreneurial Identity,1
-36,I&E4,Founders and Entrepreneurial Identity,2
-164,I&E4,Founders and Entrepreneurial Identity,3
+11,I&E4,Entrepreneurial Identity and Category Formation,1
+36,I&E4,Entrepreneurial Identity and Category Formation,2
+52,I&E4,Entrepreneurial Identity and Category Formation,3
+164,I&E4,Entrepreneurial Identity and Category Formation,4
 219,OSCM4,Supply Network Visibility,1
 213,OSCM4,Supply Network Visibility,2
 166,OSCM4,Supply Network Visibility,3
@@ -87,8 +86,8 @@
 160,SUS4,Circular Economy and Firm Strategy,3
 115,XTrack2,"Conducting Field Research with Organizations: Opportunities, Challenges, and Best Practices",1
 99,GIS4,Rules and Governance in Digital Markets,1
-189,GIS4,Rules and Governance in Digital Markets,2
-179,GIS4,Rules and Governance in Digital Markets,3
+179,GIS4,Rules and Governance in Digital Markets,2
+132,GIS4,Rules and Governance in Digital Markets,3
 151,I&E5,Innovation Search and Diffusion,1
 171,I&E5,Innovation Search and Diffusion,2
 211,I&E5,Innovation Search and Diffusion,3
@@ -141,11 +140,10 @@
 63,LAB6,Human Capital and Workplace Performance,4
 87,OSCM6,Food and Resource Supply Chains,1
 218,OSCM6,Food and Resource Supply Chains,2
-136,OSCM6,Food and Resource Supply Chains,3
-127,OSCM6,Food and Resource Supply Chains,4
+127,OSCM6,Food and Resource Supply Chains,3
 125,SUS7,Industrial Decarbonisation,1
 147,SUS7,Industrial Decarbonisation,2
 194,SUS7,Industrial Decarbonisation,3
-27,XTrack5,Alternative Proteins and Category Emergence,1
-52,XTrack5,Alternative Proteins and Category Emergence,2
-47,XTrack5,Alternative Proteins and Category Emergence,3
+27,XTrack5,Alternative Proteins,1
+47,XTrack5,Alternative Proteins,2
+136,XTrack5,Alternative Proteins,3
