@@ -344,9 +344,13 @@ function renderSchedule() {
         if (isEvent) {
             const excursion = findExcursion(session.session_name);
             if (!excursion) {
+                const hasEventDetails = Boolean((session.papers[0]?.abstract || '').trim() || (session.papers[0]?.event_url || '').trim());
+                const eventCalKey = `cal_${String(session.session_id || '').replace(/[^a-zA-Z0-9]/g, '_')}_${(session.time_slot || '').replace(/[^a-zA-Z0-9]/g, '_')}`;
+                sessionCalendarData[eventCalKey] = session;
+                const eventDetails = hasEventDetails ? renderSocialEventContent(session.papers[0], eventCalKey) : '';
                 html += `
-            <div class="session-group cat-event event-card">
-                <div class="session-header">
+            <div class="session-group cat-event ${hasEventDetails ? '' : 'event-card'}">
+                <div class="session-header" ${hasEventDetails ? 'onclick="toggleSession(this)"' : ''}>
                     <div class="session-meta">
                         <div>
                             <div class="session-title-row">
@@ -361,6 +365,7 @@ function renderSchedule() {
                         </div>
                     </div>
                 </div>
+                ${hasEventDetails ? `<div class="session-papers">${eventDetails}</div>` : ''}
             </div>`;
                 return;
             }
@@ -457,6 +462,14 @@ function renderSchedule() {
     scheduleDiv.innerHTML = html;
     document.getElementById('sessionCount').textContent = totalSessions;
     document.getElementById('paperCount').textContent = totalPapers;
+}
+
+
+function renderSocialEventContent(item, calKey) {
+    const description = item && item.abstract ? `<div class="panel-description">${escapeHtml(item.abstract)}</div>` : '';
+    const mapLink = item && item.event_url ? `<p><a href="${escapeHtml(item.event_url)}" target="_blank" rel="noopener noreferrer">View on Google Maps</a></p>` : '';
+    const calBtn = `<div class="cal-wrapper"><button class="cal-btn" onclick="event.stopPropagation();toggleCalMenu(this,'${calKey}')">&#128197; Add to Calendar &#9662;</button><div class="cal-menu" style="display:none"><a href="#" onclick="event.preventDefault();event.stopPropagation();calToGoogle('${calKey}')">&#127760; Google Calendar</a><a href="#" onclick="event.preventDefault();event.stopPropagation();calDownloadICS('${calKey}')">&#128229; Apple / Outlook (.ics)</a></div></div>`;
+    return `<div class="paper">${description}${mapLink}${calBtn}</div>`;
 }
 
 function findExcursion(session_name) {
