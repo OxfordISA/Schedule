@@ -306,7 +306,8 @@ overview <- read_csv(
   ) %>%
   mutate(
     overview_row_id = row_number(),
-    across(c(weekday, time_start_str, time_end_str, session, building, room_raw), clean_text)
+    across(c(weekday, time_start_str, time_end_str, session, building, room_raw), clean_text),
+    event_url = clean_text(event_url)
   ) %>%
   left_join(conference_day_map, by = c("weekday" = "day"))
 
@@ -337,6 +338,12 @@ events <- overview %>%
     category = NA_character_,
     time_slot = NA_character_,
     title = session,
+    event_url = event_url,
+    event_format = case_when(
+      str_to_lower(session) == "welcome reception" ~ "welcome-reception",
+      str_to_lower(session) == "gala dinner" ~ "gala-dinner",
+      TRUE ~ NA_character_
+    ),
     authors = NA_character_,
     abstract = clean_text(description),
     moderator = NA_character_,
@@ -348,7 +355,7 @@ events <- overview %>%
   ) %>%
   select(
     id, session_id, session_name, paper_order, type, category, date, day,
-    start_time, end_time, time_slot, room, title, authors, abstract,
+    start_time, end_time, time_slot, room, title, event_url, event_format, authors, abstract,
     moderator, panelists, session_chair, discussant
   )
 
@@ -366,8 +373,9 @@ if (any(is.na(events$date))) {
 
 all_data <- bind_rows(
   paper_sessions %>%
+    mutate(event_url = NA_character_, event_format = NA_character_) %>%
     select(-author_names, -contact_author, -id_occurrence, -time_order),
-  panels,
+  panels %>% mutate(event_url = NA_character_, event_format = NA_character_),
   events
 ) %>%
   mutate(
@@ -378,7 +386,7 @@ all_data <- bind_rows(
   arrange(date, start_seconds, session_id, paper_order) %>%
   select(
     id, session_id, session_name, paper_order, type, category, date, day,
-    start_time, end_time, time_slot, time_order, room, title, authors,
+    start_time, end_time, time_slot, time_order, room, title, event_url, event_format, authors,
     abstract, moderator, panelists, session_chair, discussant
   )
 
@@ -419,21 +427,23 @@ write_json(
 )
 cat(sprintf("Written %d award entries to awards_data.json\n", nrow(awards)))
 
-excursions_meta <- overview %>%
-  filter(!is.na(excursion_id), str_trim(excursion_id) != "") %>%
+excursions_meta <- read_csv(
+  here::here("data", "excursion-meta.csv"),
+  show_col_types = FALSE,
+  col_types = cols(.default = "c")
+) %>%
   transmute(
-    id = excursion_id,
-    option = suppressWarnings(as.integer(excursion_option)),
-    session_name = session,
-    date = as.character(date),
-    day = weekday,
-    start_time = time_start_str,
-    end_time = time_end_str,
+    id = id,
+    option = suppressWarnings(as.integer(option)),
+    session_name = session_name,
+    date = date,
+    day = day,
+    start_time = start_time,
+    end_time = end_time,
     meeting_point = clean_text(meeting_point),
     description = clean_text(description)
   ) %>%
   arrange(option)
-
 excursion_program <- read_csv(
   here::here("data", "excursion-program.csv"),
   show_col_types = FALSE
