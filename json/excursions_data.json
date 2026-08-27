@@ -22,13 +22,13 @@
     "session_name": "Company visits",
     "date": "2026-09-03",
     "day": "Thursday",
-    "start_time": "8:00am",
+    "start_time": "8:30am",
     "end_time": "12:00pm",
     "meeting_point": "Saïd Business School",
     "description": "Wallingford, Oxford. A behind-the-scenes visit to one of the world's leading centres for water, environmental, and climate resilience research. Participants will tour HR Wallingford's unique research facilities, which combines large-scale physical modelling with advanced digital simulation to tackle some of society's most complex challenges. From flood risk and coastal protection, to offshore energy and critical infrastructure, visitors will see how the facility helps to understand, predict, and manage the behaviour of water in the real world.",
     "timeline": [
       {
-        "time": "8:00am-12:00pm",
+        "time": "8:30am-12:00pm",
         "activity": "HR Wallingford"
       }
     ]
