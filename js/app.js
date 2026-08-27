@@ -410,7 +410,7 @@ function renderSchedule() {
 
         const typeLabel = isAwp                               ? '🏆 Award Winners Panel' :
                           session.type === 'plenary'         ? '🎤 Plenary Session' :
-                          session.type === 'special_session' ? '🎤 Special Session' :
+                          session.type === 'special_session' ? '🎤' :
                           session.type === 'panel'           ? '🗣 Panel' :
                           `📄 ${session.papers.length} paper${session.papers.length !== 1 ? 's' : ''}`;
 
