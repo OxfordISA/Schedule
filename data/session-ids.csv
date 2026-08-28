@@ -1,4 +1,4 @@
-id,session_id,session_name,paper_order
+﻿id,session_id,session_name,paper_order
 66,GIS1,"Market Power, Competition, and Social Outcomes",1
 31,GIS1,"Market Power, Competition, and Social Outcomes",2
 97,GIS1,"Market Power, Competition, and Social Outcomes",3
@@ -147,3 +147,4 @@ id,session_id,session_name,paper_order
 27,XTrack5,Alternative Proteins,1
 47,XTrack5,Alternative Proteins,2
 136,XTrack5,Alternative Proteins,3
+221,PP4,Competition in Strategic Industries,4
