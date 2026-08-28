@@ -965,3 +965,65 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
 }
+
+
+/* Venue additional information */
+#venue-floors,
+#venue-additional-information {
+    scroll-margin-top: 1.25rem;
+}
+.venue-additional-information {
+    margin-top: 2.25rem;
+    padding-top: 0.25rem;
+}
+.venue-additional-information > h2 {
+    margin: 0 0 1rem;
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: #212529;
+}
+.venue-info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+.venue-info-card {
+    min-width: 0;
+    padding: 1.1rem 1.2rem;
+    background: #ffffff;
+    border: 1px solid #dee2e6;
+    border-left: 4px solid #0d6efd;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.06);
+}
+.venue-info-card-wide {
+    grid-column: 1 / -1;
+}
+.venue-info-card h3 {
+    margin: 0 0 0.55rem;
+    color: #212529;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+.venue-info-card p,
+.venue-info-card ul {
+    margin: 0;
+    color: #495057;
+}
+.venue-info-card ul {
+    padding-left: 1.2rem;
+}
+.venue-info-card li + li {
+    margin-top: 0.35rem;
+}
+@media (max-width: 760px) {
+    .venue-additional-information {
+        margin-top: 1.5rem;
+    }
+    .venue-info-grid {
+        grid-template-columns: 1fr;
+    }
+    .venue-info-card-wide {
+        grid-column: auto;
+    }
+}
