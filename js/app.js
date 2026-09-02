@@ -778,7 +778,7 @@ function canonicalPersonName(value) {
         .normalize('NFD')
         .replace(/[\u0300-\u036f]/g, '')
         .replace(/[‘’]/g, "'")
-        .replace(/^(?:the\s+rt\s+hon\s+|professor\s+sir\s+|professor\s+|prof\.?\s+|dr\.?\s+|sir\s+)+/i, '')
+        .replace(/^(?:the\s+rt\s+hon\s+|professor\s+emeritus\s+|professor\s+sir\s+|professor\s+|prof\.?\s+|dr\.?\s+|sir\s+)+/i, '')
         .replace(/(?:\s+(?:cbe|ceng|fice|freng|frs))+$/i, '')
         .replace(/\s+/g, ' ')
         .toLowerCase();
