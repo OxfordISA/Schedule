@@ -105,7 +105,7 @@
     "person_id": "chetan-kotur",
     "image": "chetan-kotur",
     "name": "Chetan Kotur FREng",
-    "bio": "Chetan Kotur FREng is Head of Technology and Innovation at Laing O'Rourke. His career started with designing cars at Volvo Cars in Gothenburg, Sweden, to then accelerating the global shift to sustainable electric mobility by starting up and launching the electric car brand Polestar. At Laing O Rourke, he leads the team researching and developing transformative innovations in modern methods of construction focused on improving productivity, safety and sustainability on the complex buildings and infrastructure projects Laing O’Rourke delivers for its clients. In 2025, Chetan was elected as one of the youngest ever Fellows of the Royal Academy of Engineering."
+    "bio": "Chetan Kotur FREng, an Automotive Engineer by background, is Head of Technology and Innovation at Laing O'Rourke. His career started with designing cars at Volvo Cars in Gothenburg, Sweden, to then accelerating the global shift to sustainable electric mobility by starting up and launching the electric car brand Polestar. At Laing O Rourke, he leads the team researching and developing transformative innovations in modern methods of construction focused on improving productivity, safety and sustainability on the complex buildings and infrastructure projects Laing O’Rourke delivers for its clients. In 2025, Chetan was elected as one of the youngest ever Fellows of the Royal Academy of Engineering."
   },
   {
     "person_id": "travis-mosier",
@@ -140,8 +140,8 @@
   {
     "person_id": "sir-mike-gregory",
     "image": "sir-mike-gregory",
-    "name": "Professor Sir Mike Gregory CBE, FREng",
-    "bio": "Professor Sir Mike Gregory CBE, FREng was the founder member of the team which established Cambridge University’s Institute for Manufacturing (IfM) linking science, engineering, management and policy and integrating education, research and practice. He retired as Head of the Manufacturing and Management Division of the University of Cambridge’s Department of Engineering and of the Institute for Manufacturing (IfM) and now chairs the Babbage Policy International Forum."
+    "name": "Professor Emeritus Sir Mike Gregory CBE, FREng",
+    "bio": "Professor Emeritus Sir Mike Gregory CBE, FREng. Following an early career in industry Mike Gregory was the founder member of the team which established Cambridge University’s Institute for Manufacturing (IfM) linking science, engineering, management and policy and integrating education, research and practice. He retired as Head of the Manufacturing and Management Division of the University of Cambridge’s Department of Engineering and of the Institute for Manufacturing (IfM) and now chairs the Babbage Policy International Forum."
   },
   {
     "person_id": "julia-sutcliffe",
@@ -158,8 +158,8 @@
   {
     "person_id": "mike-lewis",
     "image": "mike-lewis",
-    "name": "Michael A. Lewis",
-    "bio": "Michael A. Lewis is Professor of Operations Management at the University of Bristol. His research examines how firms and industries build capabilities, manage innovation, and respond to technological and geopolitical change. He is co-author of the textbook Operations Strategy and has worked with industry and policymakers on manufacturing competitiveness, supply-chain resilience, and emerging technologies. His current work focuses on the evolution of critical industrial capabilities and the resilience and security of complex supply networks."
+    "name": "Mike Lewis",
+    "bio": "Mike is Professor of Operations Management at the University of Bristol. His research spans supply chain resilience and the governance of emerging technologies, with current work on drones and governance of low-altitude airspace."
   },
   {
     "person_id": "saurabh-bansal",
@@ -177,13 +177,19 @@
     "person_id": "juliane-reinecke",
     "image": "juliane-reinecke",
     "name": "Juliane Reinecke",
-    "bio": "Juliane Reinecke is Professor of Management Studies, Academic Area Head (Research) and Faculty Director for Sustainability at Saïd Business School, University of Oxford. Juliane uses qualitative methods to study the emergence of or change towards sustainable industries (i.e. food, garments, minerals, energy), and the role of collective action, social movements, multi-stakeholder collaboration and transnational governance therein. Her work has been published in Academy of Management Journal, Academy of Management Review, Administrative Science Quarterly, Journal of Management Studies, Organization Science, Organization Studies and Research Policy, among others. Juliane received her MPhil and Ph.D. from the University of Cambridge."
+    "bio": "Juliane Reinecke is Professor of Management Studies, and Faculty Director for Sustainability at Saïd Business School, University of Oxford. Juliane uses qualitative methods to study the emergence of or change towards sustainable industries (i.e. food, garments, minerals, energy), and the role of collective action, social movements, multi-stakeholder collaboration and transnational governance therein. Her work has been published in Academy of Management Journal, Academy of Management Review, Administrative Science Quarterly, Journal of Management Studies, and Organization Science, among others. Juliane received her MPhil and Ph.D. from the University of Cambridge."
   },
   {
     "person_id": "simon-bachelor",
     "image": "simon-bachelor",
     "name": "Simon Bachelor",
     "bio": "Simon Bachelor is Head of the Drones Programme for British Transport Police, where he leads delivery of a Beyond Visual Line of Sight (BVLOS) capability to reduce disruption across the rail network. A senior leader with a thirty-year policing career, he previously ran the NPCC counter-drones portfolio embedded with the Home Office Counter Drones Unit, advising on the ATMUA Act 2021 and working with the CAA on regulatory reform. His work spans operational deployment, risk quantification and the industry liaison that turns emerging capability into safe, funded operations."
+  },
+  {
+    "person_id": "stephen-farmer",
+    "image": "stephen-farmer",
+    "name": "Stephen Farmer",
+    "bio": "Stephen Farmer is Senior Communications Specialist at Tekever. A strategic communications leader with more than twenty years' experience across technology, the public sector and broadcast media, he was previously VP at Altitude Angel, a pioneering unmanned traffic management (UTM) platform. Stephen works closely with regulators, governments and boards to shape UAS industry dialogue."
   },
   {
     "person_id": "sofia-stayte",
