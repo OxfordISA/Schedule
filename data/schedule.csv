@@ -1,4 +1,4 @@
-﻿id,session_id,session_name,paper_order,time_slot,room,date,day,start_time,end_time,time_order
+id,session_id,session_name,paper_order,time_slot,room,date,day,start_time,end_time,time_order
 66,GIS1,"Market Power, Competition, and Social Outcomes",1,TH01,Rhodes Trust,2026-09-03,Thursday,14:05:00,15:15:00,1
 31,GIS1,"Market Power, Competition, and Social Outcomes",2,TH01,Rhodes Trust,2026-09-03,Thursday,14:05:00,15:15:00,1
 97,GIS1,"Market Power, Competition, and Social Outcomes",3,TH01,Rhodes Trust,2026-09-03,Thursday,14:05:00,15:15:00,1
@@ -19,7 +19,6 @@
 51,SUS1,Climate Legitimacy and Adaptation,1,TH01,SR A,2026-09-03,Thursday,14:05:00,15:15:00,1
 142,SUS1,Climate Legitimacy and Adaptation,2,TH01,SR A,2026-09-03,Thursday,14:05:00,15:15:00,1
 187,SUS1,Climate Legitimacy and Adaptation,3,TH01,SR A,2026-09-03,Thursday,14:05:00,15:15:00,1
-196,SUS1,Climate Legitimacy and Adaptation,4,TH01,SR A,2026-09-03,Thursday,14:05:00,15:15:00,1
 137,GIS2,"Policy, Infrastructure, and Industrial Capability",1,TH02,Rhodes Trust,2026-09-03,Thursday,16:50:00,18:00:00,2
 123,GIS2,"Policy, Infrastructure, and Industrial Capability",2,TH02,Rhodes Trust,2026-09-03,Thursday,16:50:00,18:00:00,2
 203,GIS2,"Policy, Infrastructure, and Industrial Capability",3,TH02,Rhodes Trust,2026-09-03,Thursday,16:50:00,18:00:00,2

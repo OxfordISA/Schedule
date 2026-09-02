@@ -1,4 +1,4 @@
-﻿id,session_id,session_name,paper_order
+id,session_id,session_name,paper_order
 66,GIS1,"Market Power, Competition, and Social Outcomes",1
 31,GIS1,"Market Power, Competition, and Social Outcomes",2
 97,GIS1,"Market Power, Competition, and Social Outcomes",3
@@ -19,7 +19,6 @@
 51,SUS1,Climate Legitimacy and Adaptation,1
 142,SUS1,Climate Legitimacy and Adaptation,2
 187,SUS1,Climate Legitimacy and Adaptation,3
-196,SUS1,Climate Legitimacy and Adaptation,4
 137,GIS2,"Policy, Infrastructure, and Industrial Capability",1
 123,GIS2,"Policy, Infrastructure, and Industrial Capability",2
 203,GIS2,"Policy, Infrastructure, and Industrial Capability",3
